@@ -1,5 +1,7 @@
 import type {
   Career,
+  CareerPathPayload,
+  CareerSurveyAnswers,
   CatalogCourse,
   CatalogProgram,
   Meta,
@@ -41,6 +43,15 @@ export const setMyCareer = (targetCareer: string) =>
   api<StudentProfile>("/api/me/career", {
     method: "PUT",
     body: JSON.stringify({ targetCareer }),
+  });
+export const getCareerPath = () => api<CareerPathPayload>("/api/me/career-path");
+export const submitCareerSurvey = (
+  answers: CareerSurveyAnswers,
+  confirmCareerId?: string | null
+) =>
+  api<CareerPathPayload>("/api/me/career-survey", {
+    method: "POST",
+    body: JSON.stringify({ answers, confirmCareerId: confirmCareerId ?? null }),
   });
 export const getCareers = () => api<Career[]>("/api/careers");
 export const getPrograms = () => api<CatalogProgram[]>("/api/programs");

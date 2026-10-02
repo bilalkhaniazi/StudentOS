@@ -43,7 +43,7 @@ The first screen is **student Google sign-in**. You cannot open the catalog unti
 3. Sign in with a GVSU Google account: **@mail.gvsu.edu** or **@gvsu.edu**.
 4. After Google finishes, StudentOS opens **your** profile (your Google name) and the catalog.
 
-On **Profile**, upload a Banner advising transcript PDF (the file is read and discarded). Degree, majors, and any post-baccalaureate badge come from that PDF. Upload a resume there too — StudentOS extracts experience, projects, skills, education, and languages into editable sections (or enter them by hand), then discards the file. Open **Pathways** for the Computer Science B.S. and Applied CS M.S. required courses, electives, and graduate badges. Choose a career under **Career**, and browse **Courses**. Use **Sign out** when you are done.
+On **Profile**, upload a Banner advising transcript PDF (the file is read and discarded). Degree, majors, and any post-baccalaureate badge come from that PDF. If the degree line is missing, pick Applied CS M.S. or CS B.S. by hand. Upload a resume there too — StudentOS extracts experience, projects, skills, education, and languages into editable sections (or enter them by hand), then discards the file. Open **Pathways** for the Computer Science B.S. and Applied CS M.S. required courses, electives, and graduate badges. On **Career**, take the short preference survey after a transcript is on file — you get Match % rankings, skill gaps, and a complete path sketch (you can override the suggested career). Browse **Courses**. Use **Sign out** when you are done.
 
 A simple “is the server up?” page: [http://127.0.0.1:43124/health](http://127.0.0.1:43124/health)
 

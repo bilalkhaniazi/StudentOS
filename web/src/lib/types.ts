@@ -94,6 +94,13 @@ export type StudentProfile = {
     emailsFound?: number;
     phonesFound?: number;
   } | null;
+  programId?: "cs-bs" | "applied-cs-ms" | null;
+  transcriptReadAt?: string | null;
+  transcriptFilename?: string | null;
+  careerSurvey?: {
+    answeredAt?: string;
+    answers?: CareerSurveyAnswers;
+  } | null;
   editable?: boolean;
   synthetic?: boolean;
 };
@@ -105,6 +112,99 @@ export type Career = {
   onetSoc: string;
   onetTitle: string;
   summary: string;
+  skills?: CareerSkillDef[];
+  linkedCourses?: string[];
+  badgeLean?: string[];
+};
+
+export type CareerSkillDef = {
+  id: string;
+  label: string;
+  demand: "core" | "common" | "emerging" | string;
+  aliases?: string[];
+};
+
+export type CareerSurveyAnswers = {
+  interestData: number;
+  interestCloud: number;
+  interestBackend: number;
+  interestMl: number;
+  workStyle?: string | null;
+  tools: string[];
+  horizon?: string | null;
+  constraint?: string | null;
+};
+
+export type CareerSkillGap = {
+  id: string;
+  label: string;
+  demand: string;
+  gap: "strong" | "moderate" | "weak" | "missing" | string;
+  sources: string[];
+};
+
+export type CareerRanking = {
+  careerId: string;
+  label?: string;
+  summary?: string;
+  match: number;
+  evidenceMatch?: number;
+  surveyPreference?: number;
+  recommended?: boolean;
+  yourInterest?: boolean;
+  reason?: string;
+  factors: { S: number; C: number; P: number; K: number };
+  skills: CareerSkillGap[];
+  linkedCoursesCompleted?: number;
+  linkedCoursesTotal?: number;
+};
+
+export type CareerPathBucket = {
+  id: string;
+  title: string;
+  status: string;
+  detail?: string;
+  openAreas?: { area: string; options: { code?: string; title?: string }[] }[];
+  options?: { id?: string; name?: string; code?: string; title?: string }[];
+};
+
+export type CareerPathSketch = {
+  programId: string;
+  careerId: string;
+  buckets: CareerPathBucket[];
+  skillsToDevelop: CareerSkillGap[];
+  suggestedCourses: { code: string; title: string; credits?: number | null; why: string }[];
+  note?: string;
+};
+
+export type CareerPathPayload = {
+  ready: boolean;
+  gate: {
+    signedIn: boolean;
+    transcriptPresent: boolean;
+    programId?: string | null;
+    needsProgramPick?: boolean;
+  };
+  evidence: {
+    transcriptPresent: boolean;
+    courseCompleted: number;
+    courseInProgress: number;
+    skills: number;
+    projects: number;
+    experiences: number;
+    certifications: number;
+    hasResumeSignal: boolean;
+    programId?: string | null;
+    degreeLine?: string | null;
+    transcriptLevel?: string | null;
+  };
+  warnings: string[];
+  rankings: CareerRanking[];
+  recommendedCareerId?: string | null;
+  selectedCareerId?: string | null;
+  path: CareerPathSketch | null;
+  survey?: StudentProfile["careerSurvey"];
+  attribution?: string;
 };
 
 export type CatalogCourse = {

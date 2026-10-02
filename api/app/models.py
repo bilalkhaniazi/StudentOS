@@ -103,6 +103,10 @@ class StudentProfile(BaseModel):
     termCreditPreference: str = "softCap15"
     summary: str | None = None
     studentType: Literal["international", "domestic", "unknown"] | None = None
+    programId: Literal["cs-bs", "applied-cs-ms"] | None = None
+    transcriptReadAt: str | None = None
+    transcriptFilename: str | None = None
+    careerSurvey: dict[str, Any] | None = None
     skills: list[SkillEntry] = Field(default_factory=list)
     projects: list[ProjectEntry] = Field(default_factory=list)
     experiences: list[ExperienceEntry] = Field(default_factory=list)
@@ -135,6 +139,10 @@ class ProfileUpdate(BaseModel):
     remainingCredits: float | None = None
     summary: str | None = None
     studentType: Literal["international", "domestic", "unknown"] | None = None
+    programId: Literal["cs-bs", "applied-cs-ms"] | None = None
+    transcriptReadAt: str | None = None
+    transcriptFilename: str | None = None
+    careerSurvey: dict[str, Any] | None = None
     skills: list[SkillEntry] | None = None
     projects: list[ProjectEntry] | None = None
     experiences: list[ExperienceEntry] | None = None
@@ -159,6 +167,22 @@ class SessionUpdate(BaseModel):
 
 class CareerPick(BaseModel):
     targetCareer: str
+
+
+class CareerSurveyAnswers(BaseModel):
+    interestData: float = 0
+    interestCloud: float = 0
+    interestBackend: float = 0
+    interestMl: float = 0
+    workStyle: str | None = None
+    tools: list[str] = Field(default_factory=list)
+    horizon: str | None = None
+    constraint: str | None = None
+
+
+class CareerSurveySubmit(BaseModel):
+    answers: CareerSurveyAnswers
+    confirmCareerId: str | None = None
 
 
 class TranscriptImportResult(BaseModel):

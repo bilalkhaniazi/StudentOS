@@ -18,15 +18,16 @@ If you already started it once, opening Docker Desktop is enough — StudentOS c
 
 `docker-compose.yml` is in **this folder** (the same place as this README). Do not nest it inside `app/`.
 
-## What works now (Slice A)
+## What works now
 
 You can:
 
 - Sign in with Google (GVSU student emails only)
 - Open **your** academic profile (Google name, current degree, majors, Banner badge if you have one)
 - Upload a Banner advising transcript and a resume (parsed into profile fields, then discarded)
+- Manually pick Applied CS M.S. or CS B.S. when the degree line is missing
 - See the Computer Science B.S. and Applied CS M.S. pathways, including graduate badges
-- Pick a target career: Data Engineer, Cloud Engineer, Backend Engineer, or ML Engineer
+- Take the Career survey for Match % rankings, skill-gap labels, and a complete path sketch (override allowed)
 - Browse GVSU computing courses, including credits, descriptions, and prerequisites when the public catalog lists them
 
 Transcript upload lists completed, in-progress, and still-needed catalog courses. Student ID and GPA are not saved. Your name is the Google sign-in name.
@@ -55,9 +56,9 @@ See [docs/README.md](docs/README.md) for the readable list. Short version:
 - [How to run locally](docs/local-run.md)
 - [Master’s proposal (PDF)](docs/masters-proposal.pdf)
 
-## This is not in Slice A yet
+## This is not ready yet
 
-Skill-gap labels, Career Match Score, personalized recommendations, job-market ingest, and campus SSO.
+Next-semester course packing (prereqs / credit cap), job-market ingest, and campus SSO.
 
 ## Privacy
 

@@ -87,6 +87,7 @@ export default function ProfilePage() {
         catalogYear: profile.catalogYear,
         remainingCredits: profile.remainingCredits,
         careerInterests: profile.careerInterests,
+        programId: profile.programId ?? null,
         skills: profile.skills,
         courses: profile.courses,
         summary: profile.summary,
@@ -226,6 +227,30 @@ export default function ProfilePage() {
               {profile.transcriptLevel ? (
                 <p className="text-muted-foreground">{profile.transcriptLevel}</p>
               ) : null}
+            </div>
+            <div className="grid gap-1.5">
+              <Label htmlFor="program">Program for pathways / career path</Label>
+              <select
+                id="program"
+                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-xs outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
+                value={profile.programId ?? ""}
+                onChange={(e) =>
+                  patch(
+                    "programId",
+                    e.target.value === ""
+                      ? null
+                      : (e.target.value as StudentProfile["programId"])
+                  )
+                }
+              >
+                <option value="">Detect from transcript</option>
+                <option value="applied-cs-ms">Applied Computer Science M.S.</option>
+                <option value="cs-bs">Computer Science B.S.</option>
+              </select>
+              <p className="text-xs text-muted-foreground">
+                Use this if Banner OCR missed the degree line. Career survey still needs a transcript
+                upload first.
+              </p>
             </div>
             <div>
               <p className="text-xs uppercase tracking-wide text-muted-foreground">Major</p>

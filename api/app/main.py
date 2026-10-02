@@ -16,6 +16,7 @@ from api.app import db
 from api.app.models import (
     BadgeEntry,
     CareerPick,
+    CareerSurveySubmit,
     IdentityEnsure,
     ProfileUpdate,
     ResumeImportResult,
@@ -24,12 +25,13 @@ from api.app.models import (
     CourseEntry,
 )
 from api.app.identity import empty_profile, profile_id_for_email
+from api.app.career_path import build_career_path_payload, enrich_career
 from pipeline.ingest import SCHEMA_SQL, fetch_catalog, save_snapshot, write_catalog, clean_frames
 
 app = FastAPI(
     title="StudentOS API",
-    version="0.4.0",
-    description="Slice A: GVSU CS catalog, Google login, Banner transcript import, and resume intake.",
+    version="0.6.0",
+    description="GVSU CS catalog, transcript/resume intake, and career survey path guidance.",
 )
 
 app.add_middleware(
@@ -150,6 +152,10 @@ def _node_to_profile(row: dict) -> dict:
     props.setdefault("resumeReadAt", None)
     props.setdefault("resumeParsed", None)
     props.setdefault("studentType", None)
+    props.setdefault("programId", None)
+    props.setdefault("transcriptReadAt", None)
+    props.setdefault("transcriptFilename", None)
+    props.setdefault("careerSurvey", None)
     props.setdefault("experiences", [])
     props.setdefault("education", [])
     props.setdefault("languages", [])
@@ -307,6 +313,62 @@ def set_career(profile_id: str, body: CareerPick) -> dict:
     return update_profile(profile_id, ProfileUpdate(targetCareer=body.targetCareer))
 
 
+@app.get("/api/profiles/{profile_id}/career-path")
+def get_career_path(profile_id: str) -> dict:
+    row = db.fetch_one(
+        "SELECT id, properties FROM nodes WHERE id = %s AND type = 'student'",
+        (f"student:{profile_id}",),
+    )
+    if not row:
+        raise HTTPException(status_code=404, detail="Profile not found.")
+    profile = _node_to_profile(row)
+    careers = list_careers()
+    catalog, programs = _catalog_and_programs()
+    return build_career_path_payload(profile, careers, programs, catalog)
+
+
+@app.post("/api/profiles/{profile_id}/career-survey")
+def submit_career_survey(profile_id: str, body: CareerSurveySubmit) -> dict:
+    from datetime import datetime, timezone
+
+    row = db.fetch_one(
+        "SELECT id, properties FROM nodes WHERE id = %s AND type = 'student'",
+        (f"student:{profile_id}",),
+    )
+    if not row:
+        raise HTTPException(status_code=404, detail="Profile not found.")
+    props = row["properties"]
+    if isinstance(props, str):
+        props = json.loads(props)
+    answers = body.answers.model_dump()
+    props["careerSurvey"] = {
+        "answeredAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
+        "answers": answers,
+    }
+    if body.confirmCareerId:
+        career = db.fetch_one(
+            "SELECT id FROM nodes WHERE id = %s AND type = 'career'",
+            (f"career:{body.confirmCareerId}",),
+        )
+        if not career:
+            raise HTTPException(status_code=400, detail="Unknown career to confirm.")
+        props["targetCareer"] = body.confirmCareerId
+    props["syntheticId"] = profile_id
+    db.execute(
+        "UPDATE nodes SET properties = %s WHERE id = %s",
+        (db.as_json(props), f"student:{profile_id}"),
+    )
+    catalog, programs = _catalog_and_programs()
+    profile = get_profile(profile_id)
+    return build_career_path_payload(
+        profile,
+        list_careers(),
+        programs,
+        catalog,
+        answers=answers,
+    )
+
+
 @app.get("/api/careers")
 def list_careers() -> list[dict]:
     rows = db.fetch_all(
@@ -318,7 +380,7 @@ def list_careers() -> list[dict]:
         if isinstance(props, str):
             props = json.loads(props)
         props["id"] = row["id"].removeprefix("career:")
-        out.append(props)
+        out.append(enrich_career(props))
     return out
 
 
@@ -467,7 +529,9 @@ async def import_transcript(
     parsed = attach_catalog(parsed, catalog, programs)
     payload = parsed_to_payload(parsed)
 
-    if not parsed.completed() and not parsed.in_progress():
+    has_courses = bool(parsed.completed() or parsed.in_progress())
+    has_degree = bool(payload.get("degreeLine") or payload.get("major") or payload.get("transcriptLevel"))
+    if not has_courses and not has_degree:
         return TranscriptImportResult(
             accepted=True,
             filename=name,
@@ -476,11 +540,20 @@ async def import_transcript(
             method=method,
             warnings=payload["warnings"],
             message=(
-                "The PDF was not stored. StudentOS could not find course rows. "
+                "The PDF was not stored. StudentOS could not find course rows or a degree line. "
                 "In Banner, open View Academic Transcript, choose Transcript Level and Advising, "
                 "then print the page and save it as a PDF."
             ),
         )
+
+    from datetime import datetime, timezone
+
+    stamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    program_guess = None
+    if payload.get("transcriptLevel") == "Masters":
+        program_guess = "applied-cs-ms"
+    elif payload.get("transcriptLevel") == "Undergraduate":
+        program_guess = "cs-bs"
 
     update = ProfileUpdate(
         transcriptLevel=payload["transcriptLevel"] or None,
@@ -493,6 +566,9 @@ async def import_transcript(
         badges=[BadgeEntry(**row) for row in payload.get("badges") or []],
         remainingCredits=payload["remainingCredits"],
         courses=[CourseEntry(**row) for row in payload["courses"]],
+        transcriptReadAt=stamp,
+        transcriptFilename=name,
+        programId=program_guess,
     )
     updated = update_profile(target_id, update)
     n_done = len(payload["completed"])
@@ -501,6 +577,17 @@ async def import_transcript(
     n_badges = len(payload.get("badges") or [])
     how = "printed page (OCR)" if method == "ocr" else "selectable text"
     badge_bit = f" and {n_badges} badge" + ("s" if n_badges != 1 else "") if n_badges else " and no Banner badge"
+    if not has_courses:
+        message = (
+            f"Read degree context from the advising PDF ({how}) with no course rows yet{badge_bit}. "
+            "The PDF was discarded. You can still take the career survey and see a starter pathway."
+        )
+    else:
+        message = (
+            f"Read {n_done} completed, {n_now} in progress, and {n_left} still needed "
+            f"from the catalog{badge_bit} ({how}). The PDF was discarded. "
+            "Student ID and GPA were not saved. Your name stays the Google sign-in name."
+        )
     return TranscriptImportResult(
         accepted=True,
         filename=name,
@@ -519,11 +606,7 @@ async def import_transcript(
         inProgress=payload["inProgress"],
         remaining=payload["remaining"],
         mappedCourses=payload["completed"] + payload["inProgress"],
-        message=(
-            f"Read {n_done} completed, {n_now} in progress, and {n_left} still needed "
-            f"from the catalog{badge_bit} ({how}). The PDF was discarded. "
-            "Student ID and GPA were not saved. Your name stays the Google sign-in name."
-        ),
+        message=message,
     )
 
 

@@ -43,6 +43,14 @@ CAREERS = [
     },
 ]
 
+# Keep JSON snapshot in sync for non-DB readers.
+try:
+    from api.app.career_path import enrich_career  # type: ignore
+
+    CAREERS = [enrich_career(c) for c in CAREERS]
+except Exception:
+    pass
+
 
 def _course(
     code: str,
@@ -80,8 +88,11 @@ def _bs_base(**kwargs: Any) -> dict[str, Any]:
         "major": "Computer Science",
         "majorAndDepartment": "Computer Science",
         "catalogYear": "2026-2027",
+        "programId": "cs-bs",
+        "transcriptReadAt": "2026-01-15T12:00:00+00:00",
         "targetCareer": None,
         "careerInterests": [],
+        "careerSurvey": None,
         "remainingCredits": None,
         "termCreditPreference": "softCap15",
         "skills": [],
@@ -114,8 +125,11 @@ def _ms_base(**kwargs: Any) -> dict[str, Any]:
         "major": "Applied Computer Science",
         "majorAndDepartment": "Applied Computer Science",
         "catalogYear": "2026-2027",
+        "programId": "applied-cs-ms",
+        "transcriptReadAt": "2026-01-15T12:00:00+00:00",
         "targetCareer": None,
         "careerInterests": [],
+        "careerSurvey": None,
         "remainingCredits": None,
         "termCreditPreference": "softCap15",
         "skills": [],
