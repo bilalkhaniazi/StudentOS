@@ -243,7 +243,7 @@ def extract_badges(lines: list[str]) -> list[dict]:
             cl = cur.lower()
             if cl.startswith("institution credit") or cl.startswith("attempt") or _PERIOD_RE.search(cur):
                 break
-            if "college of computing" in cl:
+            if "college of computing" in cl or "collegeofcomputing" in cl.replace(" ", ""):
                 college = "College of Computing"
                 continue
             if cl in {"college", "major", "department", "awarded", "degree date", "badge", "post-baccalaureate"}:

@@ -158,6 +158,8 @@ def list_profiles() -> list[dict]:
         SELECT id, properties FROM nodes
         WHERE type = 'student'
           AND COALESCE(properties->>'synthetic', 'false') <> 'true'
+          AND id NOT LIKE 'student:synth-%'
+          AND id <> 'student:demo-profile'
         ORDER BY id
         """
     )

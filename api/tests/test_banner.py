@@ -345,6 +345,7 @@ class BannerParseTests(unittest.TestCase):
         self.assertEqual(parsed.major, "Applied Computer Science")
         self.assertEqual([b["name"] for b in parsed.badges], ["Database Management"])
         self.assertEqual(parsed.badges[0]["kind"], "Post-Baccalaureate Badge")
+        self.assertEqual(parsed.badges[0]["college"], "College of Computing")
         self.assertEqual(parsed.badges[0]["awardedOn"], "05/02/2026")
 
 
