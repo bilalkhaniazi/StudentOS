@@ -6,6 +6,7 @@ import {
   formatDomainList,
   isDevLoginEnabled,
   isGoogleOAuthConfigured,
+  PUBLIC_APP_ORIGIN,
 } from "@/lib/auth-config";
 import { LoginCard } from "./login-card";
 
@@ -23,7 +24,7 @@ export default async function LoginPage({
 }) {
   const session = await auth();
   if (session?.user) {
-    redirect("/");
+    redirect(`${PUBLIC_APP_ORIGIN}/`);
   }
 
   const params = await searchParams;

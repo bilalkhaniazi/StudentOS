@@ -5,6 +5,10 @@ const api = process.env.API_INTERNAL_URL || "http://127.0.0.1:43124";
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["127.0.0.1", "localhost"],
   agentRules: false,
+  env: {
+    AUTH_URL: process.env.AUTH_URL || "http://127.0.0.1:43123",
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL || "http://127.0.0.1:43123",
+  },
   async rewrites() {
     const catalog = ["meta", "session", "profiles", "careers", "courses", "programs", "transcripts"];
     return [

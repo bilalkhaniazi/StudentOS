@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { AlertCircle, Ban, Loader2, ShieldAlert, WifiOff } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
+import { PUBLIC_APP_ORIGIN, toPublicAppUrl } from "@/lib/auth-config";
 
 function GoogleMark() {
   return (
@@ -125,7 +126,7 @@ export function LoginCard({
     setBusy("google");
     setLocalError(undefined);
     try {
-      await signIn("google", { callbackUrl: "/" });
+      await signIn("google", { callbackUrl: `${PUBLIC_APP_ORIGIN}/` });
     } catch {
       setLocalError("network");
       setBusy(null);
@@ -138,7 +139,7 @@ export function LoginCard({
     try {
       const result = await signIn("dev", {
         intent: "local",
-        callbackUrl: "/",
+        callbackUrl: `${PUBLIC_APP_ORIGIN}/`,
         redirect: false,
       });
       if (result?.error) {
@@ -146,7 +147,7 @@ export function LoginCard({
         setBusy(null);
         return;
       }
-      window.location.assign(result?.url ?? "/");
+      window.location.replace(toPublicAppUrl(result?.url ?? `${PUBLIC_APP_ORIGIN}/`));
     } catch {
       setLocalError("network");
       setBusy(null);

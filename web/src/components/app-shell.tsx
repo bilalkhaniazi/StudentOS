@@ -23,6 +23,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { createDemoProfile, getProfiles, getSession, setSession } from "@/lib/api";
+import { PUBLIC_APP_ORIGIN } from "@/lib/auth-config";
 import type { StudentProfile } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
@@ -57,6 +58,15 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     await setSession(id);
     setActiveId(id);
     router.refresh();
+  }
+
+  async function onSignOut() {
+    try {
+      await signOut({ redirect: false, callbackUrl: `${PUBLIC_APP_ORIGIN}/login` });
+    } catch {
+      // Still leave the signed-in page so a failed Auth.js call cannot stick the browser on localhost.
+    }
+    window.location.replace(`${PUBLIC_APP_ORIGIN}/login`);
   }
 
   async function onNewDemo() {
@@ -115,7 +125,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               size="sm"
               variant="ghost"
               className="hidden text-[color:var(--header-foreground)] hover:bg-white/10 hover:text-white md:inline-flex"
-              onClick={() => signOut({ callbackUrl: "/login" })}
+              onClick={onSignOut}
             >
               <LogOut className="size-3.5" />
               Sign out
@@ -170,7 +180,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     type="button"
                     variant="ghost"
                     className="w-full"
-                    onClick={() => signOut({ callbackUrl: "/login" })}
+                    onClick={onSignOut}
                   >
                     Sign out
                   </Button>

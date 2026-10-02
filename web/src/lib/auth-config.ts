@@ -6,6 +6,33 @@ export const PUBLIC_APP_ORIGIN = "http://127.0.0.1:43123";
 
 export const GOOGLE_CALLBACK_URL = `${PUBLIC_APP_ORIGIN}/api/auth/callback/google`;
 
+export function isLoopbackAlias(hostname: string): boolean {
+  return hostname === "localhost" || hostname === "0.0.0.0";
+}
+
+/** Keep every Auth.js redirect on 127.0.0.1. Google treats localhost as a different app. */
+export function toPublicAppUrl(url: string): string {
+  try {
+    const parsed = url.startsWith("/") ? new URL(url, PUBLIC_APP_ORIGIN) : new URL(url);
+    if (parsed.hostname === "127.0.0.1" || isLoopbackAlias(parsed.hostname)) {
+      return `${PUBLIC_APP_ORIGIN}${parsed.pathname}${parsed.search}${parsed.hash}`;
+    }
+  } catch {
+    // ignore invalid URLs
+  }
+  if (url.startsWith("/")) return `${PUBLIC_APP_ORIGIN}${url}`;
+  return `${PUBLIC_APP_ORIGIN}/`;
+}
+
+/** Bounce localhost/0.0.0.0 onto 127.0.0.1 and drop the false Configuration error that host mismatch causes. */
+export function publicOriginFromRequest(pathname: string, search = ""): URL {
+  const dest = new URL(`${pathname}${search}`, PUBLIC_APP_ORIGIN);
+  if (dest.searchParams.get("error")?.toLowerCase() === "configuration") {
+    dest.searchParams.delete("error");
+  }
+  return dest;
+}
+
 /**
  * Single place to change which emails may sign in.
  *

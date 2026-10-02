@@ -12,8 +12,8 @@ import {
   PUBLIC_APP_ORIGIN,
 } from "@/lib/auth-config";
 
-process.env["AUTH_URL"] ??= PUBLIC_APP_ORIGIN;
-process.env["NEXTAUTH_URL"] ??= PUBLIC_APP_ORIGIN;
+process.env["AUTH_URL"] = PUBLIC_APP_ORIGIN;
+process.env["NEXTAUTH_URL"] = PUBLIC_APP_ORIGIN;
 
 export const { handlers, auth, signIn, signOut } = NextAuth(() => {
   const providers = [];
@@ -55,6 +55,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth(() => {
     ...authConfig,
     providers,
     callbacks: {
+      ...authConfig.callbacks,
       async signIn({ user, account }) {
         if (account?.provider === "dev") {
           return isDevLoginEnabled();
