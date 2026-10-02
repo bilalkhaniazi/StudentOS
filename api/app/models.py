@@ -72,6 +72,7 @@ class StudentProfile(BaseModel):
 class ProfileUpdate(BaseModel):
     displayName: str | None = None
     transcriptLevel: Literal["Undergraduate", "Masters"] | None = None
+    transcriptType: str | None = None
     college: str | None = None
     degreeLine: str | None = None
     major: str | None = None
@@ -101,4 +102,15 @@ class TranscriptImportResult(BaseModel):
     filename: str | None = None
     message: str
     parsed: bool = False
+    profileId: str | None = None
+    transcriptLevel: str | None = None
+    college: str | None = None
+    degreeLine: str | None = None
+    major: str | None = None
+    remainingCredits: float | None = None
+    method: str | None = None
+    warnings: list[str] = Field(default_factory=list)
+    completed: list[CourseEntry] = Field(default_factory=list)
+    inProgress: list[CourseEntry] = Field(default_factory=list)
+    remaining: list[CourseEntry] = Field(default_factory=list)
     mappedCourses: list[dict[str, Any]] = Field(default_factory=list)

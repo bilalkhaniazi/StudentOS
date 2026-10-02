@@ -53,7 +53,7 @@ If Windows asks to allow Docker or a network, allow it.
 
 Those addresses are on **your** PC (`127.0.0.1` means this computer). Use Microsoft Edge or Chrome.
 
-The first screen is Google sign-in. Use a GVSU account (`@mail.gvsu.edu` or `@gvsu.edu`). After that, pick a synthetic student in the header (try **CS B.S. · Data Engineer example**), choose **Data Engineer** under Career, and browse **Courses**.
+The first screen is Google sign-in. Use a GVSU account (`@mail.gvsu.edu` or `@gvsu.edu`). After that, pick a synthetic student in the header (try **CS B.S. · Data Engineer example**), choose **Data Engineer** under Career, and browse **Courses**. On Profile you can upload a Banner advising transcript; StudentOS reads it and does not keep the PDF.
 
 ## 5. Stop it
 

@@ -28,7 +28,7 @@ You can:
 - Pick a target career: Data Engineer, Cloud Engineer, Backend Engineer, or ML Engineer
 - Browse GVSU CIS courses, including credits and prerequisites when the public catalog lists them
 
-Transcript upload accepts a file locally and discards it. Parsing is not built yet — add courses by catalog code instead.
+Transcript upload reads a Banner advising PDF in memory and discards it. Completed, in-progress, and still-needed catalog courses are listed on Profile. Name, student ID, and GPA are not saved.
 
 ## Folder layout
 
@@ -56,7 +56,7 @@ See [docs/README.md](docs/README.md) for the readable list. Short version:
 
 ## This is not in Slice A yet
 
-Skill-gap labels, Career Match Score, personalized recommendations, job-market ingest, campus SSO, and a working transcript parser.
+Skill-gap labels, Career Match Score, personalized recommendations, job-market ingest, and campus SSO.
 
 ## Privacy
 

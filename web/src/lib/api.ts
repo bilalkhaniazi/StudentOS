@@ -1,4 +1,4 @@
-import type { Career, CatalogCourse, Meta, Session, StudentProfile } from "./types";
+import type { Career, CatalogCourse, Meta, Session, StudentProfile, TranscriptImportResult } from "./types";
 
 async function parseError(res: Response): Promise<string> {
   const text = await res.text();
@@ -55,15 +55,11 @@ export const getCourses = (params: Record<string, string | undefined> = {}) => {
 export const getCourse = (code: string) =>
   api<CatalogCourse>(`/api/courses/${encodeURIComponent(code)}`);
 
-export async function importTranscript(file: File) {
+export async function importTranscript(file: File, profileId?: string) {
   const body = new FormData();
   body.append("file", file);
-  return api<{
-    accepted: boolean;
-    filename: string | null;
-    message: string;
-    parsed: boolean;
-  }>("/api/transcripts/import", { method: "POST", body });
+  const suffix = profileId ? `?profile_id=${encodeURIComponent(profileId)}` : "";
+  return api<TranscriptImportResult>(`/api/transcripts/import${suffix}`, { method: "POST", body });
 }
 
 export function courseHref(code: string) {

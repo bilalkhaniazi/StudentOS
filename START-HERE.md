@@ -43,7 +43,7 @@ The first screen is **student Google sign-in**. You cannot open the catalog unti
 3. Sign in with a GVSU Google account: **@mail.gvsu.edu** or **@gvsu.edu**.
 4. After Google finishes, StudentOS opens the existing profile and catalog (Slice A).
 
-Pick a synthetic student in the header (try **CS B.S. · Data Engineer example**), choose **Data Engineer** under Career, and browse **Courses**. Use **Sign out** when you are done.
+Pick a synthetic student in the header (try **CS B.S. · Data Engineer example**), choose **Data Engineer** under Career, and browse **Courses**. On **Profile**, upload a Banner advising transcript PDF (the file is read and discarded). Use **Sign out** when you are done.
 
 A simple “is the server up?” page: [http://127.0.0.1:43124/health](http://127.0.0.1:43124/health)
 
@@ -82,4 +82,4 @@ You can also quit Docker Desktop when you are finished. Open Docker Desktop agai
 
 More detail: [docs/local-run.md](docs/local-run.md).
 
-Do not put real transcripts, student IDs, or GPAs into this folder, email, chat, or git.
+Do not put real transcripts, student IDs, or GPAs into this folder, email, chat, or git. Upload a transcript only in the Profile page; StudentOS does not save the PDF.

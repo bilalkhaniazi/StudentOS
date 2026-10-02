@@ -81,6 +81,24 @@ export type Session = {
   note?: string;
 };
 
+export type TranscriptImportResult = {
+  accepted: boolean;
+  filename: string | null;
+  message: string;
+  parsed: boolean;
+  profileId?: string | null;
+  transcriptLevel?: string | null;
+  college?: string | null;
+  degreeLine?: string | null;
+  major?: string | null;
+  remainingCredits?: number | null;
+  method?: string | null;
+  warnings: string[];
+  completed: CourseEntry[];
+  inProgress: CourseEntry[];
+  remaining: CourseEntry[];
+};
+
 export type Meta = {
   catalog_year?: string;
   ingested_at?: string;

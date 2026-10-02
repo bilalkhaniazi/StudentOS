@@ -2,13 +2,14 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
+import { FileUp, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { EmptyState, ErrorState } from "@/components/empty-state";
 import {
   createDemoProfile,
@@ -30,6 +31,7 @@ export default function ProfilePage() {
   const [grade, setGrade] = useState("B");
   const [term, setTerm] = useState("Fall 2026");
   const [status, setStatus] = useState<CourseEntry["status"]>("completed");
+  const [importing, setImporting] = useState(false);
 
   async function load() {
     setLoading(true);
@@ -126,13 +128,23 @@ export default function ProfilePage() {
     );
   }
 
-  async function onTranscript(file: File | undefined) {
-    if (!file) return;
+  async function onTranscript(file: File | undefined, input: HTMLInputElement) {
+    if (!file || !profile) return;
+    setImporting(true);
     try {
-      const result = await importTranscript(file);
-      toast.message(result.message);
+      const result = await importTranscript(file, profile.syntheticId);
+      input.value = "";
+      if (!result.parsed) {
+        toast.error(result.message);
+        return;
+      }
+      const next = await getProfile(profile.syntheticId);
+      setProfile(next);
+      toast.success(result.message);
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Upload failed");
+    } finally {
+      setImporting(false);
     }
   }
 
@@ -167,8 +179,8 @@ export default function ProfilePage() {
           </p>
           <h1 className="mt-2 font-heading text-3xl">Academic profile</h1>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-            Banner-shaped fields (level, college, major, course rows with letter grades). No names,
-            student IDs, or GPAs from a real transcript belong here.
+            Upload a Banner advising transcript or add catalog courses by hand. StudentOS reads the PDF
+            in memory and discards it. Name, student ID, and GPA are not saved.
           </p>
         </div>
         <div className="flex gap-2">
@@ -315,19 +327,56 @@ export default function ProfilePage() {
           <CardHeader>
             <CardTitle>Transcript import</CardTitle>
             <CardDescription>
-              Banner advising PDF is accepted locally and discarded. Parsing is stubbed in this slice.
+              Anyone signed in can upload their own Banner advising PDF. The file is read, then thrown
+              away — it is not stored on this PC’s StudentOS folder or in git.
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-3 text-sm">
-            <Input
-              type="file"
-              accept="application/pdf,.pdf"
-              onChange={(e) => onTranscript(e.target.files?.[0])}
-            />
-            <p className="text-muted-foreground">
-              Map courses below using catalog codes (Subject + 3-digit number). Do not paste names,
-              G-numbers, or GPA lines into this form.
-            </p>
+          <CardContent className="space-y-4 text-sm">
+            <Alert>
+              <FileUp />
+              <AlertTitle>How to get the PDF from Banner</AlertTitle>
+              <AlertDescription>
+                <ol className="mt-2 list-decimal space-y-1 pl-4 text-muted-foreground">
+                  <li>
+                    Open{" "}
+                    <a
+                      className="font-medium text-foreground underline-offset-2 hover:underline"
+                      href="https://www.gvsu.edu/banner/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      https://www.gvsu.edu/banner/
+                    </a>
+                  </li>
+                  <li>Sign in with your GVSU email and password (on Banner, not in StudentOS).</li>
+                  <li>Choose Student, then Student Records, then View Academic Transcript.</li>
+                  <li>Select Transcript Level (Undergraduate or Masters) and Transcript Type (Advising).</li>
+                  <li>Print the page and save it as a PDF. Name it whatever you like.</li>
+                  <li>Upload that PDF here.</li>
+                </ol>
+              </AlertDescription>
+            </Alert>
+            <div className="grid gap-1.5">
+              <Label htmlFor="transcript">PDF file</Label>
+              <Input
+                id="transcript"
+                type="file"
+                accept="application/pdf,.pdf"
+                disabled={importing}
+                onChange={(e) => onTranscript(e.target.files?.[0], e.currentTarget)}
+              />
+            </div>
+            {importing ? (
+              <p className="flex items-center gap-2 text-muted-foreground">
+                <Loader2 className="size-4 animate-spin" />
+                Reading the transcript. The file is not being saved.
+              </p>
+            ) : (
+              <p className="text-muted-foreground">
+                Completed, in-progress, and still-needed catalog courses are listed below. You can still
+                add or remove rows by catalog code.
+              </p>
+            )}
           </CardContent>
         </Card>
       </div>
@@ -396,46 +445,93 @@ export default function ProfilePage() {
           {profile.courses.length === 0 ? (
             <EmptyState
               title="No courses on this record"
-              body="Search the ingested CIS catalog above, or switch to synth-bs-data-eng to see a filled Data Engineer example."
+              body="Upload a Banner advising transcript, search the ingested CIS catalog above, or switch to a synthetic student to see a filled example."
             />
           ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-sm">
-                <thead className="text-xs text-muted-foreground">
-                  <tr>
-                    <th className="py-2 pr-3">Code</th>
-                    <th className="py-2 pr-3">Title</th>
-                    <th className="py-2 pr-3">Status</th>
-                    <th className="py-2 pr-3">Term</th>
-                    <th className="py-2 pr-3">Grade</th>
-                    <th className="py-2 pr-3">Cr</th>
-                    <th />
-                  </tr>
-                </thead>
-                <tbody>
-                  {profile.courses.map((row, index) => (
-                    <tr key={`${row.code}-${row.status}-${index}`} className="border-t">
-                      <td className="py-2 pr-3 font-mono text-xs">{row.code}</td>
-                      <td className="py-2 pr-3">{row.title}</td>
-                      <td className="py-2 pr-3">
-                        <Badge variant="outline">{row.status.replace("_", " ")}</Badge>
-                      </td>
-                      <td className="py-2 pr-3">{row.term}</td>
-                      <td className="py-2 pr-3">{row.gradeLetter ?? "—"}</td>
-                      <td className="py-2 pr-3">{row.creditHours ?? "—"}</td>
-                      <td className="py-2">
-                        <Button type="button" size="xs" variant="ghost" onClick={() => removeCourse(index)}>
-                          Remove
-                        </Button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="space-y-6">
+              <CourseGroup
+                title="Completed"
+                empty="No completed courses on this record."
+                rows={profile.courses
+                  .map((row, index) => ({ row, index }))
+                  .filter(({ row }) => row.status === "completed")}
+                onRemove={removeCourse}
+              />
+              <CourseGroup
+                title="In progress"
+                empty="No in-progress courses. Banner lists these under Course(s) in Progress."
+                rows={profile.courses
+                  .map((row, index) => ({ row, index }))
+                  .filter(({ row }) => row.status === "in_progress")}
+                onRemove={removeCourse}
+              />
+              <CourseGroup
+                title="Still needed"
+                empty="No remaining required catalog courses. Electives are not listed as required."
+                rows={profile.courses
+                  .map((row, index) => ({ row, index }))
+                  .filter(({ row }) => row.status === "planned")}
+                onRemove={removeCourse}
+              />
             </div>
           )}
         </CardContent>
       </Card>
+    </div>
+  );
+}
+
+function CourseGroup({
+  title,
+  empty,
+  rows,
+  onRemove,
+}: {
+  title: string;
+  empty: string;
+  rows: { row: CourseEntry; index: number }[];
+  onRemove: (index: number) => void;
+}) {
+  return (
+    <div>
+      <div className="mb-2 flex items-baseline justify-between gap-3">
+        <h3 className="font-heading text-base">{title}</h3>
+        <p className="text-xs text-muted-foreground">{rows.length}</p>
+      </div>
+      {rows.length === 0 ? (
+        <p className="text-sm text-muted-foreground">{empty}</p>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-sm">
+            <thead className="text-xs text-muted-foreground">
+              <tr>
+                <th className="py-2 pr-3">Code</th>
+                <th className="py-2 pr-3">Title</th>
+                <th className="py-2 pr-3">Term</th>
+                <th className="py-2 pr-3">Grade</th>
+                <th className="py-2 pr-3">Cr</th>
+                <th />
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map(({ row, index }) => (
+                <tr key={`${row.code}-${row.status}-${index}`} className="border-t">
+                  <td className="py-2 pr-3 font-mono text-xs">{row.code}</td>
+                  <td className="py-2 pr-3">{row.title}</td>
+                  <td className="py-2 pr-3">{row.term ?? "—"}</td>
+                  <td className="py-2 pr-3">{row.gradeLetter ?? "—"}</td>
+                  <td className="py-2 pr-3">{row.creditHours ?? "—"}</td>
+                  <td className="py-2">
+                    <Button type="button" size="xs" variant="ghost" onClick={() => onRemove(index)}>
+                      Remove
+                    </Button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }
