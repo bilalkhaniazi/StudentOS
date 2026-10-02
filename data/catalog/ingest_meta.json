@@ -1,0 +1,19 @@
+{
+  "catalog_year": "2026-2027",
+  "ingested_at": "2026-10-02T04:59:49.287769+00:00",
+  "source": "GVSU public catalog",
+  "attribution": "Grand Valley State University public catalog. Structured fields only. Not official SIS.",
+  "subject_pages": {
+    "CIS": "https://www.gvsu.edu/catalog/subject/computer-information-systems.htm",
+    "AI": "https://www.gvsu.edu/catalog/subject/artificial-intelligence.htm",
+    "CYB": "https://www.gvsu.edu/catalog/subject/cybersecurity.htm",
+    "SE": "https://www.gvsu.edu/catalog/subject/software-engineering.htm",
+    "HCC": "https://www.gvsu.edu/catalog/subject/human-centered-computing.htm"
+  },
+  "program_pages": {
+    "cs-bs": "https://www.gvsu.edu/catalog/program/bachelor-of-science-in-computer-science.htm",
+    "applied-cs-ms": "https://www.gvsu.edu/catalog/program/master-of-science-in-applied-computer-science.htm"
+  },
+  "course_count": 181,
+  "program_count": 2
+}

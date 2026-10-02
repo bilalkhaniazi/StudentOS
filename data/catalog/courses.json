@@ -1,0 +1,4220 @@
+[
+  {
+    "code": "AI 101",
+    "subject": "AI",
+    "course_number": "101",
+    "title": "AI Literacy: Understanding Artificial Intelligence",
+    "description": "The increase of connected technology has dramatically altered our relationship with data. Collected data enables artificial intelligence (AI) models that enhance businesses and our personal lives. This course examines various AI models, how data informs and influences their behavior, and the ethical/societal issues that naturally arise from machines making decisions. Offered fall and winter semesters.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-265.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 102",
+    "subject": "AI",
+    "course_number": "102",
+    "title": "Artificial Intelligence and the Environment",
+    "description": "Exploration of environmental and climatological challenges and opportunities of AI including AI-enabled environmental solutions, opportunities and hazards of AI data centers, and energy requirements. The course takes a broad approach to AI-related environmental benefits, hazards, mitigation strategies, energy use, and related costs including strategies with the help of AI. Offered every semester.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-102.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 201",
+    "subject": "AI",
+    "course_number": "201",
+    "title": "Introduction to Artificial Intelligence",
+    "description": "This course gives an overview of different learning techniques and algorithms used in Artificial Intelligence (AI). The components involved in building, training, and utilizing AI models will be covered as well as the impact of bias, ethical, and societal issues.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-365.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence",
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "AI 402",
+    "subject": "AI",
+    "course_number": "402",
+    "title": "Generative Artificial Intelligence",
+    "description": "In this course, students will survey the growing field of Generative Artificial Intelligence, exploring techniques for generating data such as images, text and video using models like generative adversarial networks (GAN), variational autoencoders, and large language models. The underlying frameworks and algorithms of building cutting-edge generative models will be explored. Offered winter semester. Dual-listed with AI 502 .",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered winter semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-402.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence",
+      "networking",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 411",
+    "subject": "AI",
+    "course_number": "411",
+    "title": "AI Ethics and Bias",
+    "description": "This course explores the ethical challenges and biases in Artificial Intelligence (AI) systems, focusing on data, algorithmic, and decision biases. Students will examine fairness metrics, bias mitigation strategies, generative AI biases, and societal impacts, utilizing interdisciplinary approaches to create responsible, equitable artificial intelligence systems. Offered fall and winter semesters. Dual-listed with AI 511",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "AI 201",
+    "prerequisite_codes": [
+      "AI 201"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-411.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 421",
+    "subject": "AI",
+    "course_number": "421",
+    "title": "Applied Computer Vision",
+    "description": "This course will cover essential computer vision techniques ranging from digital image processing to advanced deep learning architectures such as convolutional neural networks, transformers and generative networks. This course blends theory and practice empowering you with the knowledge and expertise to apply state-of-the-art computer vision technologies to real-world applications. Offered fall and winter semesters. Dual-listed with AI 521",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 378",
+    "prerequisite_codes": [
+      "CIS 378"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-421.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "networking"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 431",
+    "subject": "AI",
+    "course_number": "431",
+    "title": "Natural Language Processing",
+    "description": "The course covers fundamental concepts involved in the field of natural language processing. It focuses on different embedding and text representation techniques, transformer architectures, and objectives used in language models. It also provides understanding on how to pretrain and fine tune models, apply transfer learning techniques, and design real-world applications. Offered fall and winter semesters. Dual-listed with AI 531",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 378",
+    "prerequisite_codes": [
+      "CIS 378"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-431.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 441",
+    "subject": "AI",
+    "course_number": "441",
+    "title": "Edge AI",
+    "description": "This course explores how to deploy machine learning models on resource-constrained devices. Topics include model optimization, edge computing, and real-time AI applications for Internet of Things (IoT), robotics, and smart devices. Offered winter semester. Dual-listed with AI 541",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 378",
+    "prerequisite_codes": [
+      "CIS 378"
+    ],
+    "offered": "Offered winter semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-441.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 445",
+    "subject": "AI",
+    "course_number": "445",
+    "title": "Machine Learning Operations",
+    "description": "Machine Learning Operations (MLOps) focuses on the deployment, monitoring, and management of machine learning models in production environments. This course covers end-to-end model lifecycle operations, including continuous integration/continuous deployment (CI/CD) pipelines, versioning, model governance, and infrastructure automation using tools like Weights & Biases(W&B), Docker, Kubernetes etc. Offered fall and winter semesters. Dual-listed with AI 545",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Bachelors: CIS 350 and AI 201",
+    "prerequisite_codes": [
+      "CIS 350",
+      "AI 201"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-445.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "data-engineering",
+      "machine-learning",
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 451",
+    "subject": "AI",
+    "course_number": "451",
+    "title": "Reinforcement Learning",
+    "description": "This course explores foundational and advanced reinforcement learning techniques, including Markov decision processes, dynamic programming, Monte Carlo methods, and model-free approaches like Q(Quality)-learning. It covers continuous state spaces with state aggregation and delves into topics such as deep Q(Quality)-learning, Advantage Actor-Critic, etc. applicable to real-world environments. Dual-listed with AI 551 . Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 378",
+    "prerequisite_codes": [
+      "CIS 378"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-451.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 488",
+    "subject": "AI",
+    "course_number": "488",
+    "title": "Introduction to AI and Healthcare",
+    "description": "This course explores artificial intelligence (AI) applications in healthcare and life sciences. Students will learn machine learning, deep learning, medical imaging analysis, clinical text processing, and graph-based bioinformatics. Ethical, regulatory, and privacy challenges in healthcare AI will also be discussed through real-world case studies and hands-on projects. Offered every semester. Dual-listed with AI 588",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 335 or CIS 378 , or instructor approval",
+    "prerequisite_codes": [
+      "CIS 335",
+      "CIS 378"
+    ],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-488.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 489",
+    "subject": "AI",
+    "course_number": "489",
+    "title": "Artificial Intelligence in Medical Imaging Informatics",
+    "description": "This course explores AI applications in medical imaging. Topics include Digital Imaging and Communications in Medicine (DICOM), Picture Archiving and Communication Systems (PACS), deep learning, radiomics, and image workflows. Students will analyze image data, develop AI models, and examine ethical and regulatory issues through hands-on labs and real-world case studies. Dual-listed with AI 589 . Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 335 , CIS 378 , or instructor approval",
+    "prerequisite_codes": [
+      "CIS 335",
+      "CIS 378"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-489.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 495",
+    "subject": "AI",
+    "course_number": "495",
+    "title": "Artificial Intelligence Senior Project",
+    "description": "Individual or group Capstone projects that synthesize the breadth and depth of artificial intelligence best practices covered in B.S. in Artificial Intelligence (AI) program. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 350 and CIS 378 or both AI 402 and HCC 431",
+    "prerequisite_codes": [
+      "CIS 350",
+      "CIS 378",
+      "AI 402",
+      "HCC 431"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-495.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 501",
+    "subject": "AI",
+    "course_number": "501",
+    "title": "Introduction to Artificial Intelligence",
+    "description": "This course gives an overview of different learning techniques, and algorithms used in Artificial Intelligence (AI). It helps students understand the components involved in building, training, and utilizing AI models. Students will learn about biases, ethical, and societal issues that arise from using AI models for making real-world decisions. Offered fall and winter semesters.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-501.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "artificial-intelligence",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 502",
+    "subject": "AI",
+    "course_number": "502",
+    "title": "Generative Artificial Intelligence",
+    "description": "In this course, students will survey the growing field of Generative Artificial Intelligence, exploring techniques for generating data such as images, text and video using models like generative adversarial networks (GAN), variational autoencoders, and large language models. The underlying frameworks and algorithms of building cutting-edge generative models will be explored. Offered winter semester. Dual-listed with AI 402 .",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered winter semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-502.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "artificial-intelligence",
+      "networking",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 511",
+    "subject": "AI",
+    "course_number": "511",
+    "title": "AI Ethics and Bias",
+    "description": "This course explores the ethical challenges and biases in Artificial Intelligence (AI) systems, focusing on data, algorithmic, and decision biases. Students will examine fairness metrics, bias mitigation strategies, generative AI biases, and societal impacts, utilizing interdisciplinary approaches to create responsible, equitable artificial intelligence systems. Offered fall and winter semesters. Dual-listed with AI 411",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "AI 501",
+    "prerequisite_codes": [
+      "AI 501"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-511.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 521",
+    "subject": "AI",
+    "course_number": "521",
+    "title": "Applied Computer Vision",
+    "description": "This course will cover essential computer vision techniques ranging from digital image processing to advanced deep learning architectures such as Convolutional Neural Networks, transformers and generative networks. This course blends theory and practice empowering you with the knowledge and expertise to apply state-of-the-art computer vision technologies to real-world applications. Offered fall and winter semesters. Dual-listed with AI 421",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 678",
+    "prerequisite_codes": [
+      "CIS 678"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-521.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "networking"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 531",
+    "subject": "AI",
+    "course_number": "531",
+    "title": "Natural Language Processing",
+    "description": "The course covers fundamental concepts involved in the field of natural language processing. It focuses on different embedding and text representation techniques, transformer architectures, and objectives used in language models. It also provides understanding on how to pretrain and fine tune models, apply transfer learning techniques, and design real-world applications. Offered fall and winter semesters. Dual-listed with AI 431",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 678",
+    "prerequisite_codes": [
+      "CIS 678"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-531.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 541",
+    "subject": "AI",
+    "course_number": "541",
+    "title": "Edge AI",
+    "description": "This course explores how to deploy machine learning models on resource-constrained devices. Topics include model optimization, edge computing, and real-time AI applications for Internet of Things (IoT), robotics, and smart devices. Offered winter semester. Dual-listed with AI 441",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 678",
+    "prerequisite_codes": [
+      "CIS 678"
+    ],
+    "offered": "Offered winter semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-541.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 545",
+    "subject": "AI",
+    "course_number": "545",
+    "title": "Machine Learning Operations",
+    "description": "Machine Learning Operations (MLOps) focuses on the deployment, monitoring, and management of machine learning models in production environments. This course covers end-to-end model lifecycle operations, including Continuous Integration/Continuous Deployment (CI/CD) pipelines, versioning, model governance, and infrastructure automation using tools like Weights & Biases(W&B), Docker, Kubernetes etc. Offered fall and winter semesters. Dual-listed with AI 445",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "SE 511 and AI 501",
+    "prerequisite_codes": [
+      "SE 511",
+      "AI 501"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-545.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "data-engineering",
+      "machine-learning",
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 551",
+    "subject": "AI",
+    "course_number": "551",
+    "title": "Reinforcement Learning",
+    "description": "This course explores foundational and advanced reinforcement learning techniques, including Markov decision processes, dynamic programming, Monte Carlo methods, and model-free approaches like Q(Quality)-learning. It covers continuous state spaces with state aggregation and delves into topics such as deep Q(Quality)-learning, Advantage Actor-Critic, etc. applicable to real-world environments. Dual-listed with AI 451 . Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 678",
+    "prerequisite_codes": [
+      "CIS 678"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-551.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "artificial-intelligence",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 588",
+    "subject": "AI",
+    "course_number": "588",
+    "title": "Introduction to AI and Healthcare",
+    "description": "This course explores artificial intelligence (AI) applications in healthcare and life sciences. Students will learn machine learning, deep learning, medical imaging analysis, clinical text processing, and graph-based bioinformatics. Ethical, regulatory, and privacy challenges in healthcare AI will also be discussed through real-world case studies and hands-on projects. Offered every semester. Dual-listed with AI 488",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 635 or CIS 678 , or instructor approval",
+    "prerequisite_codes": [
+      "CIS 635",
+      "CIS 678"
+    ],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-588.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "AI 589",
+    "subject": "AI",
+    "course_number": "589",
+    "title": "Artificial Intelligence in Medical Imaging Informatics",
+    "description": "This course explores AI applications in medical imaging. Topics include Digital Imaging and Communications in Medicine (DICOM), Picture Archiving and Communication Systems (PACS), deep learning, radiomics, and image workflows. Students will analyze image data, develop AI models, and examine ethical and regulatory issues through hands-on labs and real-world case studies. Dual-listed with AI 489 . Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 635 , CIS 678 , or instructor approval",
+    "prerequisite_codes": [
+      "CIS 635",
+      "CIS 678"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/ai-589.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 100",
+    "subject": "CIS",
+    "course_number": "100",
+    "title": "Computing Exploration Seminar",
+    "description": "First-year seminar for incoming students to learn about the field of computing and develop skills to be successful. Through panels, presentations, and site visits, students learn more about various computing career paths, different computing subfields, including interdisciplinary computing, experiential learning opportunities, and College of Computing engagement and success initiatives. Offered fall and winter semesters.",
+    "credits_min": 1.0,
+    "credits_max": 1.0,
+    "credits_text": "1",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-100.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 101",
+    "subject": "CIS",
+    "course_number": "101",
+    "title": "Thriving in our Digital World",
+    "description": "Computing technology has a profound influence in our society. Students work together to use technology for creative expression, write computer programs to solve problems, use digital tools to make meaning from vast amounts of information and to understand how the Internet supports modern communication. Fulfills General Education Foundations - Mathematical Sciences. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-101.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 150",
+    "subject": "CIS",
+    "course_number": "150",
+    "title": "Introduction to Computing",
+    "description": "Basic principles of computing, including study of the major components of a computer system. Introduction to software packages such as word processors, spreadsheets, databases, and languages. Offered every semester.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-150.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 159",
+    "subject": "CIS",
+    "course_number": "159",
+    "title": "Object Oriented Programming for Engineers",
+    "description": "Introduction to object-oriented (OO) programming for students with previous programming experience in a procedural language such as C. Topics include classes, objects, arrays, strings, complex selection and loop statements, I/O, testing, unit testing tools, and debugging. Offered fall and winter semesters",
+    "credits_min": 1.0,
+    "credits_max": 1.0,
+    "credits_text": "1",
+    "prerequisites_text": "EGR 185",
+    "prerequisite_codes": [
+      "EGR 185"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-159.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 160",
+    "subject": "CIS",
+    "course_number": "160",
+    "title": "Learn to Code in Python",
+    "description": "The ability to apply computation to address challenging problems is a critical skill in any discipline. Students will develop programming and computational skills emphasizing problem solving, logical inference, and algorithmic thinking to solve specific problems in the areas of the arts, humanities, health care, and business. Fulfills General Education Foundations - Mathematical Sciences. Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 108 and MTH 109 (or MTH 109 )",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-160.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 161",
+    "subject": "CIS",
+    "course_number": "161",
+    "title": "Computing for Data Science Applications I",
+    "description": "This course provides an introduction to the use of computers to analyze, model, simulate, and solve problems in various mathematical and scientific disciplines. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Both MTH 122 and MTH 123 ; or MTH 124 ; or assignment through Grand Valley math placement",
+    "prerequisite_codes": [
+      "MTH 122",
+      "MTH 123",
+      "MTH 124"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-161.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 162",
+    "subject": "CIS",
+    "course_number": "162",
+    "title": "Computer Science I",
+    "description": "Introduction to programming and computational thinking through lab and lecture. Simple and structured data types and program control structures. Problem analysis, algorithm design and implementation using a high-level language. Offered every semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-162.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 163",
+    "subject": "CIS",
+    "course_number": "163",
+    "title": "Computer Science II",
+    "description": "Intermediate object-oriented programming including inheritance, abstract classes, interfaces, and exception handling. An introduction to algorithms and data structures, basic analysis of performance using Big O notation, recursion, searching, sorting, linked lists, stacks, and queues. Offered every semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "MTH 122 or MTH 124 or placement into MTH 201 or above through Grand Valley math placement, and a C or better in either CIS 159 or CIS 162",
+    "prerequisite_codes": [
+      "MTH 122",
+      "MTH 124",
+      "MTH 201",
+      "CIS 159",
+      "CIS 162"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-163.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 164",
+    "subject": "CIS",
+    "course_number": "164",
+    "title": "Computing for Data Science Applications II",
+    "description": "Intermediate programming for data and science applications. Topics include references, using application programming interfaces (APIs), online processing of data, recursion, and computational complexity and its impacts on program design. Introduction to objects/classes primarily from the perspective of APIs. Introduction to the Linux command line including utilities, scripting and version control. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 161 with a C or better",
+    "prerequisite_codes": [
+      "CIS 161"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-164.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 180",
+    "subject": "CIS",
+    "course_number": "180",
+    "title": "Special Topics in Computer Information Systems",
+    "description": "Readings, lectures, discussions, or labs (or any combination) in specific computer science topics at an introductory or elementary level. Offered on demand",
+    "credits_min": 1.0,
+    "credits_max": 4.0,
+    "credits_text": "1 to 4",
+    "prerequisites_text": "Permission of the instructor",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-180.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 198",
+    "subject": "CIS",
+    "course_number": "198",
+    "title": "First Year Computing Studio",
+    "description": "First year studio where students work on individual or group projects in the computing domain. Offered fall and winter semesters. Corequisite: CIS 100 .",
+    "credits_min": 2.0,
+    "credits_max": 2.0,
+    "credits_text": "2",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-198.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 221",
+    "subject": "CIS",
+    "course_number": "221",
+    "title": "Excel Concepts and Applications I",
+    "description": "Introduces students to fundamental concepts of spreadsheets using Microsoft Excel. It explores the structure of the Excel workbook; creating formulas and using functions, generating charts, and conducting data analysis. Practical business applications and business problem-solving techniques will be an integral part of this course. Offered every semester",
+    "credits_min": 1.5,
+    "credits_max": 1.5,
+    "credits_text": "1.5",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement, sophomore standing, declared business major or minor or CIS majors, or by permit",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-221.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 230",
+    "subject": "CIS",
+    "course_number": "230",
+    "title": "Hardware and Software",
+    "description": "Principles of computer hardware and software will be presented with the theoretical underpinnings, installation, and configuration. This course provides the hardware/software technology background to enable systems development personnel to understand tradeoffs in computer architecture for effective use in a business environment including system architecture for networked systems and operating systems. Offered every semester.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-230.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking",
+      "operating-systems",
+      "computer-organization"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 231",
+    "subject": "CIS",
+    "course_number": "231",
+    "title": "Problem Solving Using Spreadsheets",
+    "description": "Fundamental and advanced functionalities of Microsoft Excel. The course integrates practical problem-solving techniques and advanced analytical tools through hands-on case studies. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement , or MTH 115 or MTH 122 or MTH 201",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110",
+      "MTH 115",
+      "MTH 122",
+      "MTH 201"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-231.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 233",
+    "subject": "CIS",
+    "course_number": "233",
+    "title": "Concepts of Database Systems",
+    "description": "Introduces key concepts of relational database management systems (DBMS) and database design. Provides hands-on experience in data modeling, database implementation, and the design of graphical user interfaces (GUI) suitable for querying and managing the database. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 150 or CIS 160 or CIS 162",
+    "prerequisite_codes": [
+      "CIS 150",
+      "CIS 160",
+      "CIS 162"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-233.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 237",
+    "subject": "CIS",
+    "course_number": "237",
+    "title": "Introduction to Network Management",
+    "description": "An introduction to practical problems in network management such as reliability, performance, security, wire-line systems, wireless systems, data communications, local and wide-area networking protocols, SNMP protocol, and SNMP-based management. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 150",
+    "prerequisite_codes": [
+      "CIS 150"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-237.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking",
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 238",
+    "subject": "CIS",
+    "course_number": "238",
+    "title": "Internet Media and Programming",
+    "description": "Study of the technology of Internet media, including graphics, video, audio, XML, and other emerging Internet technologies. Examines advanced features of the hardware and software requirements of those media. Also covers the implementation of those technologies through Web interface development. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 160 or CIS 162",
+    "prerequisite_codes": [
+      "CIS 160",
+      "CIS 162"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-238.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "web",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 241",
+    "subject": "CIS",
+    "course_number": "241",
+    "title": "System-level Programming and Utilities",
+    "description": "Introduction software infrastructure underlying development of computer programs. Topics include Linux utilities, shell scripting, processes, facilities for programming, the C programming language, libraries, structures, pointers, dynamic memory management, and system calls. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "C or better in CIS 163 or C or better in CIS 260",
+    "prerequisite_codes": [
+      "CIS 163",
+      "CIS 260"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-241.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming",
+      "computer-organization"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 250",
+    "subject": "CIS",
+    "course_number": "250",
+    "title": "Principles of Information Systems",
+    "description": "An introduction to, and exploration of, core information systems principles that prepare students to function more efficiently and effectively as professional workers, managers, decision makers, and organizational leaders. Students explore the challenging and changing role of the IS professional while examining the value information systems provide an organization. Offered every semester.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-250.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 253",
+    "subject": "CIS",
+    "course_number": "253",
+    "title": "COBOL",
+    "description": "Introduction to the COBOL language; file management techniques; mid-range computer processing; and program design, testing, and implementation methodology with emphasis on structured programming. Topics include validation, reporting; file updating, tables, character manipulation, SORT and COPY statements, and the Report Writer feature. Offered fall and winter semesters",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "CIS 162",
+    "prerequisite_codes": [
+      "CIS 162"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-253.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 258",
+    "subject": "CIS",
+    "course_number": "258",
+    "title": "Introduction to Cybersecurity",
+    "description": "This course introduces all aspects of cybersecurity principles and technologies. Fundamental topics include cyber threats and vulnerabilities, information security frameworks, network security, cryptography, system defense, information security policy, legal and political issues, and security management. The course includes hands-on learning through experiments, case studies, and projects. Offered fall and winter semesters.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-258.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking",
+      "security",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 260",
+    "subject": "CIS",
+    "course_number": "260",
+    "title": "Application Development in Visual Studio.Net",
+    "description": "Builds on students' knowledge of programming to explore applications designed for PCs and networks. Emphasis is placed on GUI development and accessing data in a legacy environment. Numerous programming assignments provide experience using a popular .Net programming language, designing interactive forms, and using objects and controls to write applications. Offered fall and winter semesters",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "CIS 162",
+    "prerequisite_codes": [
+      "CIS 162"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-260.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 263",
+    "subject": "CIS",
+    "course_number": "263",
+    "title": "Data Structures and Algorithms",
+    "description": "Algorithms and data structures, including heaps, hash tables, trees, graphs, greedy algorithms, divide and conquer, and dynamic programming will be covered. Analysis of algorithms as well as the complexity class of problems (P, NP, NPC) will be studied. Other topics include approximation, randomized algorithms and data structure implementation. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "C or better in either CIS 163 or CIS 164 and ( MTH 225 or STA 220 or PHI 103 )",
+    "prerequisite_codes": [
+      "CIS 163",
+      "CIS 164",
+      "MTH 225",
+      "STA 220",
+      "PHI 103"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-263.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 280",
+    "subject": "CIS",
+    "course_number": "280",
+    "title": "Special Topics in Computer Information Systems",
+    "description": "Readings, lectures, discussions, or labs (or any combination) in specific computer science topics. Permission of instructor required. Offered on demand.",
+    "credits_min": 1.0,
+    "credits_max": 3.0,
+    "credits_text": "1 to 3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered on demand.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-280.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 290",
+    "subject": "CIS",
+    "course_number": "290",
+    "title": "Professional Responsibilities and Practices",
+    "description": "History of the computing profession. Local and global impacts of computing technology on individuals, organizations, and society. Professional ethics and responsibilities. Personal privacy, security, and legal issues. Preparation for an internship in the computing field. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "(C or better in CIS 162 ) or (C or better in CIS 160 ) or (C or better in CIS 161 )",
+    "prerequisite_codes": [
+      "CIS 162",
+      "CIS 160",
+      "CIS 161"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-290.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security",
+      "project"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 291",
+    "subject": "CIS",
+    "course_number": "291",
+    "title": "Introduction to Computing Research",
+    "description": "Introduction to conducting computing research. History and broader impacts of computing research. The scientific method in a computing context. Responsible conduct of research, including privacy, security, and legal issues. Preparation for experiential learning focused on computing research. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "C or better in either CIS 160 or CIS 161 or CIS 162",
+    "prerequisite_codes": [
+      "CIS 160",
+      "CIS 161",
+      "CIS 162"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-291.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 298",
+    "subject": "CIS",
+    "course_number": "298",
+    "title": "Applied Computing Studio 1",
+    "description": "Students will work independently while mentored by computing faculty on an individual or group applied computing project. Project work will address an industry challenge, research question, or entrepreneurial activity in the computing domain. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 198 or CIS 290 or CIS 291 ( CIS 290 and CIS 291 may be taken concurrently)",
+    "prerequisite_codes": [
+      "CIS 198",
+      "CIS 290",
+      "CIS 291"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-298.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 310",
+    "subject": "CIS",
+    "course_number": "310",
+    "title": "Introduction to the Structure and Mechanics of Social Networks",
+    "description": "A study of networks as implemented in typical online social network sites. This course examines the basics of representing and analyzing networks, the tools for implementing and managing an online social network, and the techniques for discovering and exploiting valuable information that resides in networks. Part of the Information, Innovation, or Technology Issue. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement and junior standing",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-310.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 320",
+    "subject": "CIS",
+    "course_number": "320",
+    "title": "Visualization of Data and Information",
+    "description": "An introduction to the concepts of information visualization, principles in vision and perception, and design principles for interactive visualizations. Emphasis is placed on analyzing, designing, developing, and evaluating visual representations of quantitative and qualitative content using visualization software that do not require technical backgrounds. Part of the Information, Innovation, or Technology Issue. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Junior standing",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-320.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "visualization"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 321",
+    "subject": "CIS",
+    "course_number": "321",
+    "title": "Excel Concepts and Applications II",
+    "description": "This course offers the opportunity to master the advanced functionality of Microsoft Excel, and to apply those skills to different business applications such as financial modeling, reporting, and the automation of accounting and financial tasks. Offered every semester",
+    "credits_min": 1.5,
+    "credits_max": 1.5,
+    "credits_text": "1.5",
+    "prerequisites_text": "CIS 221",
+    "prerequisite_codes": [
+      "CIS 221"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-321.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 330",
+    "subject": "CIS",
+    "course_number": "330",
+    "title": "Systems Analysis and Design",
+    "description": "Examines the system development and modification process. Emphasizes factors for effective communication with users and interpersonal skill development. Structured and object-oriented analysis and design, use of modeling (CASE) tools, methodological life cycle, and project management standards. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 162 and either CIS 250 or MGT 268",
+    "prerequisite_codes": [
+      "CIS 162",
+      "CIS 250",
+      "MGT 268"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-330.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 331",
+    "subject": "CIS",
+    "course_number": "331",
+    "title": "Data Analysis Tools and Techniques",
+    "description": "This course will introduce the student to key technologies used for collecting, cleaning, manipulating, storing, analyzing, visualizing, and extracting useful information from large and diverse data sets. Upon completion of this course, students will be better prepared to assist organizations in facing the challenges of large-scale data analytics. Part of the Information, Innovation, or Technology Issue. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "STA 215 or STA 312 or STA 330 , and junior standing",
+    "prerequisite_codes": [
+      "STA 215",
+      "STA 312",
+      "STA 330"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-331.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "visualization"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 333",
+    "subject": "CIS",
+    "course_number": "333",
+    "title": "Database Management and Implementation",
+    "description": "Covers information systems design and implementation within a database management system environment. Students will design and construct a physical system using database management system software to implement the logical design. Examination of the system development and modification process. Emphasis on factors for effective communication with users and interpersonal skill development. Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "( CIS 162 or CIS 160 ) and ( CIS 250 or MGT 268 ). Restrictions: Must be enrolled in the College of Computing or in the management major",
+    "prerequisite_codes": [
+      "CIS 162",
+      "CIS 160",
+      "CIS 250",
+      "MGT 268"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-333.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 335",
+    "subject": "CIS",
+    "course_number": "335",
+    "title": "Data Mining",
+    "description": "Data mining is the application of computational techniques to the discovery of useful information in large data sets. This course will provide a hands-on study of computational methods for such knowledge discovery. Topics include clustering, classification techniques, and selected data mining software. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "( CIS 160 or CIS 161 or CIS 162 ) and ( STA 215 or STA 312 or STA 330)",
+    "prerequisite_codes": [
+      "CIS 160",
+      "CIS 161",
+      "CIS 162",
+      "STA 215",
+      "STA 312",
+      "STA 330"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-335.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "data-mining"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 337",
+    "subject": "CIS",
+    "course_number": "337",
+    "title": "Network Systems Management",
+    "description": "Provides information systems students with the knowledge and skills necessary to manage the sophisticated local area networks available today. It approaches the subjects of network design, installation, and management from the corporate view of networking. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 230 or CIS 258",
+    "prerequisite_codes": [
+      "CIS 230",
+      "CIS 258"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-337.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 338",
+    "subject": "CIS",
+    "course_number": "338",
+    "title": "Wide Area Network Engineering",
+    "description": "Course covers the technologies, equipment, and protocols of the Internet. Lectures cover the design principles of WAN transport and routing protocols, Internet addresses, subnetting, and the Internet Protocol/Transmission Control Protocol. A set of laboratory experiments will provide hands-on experience with engineering a wide-area network and extensive work with routing equipment. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 237 , or CIS 337 , or CIS 457",
+    "prerequisite_codes": [
+      "CIS 237",
+      "CIS 337",
+      "CIS 457"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-338.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 339",
+    "subject": "CIS",
+    "course_number": "339",
+    "title": "Project Planning",
+    "description": "A structured approach to project planning. Topics covered emphasize the knowledge areas of the project management body of knowledge (PMBOK) that drive project initiation and definition leading to the development of a project schedule and budget. Students will prepare typical project management work products associated with initiating and planning projects. Offered winter semester.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered winter semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-339.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 340",
+    "subject": "CIS",
+    "course_number": "340",
+    "title": "Health Care Information Systems",
+    "description": "Introduces principles of information systems in health care with focus on hospitals and ambulatory care. Individuals with various backgrounds can become familiar with computer applications in medicine and the fundamentals of electronic health records, medical decision-making, and other aspects of health informatics. A major project integrates different aspects of informatics. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 233 , CIS 333 , CIS 353 , or CIS 360",
+    "prerequisite_codes": [
+      "CIS 233",
+      "CIS 333",
+      "CIS 353",
+      "CIS 360"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-340.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 343",
+    "subject": "CIS",
+    "course_number": "343",
+    "title": "Structure of Programming Languages",
+    "description": "Language definition structure. Data types and structures. Control structures and data flow. Lexical analysis and parsing. Interpretive languages. Run time considerations. Survey of programming languages. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 241",
+    "prerequisite_codes": [
+      "CIS 241"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-343.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 349",
+    "subject": "CIS",
+    "course_number": "349",
+    "title": "Agile Project Management",
+    "description": "This course goes beyond the planning of a project and explores what other factors, when well-managed, lead to project success. Topics include current trends in project management. A major emphasis will be placed on understanding agile project management principles and their relationship to the project management body of knowledge (PMBOK). Offered winter semester.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered winter semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-349.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 350",
+    "subject": "CIS",
+    "course_number": "350",
+    "title": "Introduction to Software Engineering",
+    "description": "Systems development life cycle from project request through project implementation and evaluation. Systems analysis and design concepts, tools, and techniques are emphasized. Traditional and structured approaches. Project management. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 163",
+    "prerequisite_codes": [
+      "CIS 163"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-350.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "software-engineering",
+      "project"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 351",
+    "subject": "CIS",
+    "course_number": "351",
+    "title": "Computer Organization",
+    "description": "Introduction to the logical structure of computers, including combinational and sequential logic, arithmetic, data paths, CPU control, caches, and basic pipelining. Introduction to the interface between hardware and software focusing on data movement, arithmetic, comparing and branching, bit manipulation, procedure calling, memory access, and implementation of high-level language constructs. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 225 and CIS 241",
+    "prerequisite_codes": [
+      "MTH 225",
+      "CIS 241"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-351.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "computer-organization"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 352",
+    "subject": "CIS",
+    "course_number": "352",
+    "title": "Operating System Essentials",
+    "description": "This course covers the essential concepts of operating systems, including processes and threads, CPU scheduling, interprocess communication, synchronization, deadlock and memory management. The course also covers GPU architecture and its role in parallel computing and accelerating performance. Hands-on labs exploring and implementing the above listed topics. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 241",
+    "prerequisite_codes": [
+      "CIS 241"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-352.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "operating-systems"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 353",
+    "subject": "CIS",
+    "course_number": "353",
+    "title": "Database",
+    "description": "The study and application of established sound principles in the modeling, design, implementation, and manipulation of databases using industrial-strength database management systems (DBMS). Key features and services offered by a typical DBMS are also introduced. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 163",
+    "prerequisite_codes": [
+      "CIS 163"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-353.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 357",
+    "subject": "CIS",
+    "course_number": "357",
+    "title": "Mobile Application Development",
+    "description": "Fundamental concepts and technologies underlying mobile application development. All aspects of developing and deploying conventional mobile applications are covered, including mobile user interfaces, location-based services, integration with social media and other cloud-based services. Also covered will be effective use of mobile analytics and privacy concerns. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 163 or CIS 260",
+    "prerequisite_codes": [
+      "CIS 163",
+      "CIS 260"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-357.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "mobile"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 358",
+    "subject": "CIS",
+    "course_number": "358",
+    "title": "Information Assurance",
+    "description": "Introduction to security, privacy, and information assurance. Coverage will include not only security threats, attacks, and defenses, but also issues important to information assurance such as risk management, security planning, and ethical issues. Perspectives of computing professionals as well as computing users from other professions will be discussed. Part of the Information, Innovation, or Technology Issue. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Junior standing",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-358.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 360",
+    "subject": "CIS",
+    "course_number": "360",
+    "title": "Information Management and Science",
+    "description": "Introduction to information representation, modeling, storage, retrieval, processing, analysis, visualization, and science. Topics may include digital libraries, repositories, collections, metadata, databases, ontologies, vocabularies, dictionaries, and multimedia, as applied to complex and compound content at a large scale. Approaches will be discussed for business, medical, humanities, and scientific contexts. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "( CIS 160 or CIS 161 or CIS 162 ) and ( STA 215 or STA 312 or STA 330 )",
+    "prerequisite_codes": [
+      "CIS 160",
+      "CIS 161",
+      "CIS 162",
+      "STA 215",
+      "STA 312",
+      "STA 330"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-360.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases",
+      "visualization"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 367",
+    "subject": "CIS",
+    "course_number": "367",
+    "title": "Computer Graphics",
+    "description": "Principles of computer graphics. I/O devices. Basic graphic primitives and attributes. Transformations: translation, scaling, and rotation. World and screen coordinates, windows and viewports, clipping. Circle drawing. Graphics and text modes. Raster graphics. Filling algorithms. 3-D graphics. Hidden line/surface elimination. Offered winter semester of odd-numbered years",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 263",
+    "prerequisite_codes": [
+      "CIS 263"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-367.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming",
+      "visualization"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 371",
+    "subject": "CIS",
+    "course_number": "371",
+    "title": "Web Application Programming",
+    "description": "The tools and techniques for developing dynamic Web applications. Topics include scripting languages, markup languages, database connectivity, Web standards, and security issues. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "( CIS 260 or CIS 163 ) and ( CIS 333 or CIS 353 )",
+    "prerequisite_codes": [
+      "CIS 260",
+      "CIS 163",
+      "CIS 333",
+      "CIS 353"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-371.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases",
+      "security",
+      "web",
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 373",
+    "subject": "CIS",
+    "course_number": "373",
+    "title": "Pervasive Computing",
+    "description": "This course introduces students to mobile, ubiquitous, pervasive, and Internet-of-Things (IoT) computing systems and services. Students will develop design skills for pervasive software development using different device platforms. It also provides an overview of future trends and ongoing research in these fast-growing areas. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 162 and either CIS 230 or CIS 241",
+    "prerequisite_codes": [
+      "CIS 162",
+      "CIS 230",
+      "CIS 241"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-373.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "mobile"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 376",
+    "subject": "CIS",
+    "course_number": "376",
+    "title": "Game Programming Techniques and Algorithms",
+    "description": "Techniques and algorithms often used in the construction of games and simulations. Core game loop and engine design considerations, 2-D and 3-D graphical concepts, game physics, collision detection, path-finding, and simple game artificial intelligence discussed. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 263",
+    "prerequisite_codes": [
+      "CIS 263"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-376.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence",
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 378",
+    "subject": "CIS",
+    "course_number": "378",
+    "title": "Applied Machine Learning",
+    "description": "Introduction to machine learning algorithms that learn and improve through experience. This course covers the algorithms, best practices, and use of machine learning methods on real-world applications. Topics include supervised learning, unsupervised learning, dealing with high-dimensional data, and deep learning. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 263 and ( STA 215 or STA 312 or STA 330 )",
+    "prerequisite_codes": [
+      "CIS 263",
+      "STA 215",
+      "STA 312",
+      "STA 330"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-378.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "machine-learning",
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 380",
+    "subject": "CIS",
+    "course_number": "380",
+    "title": "Special Topics in Computer Information Systems",
+    "description": "Readings, lectures, discussions, or labs (or any combination) in specific computer science topics. Offered on demand",
+    "credits_min": 1.0,
+    "credits_max": 4.0,
+    "credits_text": "1 to 4",
+    "prerequisites_text": "Permission of the instructor",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-380.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 398",
+    "subject": "CIS",
+    "course_number": "398",
+    "title": "Applied Computing Studio 2",
+    "description": "Students will continue working independently while mentored by computing faculty on an individual or group applied computing project. Project work will address an industry challenge, research question, or entrepreneurial activity in the computing domain. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 298",
+    "prerequisite_codes": [
+      "CIS 298"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-398.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 399",
+    "subject": "CIS",
+    "course_number": "399",
+    "title": "Independent Study",
+    "description": "Hours, credit, topics, and time to be arranged with individual staff members with approval of the department. Offered fall and winter semesters.",
+    "credits_min": 1.0,
+    "credits_max": 4.0,
+    "credits_text": "1 to 4",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-399.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 418",
+    "subject": "CIS",
+    "course_number": "418",
+    "title": "Secure Software Engineering",
+    "description": "This course explores characteristics that make software secure and less vulnerable to attacks. Basic techniques for securing applications such as input validation, output encoding, memory management, race conditions, vulnerability analysis and testing, authentication, access control, and secure database management will be covered in detail. Cross-listed with CIS 518",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 350",
+    "prerequisite_codes": [
+      "CIS 350"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-418-2.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases",
+      "software-engineering"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 430",
+    "subject": "CIS",
+    "course_number": "430",
+    "title": "Computer and Cyber Forensics",
+    "description": "Introduction to the fundamental concepts of digital forensics and cybercrime. The course covers the recovery and analysis of digital evidence, addressing both legal and technical issues. Hands-on lab activities use primarily open source and commercial forensics toolkits and a variety of hardware to reinforce the concepts discussed in lecture. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 237 or CIS 337 or CIS 457",
+    "prerequisite_codes": [
+      "CIS 237",
+      "CIS 337",
+      "CIS 457"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-430.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 437",
+    "subject": "CIS",
+    "course_number": "437",
+    "title": "Cloud Computing",
+    "description": "Foundations of cloud computing: infrastructure/platform/software-as-a-service, virtualization, cloud platforms, on-demand/cloud applications. Challenges of cloud computing such as security and geographic implications, full-stack development, and big data. Cloud application development, deployment, and management is also covered. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 337 or CIS 457",
+    "prerequisite_codes": [
+      "CIS 337",
+      "CIS 457"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-437.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "cloud",
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 443",
+    "subject": "CIS",
+    "course_number": "443",
+    "title": "Software Development Tools",
+    "description": "Advanced online programming, incorporating contemporary multiplatform computing technologies, application development environments, multi- and/or cross-platform database applications, and application data integration. The course may utilize one or more representative application development environments. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "( CIS 330 or CIS 350 ), and ( CIS 333 or CIS 353 ), and admission to CIS major",
+    "prerequisite_codes": [
+      "CIS 330",
+      "CIS 350",
+      "CIS 333",
+      "CIS 353"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-443.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases",
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 450",
+    "subject": "CIS",
+    "course_number": "450",
+    "title": "IS Project Management",
+    "description": "This course covers factors necessary for successful management of information systems development or enhancement projects. Both technical and behavioral aspects of project management are applied within the context of an information systems development project. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 333 , and ( STA 215 or STA 312 or STA 330 ), and ( CIS 330 or HCC 304 )",
+    "prerequisite_codes": [
+      "CIS 333",
+      "STA 215",
+      "STA 312",
+      "STA 330",
+      "CIS 330",
+      "HCC 304"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-450.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 451",
+    "subject": "CIS",
+    "course_number": "451",
+    "title": "Computer Architecture",
+    "description": "This course will survey advanced computer architecture techniques such as branch prediction, super-scalar, multiprocessors and multicomputers. It will also compare CPU design options (such as CISC vs. RISC) and discuss the effects of these options on performance",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 351 or EGR 326",
+    "prerequisite_codes": [
+      "CIS 351",
+      "EGR 326"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-451.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "computer-organization"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 452",
+    "subject": "CIS",
+    "course_number": "452",
+    "title": "Operating Systems Concepts",
+    "description": "Fundamental operating systems concepts: processes and threads, CPU scheduling, interprocess communication and synchronization, deadlock, memory management, input/output devices, file systems, distributed systems, protection and security. Hands-on labs exploring and implementing the above listed topics. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 241 ; and CIS 351 or ( EGR 326 and EGR major standing)",
+    "prerequisite_codes": [
+      "CIS 241",
+      "CIS 351",
+      "EGR 326"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-452.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "distributed-systems",
+      "security",
+      "operating-systems"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 457",
+    "subject": "CIS",
+    "course_number": "457",
+    "title": "Data Communications",
+    "description": "An introduction to data communications techniques, particularly as applied to computer networks. Physical media and devices, data link and network protocols, and other data communications topics will be studied. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 241",
+    "prerequisite_codes": [
+      "CIS 241"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-457.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 458",
+    "subject": "CIS",
+    "course_number": "458",
+    "title": "System Security",
+    "description": "Security of computer systems, including operating system, database, and network security. Coverage includes common attacks and defensive techniques as well as system monitoring and methods to test system security. Theory and applications of various techniques will be explored. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 337 or CIS 457",
+    "prerequisite_codes": [
+      "CIS 337",
+      "CIS 457"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-458.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases",
+      "networking",
+      "security",
+      "operating-systems"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 460",
+    "subject": "CIS",
+    "course_number": "460",
+    "title": "Management of Information Systems",
+    "description": "",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-460.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 461",
+    "subject": "CIS",
+    "course_number": "461",
+    "title": "Compiler Design and Construction",
+    "description": "Basics of compiler construction. Topics include lexical analysis, grammar for programming languages, parsing algorithms, symbol table construction and management, code generation and optimization. A term project consists of writing a compiler for a specified language. Offered fall semester of even-numbered years",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 263 and CIS 351",
+    "prerequisite_codes": [
+      "CIS 263",
+      "CIS 351"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-461.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming",
+      "project"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 462",
+    "subject": "CIS",
+    "course_number": "462",
+    "title": "Information Technology Project",
+    "description": "As a Capstone course of the information technology major, the student or a group of students will work collaboratively on a project using the school's laboratory facilities to demonstrate the skills and techniques learned in the program of study such as problem solving, critical thinking, research techniques, and technical writing. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 333 , CIS 338 , CIS 450 , either ( CIS 437 or CIS 458 ), senior standing, and enrolled in IT major",
+    "prerequisite_codes": [
+      "CIS 333",
+      "CIS 338",
+      "CIS 450",
+      "CIS 437",
+      "CIS 458"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-462.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 463",
+    "subject": "CIS",
+    "course_number": "463",
+    "title": "Information Systems Project",
+    "description": "Formal evaluation of a software/hardware package or of a proposed or existing system, or the analysis, design, and implementation of an application system. Formal reports and presentations required. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 450 , senior standing, enrolled in information systems major",
+    "prerequisite_codes": [
+      "CIS 450"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-463.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 464",
+    "subject": "CIS",
+    "course_number": "464",
+    "title": "Algorithm Engineering",
+    "description": "Advanced techniques for engineering correct and efficient algorithms. This course will focus on designing and implementing algorithms to solve problems, including practical algorithmic theory, strategies for extracting information from problem specifications, identifying when to use different classes of algorithms, and engineering efficient implementations. Offered fall and winter semesters. Dual-listed with CIS 564",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 263 , or Admission to the MS-ACS or MS-SE program",
+    "prerequisite_codes": [
+      "CIS 263"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-363.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 465",
+    "subject": "CIS",
+    "course_number": "465",
+    "title": "Automata and Theory of Computation",
+    "description": "Introduction to basic mathematical models of computation and the finite representation of infinite objects. Finite automata, regular languages, nondeterminism, pushdown automata, context-free languages, Turing machines and variants, halting problem, time complexity of algorithms, and NP-complete problems. Cross-listed with MTH 465 . Offered fall semester of odd-numbered years",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 162 and MTH 325",
+    "prerequisite_codes": [
+      "CIS 162",
+      "MTH 325"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-465.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 467",
+    "subject": "CIS",
+    "course_number": "467",
+    "title": "Computer Science Project",
+    "description": "Individual or group projects using the department's laboratory facilities. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 343 and CIS 350 , senior standing, enrolled in computer science major",
+    "prerequisite_codes": [
+      "CIS 343",
+      "CIS 350"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-467.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {
+      "cs-bs": [
+        "required"
+      ]
+    }
+  },
+  {
+    "code": "CIS 468",
+    "subject": "CIS",
+    "course_number": "468",
+    "title": "Cybersecurity Project",
+    "description": "As a Capstone course of the cybersecurity major, the student or a group of students will work collaboratively on a project using the school's laboratory facilities to demonstrate the skills and techniques learned in the program of study such as problem solving, critical thinking, research techniques, and technical writing. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 418 or CIS 458 , senior standing, and enrolled in cybersecurity major",
+    "prerequisite_codes": [
+      "CIS 418",
+      "CIS 458"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-468.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 480",
+    "subject": "CIS",
+    "course_number": "480",
+    "title": "Special Topics in Computer Information Systems",
+    "description": "Readings, lectures, discussions, or labs (or any combination) in specific computer science topics. Offered on demand. Prerequisites dependent upon topic selected. Permission of the instructor required.",
+    "credits_min": 1.0,
+    "credits_max": 4.0,
+    "credits_text": "1 to 4",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered on demand.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-480.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CIS 490",
+    "subject": "CIS",
+    "course_number": "490",
+    "title": "Internship",
+    "description": "Internship in a computing situation with individual faculty supervision to allow students to apply academic knowledge to actual and professional experience. A minimum of 16 hours of actual fieldwork per week under the supervision of a work supervisor is required. Offered every semester",
+    "credits_min": 2.0,
+    "credits_max": 5.0,
+    "credits_text": "2 to 5",
+    "prerequisites_text": "CIS 290 , junior standing, and permission of instructor",
+    "prerequisite_codes": [
+      "CIS 290"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-490.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {
+      "cs-bs": [
+        "capstone"
+      ]
+    }
+  },
+  {
+    "code": "CIS 491",
+    "subject": "CIS",
+    "course_number": "491",
+    "title": "Applied Computing Practicum",
+    "description": "Application of applied computing skills in a significant project. Students will design, develop, and implement a practical computing solution addressing a real-world problem or organizational challenge. Projects may involve areas such as cybersecurity, information technology, artificial intelligence, data analysis, or system integration. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Enrolled in the B.A.S. in computing",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-491.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence",
+      "security",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 499",
+    "subject": "CIS",
+    "course_number": "499",
+    "title": "Independent Study and Research",
+    "description": "Hours, credit, topics, and time to be arranged with individual staff members with approval of the department. Offered every semester.",
+    "credits_min": 1.0,
+    "credits_max": 4.0,
+    "credits_text": "1 to 4",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-499.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 500",
+    "subject": "CIS",
+    "course_number": "500",
+    "title": "Fundamentals of Software Practice",
+    "description": "Focuses on advanced programming concepts, common data structures and collections, concurrency, software modeling, searching, and sorting algorithms. Elements of discrete mathematics are integrated through lectures and programming projects",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to the CIS program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-500.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "programming",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 501",
+    "subject": "CIS",
+    "course_number": "501",
+    "title": "Fundamentals of Modern Computer Systems",
+    "description": "Survey of the fundamental systems of computing: computer architectures, operating systems, networks, and databases",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to the CIS program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-501.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases",
+      "networking",
+      "operating-systems",
+      "computer-organization"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 518",
+    "subject": "CIS",
+    "course_number": "518",
+    "title": "Secure Software Engineering",
+    "description": "This course explores characteristics that make software secure and less vulnerable to attacks. Basic techniques for securing applications such as input validation, output encoding, memory management, race conditions, vulnerability analysis and testing, authentication, access control, and secure database management will be covered in detail. Cross-listed with CIS 418",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-618.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases",
+      "software-engineering"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-software-engineering"
+      ]
+    }
+  },
+  {
+    "code": "CIS 554",
+    "subject": "CIS",
+    "course_number": "554",
+    "title": "Computer Networking",
+    "description": "This course provides an introduction to computer networking concepts, architectures, and protocols. Topics include network models, data communication fundamentals, IP addressing, routing, network security, and emerging trends in networking. The course includes hands-on lab exercises to reinforce theoretical knowledge",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-654.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "networking",
+      "security"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-networking"
+      ]
+    }
+  },
+  {
+    "code": "CIS 564",
+    "subject": "CIS",
+    "course_number": "564",
+    "title": "Algorithm Engineering",
+    "description": "Advanced techniques for engineering correct and efficient algorithms. This course will focus on designing and implementing algorithms to solve problems, including practical algorithmic theory, strategies for extracting information from problem specifications, identifying when to use different classes of algorithms, and engineering efficient implementations. Offered fall and winter semesters. Dual-listed with CIS 564",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 263 , or Admission to the MS-ACS or MS-SE program",
+    "prerequisite_codes": [
+      "CIS 263"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-564.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 623",
+    "subject": "CIS",
+    "course_number": "623",
+    "title": "Graphical User Interface Design",
+    "description": "Topics include basic concepts, models, and methods in graphical user interface (GUI) design, as well as underlying software architectures. In addition, students will gain practical experience with a typical GUI building tool",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to the M.S. in applied computer science, human centered computing, or software engineering programs",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-623.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "software-engineering"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 635",
+    "subject": "CIS",
+    "course_number": "635",
+    "title": "Knowledge Discovery and Data Mining",
+    "description": "A survey of computational methods for knowledge discovery in bioinformatics and medicine. Topics covered are dynamic programming (sequence alignment, BLAST search engine), hidden Markov models (phylogenetic trees, structure prediction), clustering and discriminations models for micro-array analysis (Gene Expression Data), selected data mining software, and working with biological databases",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-635.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases",
+      "data-mining",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 641",
+    "subject": "CIS",
+    "course_number": "641",
+    "title": "Systems Analysis and Design",
+    "description": "Models and techniques for the major phases of software development, with emphasis on requirements specification, design, testing, and software maintenance. Description of the roles of project management, quality assurance, and configuration management",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to the M.S. in applied computer science, cybersecurity, artificial intelligence, or software engineering",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-641.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "software-engineering",
+      "project"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-systems-development"
+      ]
+    }
+  },
+  {
+    "code": "CIS 642",
+    "subject": "CIS",
+    "course_number": "642",
+    "title": "IS Project Management",
+    "description": "Planning, organizing, staffing, controlling, and directing information systems projects. Major emphasis on project planning, techniques and tools for monitoring and controlling projects, and teamwork and leadership issues. A term project that involves the development of a project plan for a nontrivial IS project using project management tools is required",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "SE 511 or CIS 641",
+    "prerequisite_codes": [
+      "SE 511",
+      "CIS 641"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-642.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-systems-development"
+      ]
+    }
+  },
+  {
+    "code": "CIS 643",
+    "subject": "CIS",
+    "course_number": "643",
+    "title": "Information Systems Policy and Strategy",
+    "description": "Operational, strategic, and tactical facets of the planning cycle, with an emphasis on strategic planning, including hardware and software considerations, system migration, capacity and contingency planning, project selection and prioritization, and outsourcing, culminating in the creation of a strategic information systems plan",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 642",
+    "prerequisite_codes": [
+      "CIS 642"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-643.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 655",
+    "subject": "CIS",
+    "course_number": "655",
+    "title": "Cloud Applications Development",
+    "description": "Current and emerging techniques for developing applications supported by cloud computing technologies. Infrastructure-as-a-Service (IaaS) (e.g., virtualization), Platform-as-a-Service (PaaS) (e.g., cloud platforms), and Software-as-a-Service (SaaS) (e.g., on-demand applications) will be explored. Cloud-specific concerns such as security and geographic implications, full-stack development, and big data are also included, among others. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-655.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "cloud",
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 656",
+    "subject": "CIS",
+    "course_number": "656",
+    "title": "Distributed Systems",
+    "description": "Fundamental principles of distributed systems: systems and software architectures, virtualization, code migration, threading, RPC, message-oriented middleware, multicast, distributed naming systems, DHTs, clock synchronization, logical clocks, consistency and replication, overview of distributed Web technologies, fault tolerance and security considerations. Exposure to current research topics in distributed systems and hands-on experience building distributed systems",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission into either the M.S. in applied computer science or the M.S. cybersecurity",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-656.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "cloud",
+      "distributed-systems",
+      "security",
+      "software-engineering"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-networking"
+      ]
+    }
+  },
+  {
+    "code": "CIS 657",
+    "subject": "CIS",
+    "course_number": "657",
+    "title": "Mobile Application Development",
+    "description": "Fundamental concepts and technologies underlying mobile application development. Important aspects of developing and deploying conventional mobile applications are covered, such as mobile user interfaces, location-based services, integration with social media and other Web-based services. Effective use of mobile analytics and privacy concerns will also be covered",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission into either applied computer science, artificial intelligence, human centered computing, or software engineering",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-657.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "mobile"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 658",
+    "subject": "CIS",
+    "course_number": "658",
+    "title": "Web Architectures",
+    "description": "Current and emerging Web-based technologies, protocols, system architectures, development frameworks, and languages",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission into either the M.S. in applied computer science, artificial intelligence, or software engineering",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-658.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "web"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 660",
+    "subject": "CIS",
+    "course_number": "660",
+    "title": "Data Engineering",
+    "description": "An introduction to information storage, manipulation, retrieval, analysis, and modeling techniques. Topics include database paradigms, data preparation, extract transform load processes, information pipelines, and large-scale analytics",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-660.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases",
+      "data-engineering"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-data-engineering"
+      ]
+    }
+  },
+  {
+    "code": "CIS 661",
+    "subject": "CIS",
+    "course_number": "661",
+    "title": "Introduction to Health and Bioinformatics",
+    "description": "A survey of fundamental concepts of medical and bioinformatics methods and techniques involved in the integration of computer systems in medical centers and life science industries. Introduction to biomedical information systems; data representation, modeling, management, and mining; systems evaluation; project management practices for biomedical decision-making. Legal and ethical considerations.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-661.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 662",
+    "subject": "CIS",
+    "course_number": "662",
+    "title": "Privacy & Security in Health Care",
+    "description": "This course discusses privacy, security, and cybersecurity regulations in healthcare. Topics include data handling, risk assessments, disaster recovery, vulnerabilities, compliance, and emerging security technologies. Particular attention is specifically given to the Health Insurance Portability and Accountability Act (HIPAA), and the Health Information Technology for Economic and Clinical Health Act (HITECH). Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 661 or CIS 665",
+    "prerequisite_codes": [
+      "CIS 661",
+      "CIS 665"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-662.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 665",
+    "subject": "CIS",
+    "course_number": "665",
+    "title": "Clinical Information Systems",
+    "description": "Introduction to Clinical Information Systems (CLIS) important to the health care delivery process. The course covers the entire range from laboratory systems to electronic health records. Other topics covered are CLIS and health informatics, components, and examples of CLIS, telemedicine, public health information systems, and modern developments",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 500 , or CIS 661 , or PNH 630",
+    "prerequisite_codes": [
+      "CIS 500",
+      "CIS 661",
+      "PNH 630"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-665.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 671",
+    "subject": "CIS",
+    "course_number": "671",
+    "title": "Information Visualization",
+    "description": "Concepts of information visualization, principles in vision and perception, algorithms for building information spaces, and design principles for interactive visualizations. Emphasis is placed on analyzing, designing, developing, and evaluating visualizations and tools. Case studies demonstrate visualizations used to solve specific problems across a variety of domains",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-671.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "programming",
+      "visualization"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 672",
+    "subject": "CIS",
+    "course_number": "672",
+    "title": "Computer Systems Architecture",
+    "description": "Provides a general understanding of computer architecture and the logical organization of modern digital computers. CPU organization and input/output subsystem organizations are emphasized. The relationship between the computer architecture and the operating system is studied",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to the M.S. in applied computer science or software engineering programs",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-672.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "operating-systems",
+      "computer-organization"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 673",
+    "subject": "CIS",
+    "course_number": "673",
+    "title": "Principles of Database Design",
+    "description": "Techniques and tools used in the design of applications that utilize database management systems. Detailed treatment of conceptual modeling, logical and physical design, and query languages. Services provided by database management systems to the level of detail needed by application designers. Introduces students to the scope of the database field",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to M.S.-ACS",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-673.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-data-engineering"
+      ]
+    }
+  },
+  {
+    "code": "CIS 675",
+    "subject": "CIS",
+    "course_number": "675",
+    "title": "Compiler Construction",
+    "description": "A study of language translation and interpretation. Existing tools such as lexical analyzer generators and parser generators to facilitate compilation are introduced. A substantial programming project is required that consists of writing a small compiler",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to the M.S. applied computer science or software engineering programs",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-675.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "programming",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 676",
+    "subject": "CIS",
+    "course_number": "676",
+    "title": "Database Architecture",
+    "description": "This course covers the concepts, algorithms, and techniques used by typical relational database engines. Topics include performance measures, data storage and organization, query optimization, and concurrency. These concepts are also extended to cover parallel, distributed, and post-relational databases",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 673",
+    "prerequisite_codes": [
+      "CIS 673"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-676.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases",
+      "distributed-systems",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 677",
+    "subject": "CIS",
+    "course_number": "677",
+    "title": "High-performance Computing",
+    "description": "Introduction to parallel and high-performance computing. Coverage includes modern scalable parallel and distributed architectures, design and analysis of algorithms, communication and synchronization issues, software development environments, and performance evaluation. Case studies include applications in bioinformatics, evolutionary computing, data mining of biological and clinical databases, and knowledge-based systems",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program, or bioinformatics and genomics graduate certificate, or Master of Science in applied statistics",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-677.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases",
+      "data-mining",
+      "distributed-systems",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 678",
+    "subject": "CIS",
+    "course_number": "678",
+    "title": "Machine Learning",
+    "description": "Broad introduction to machine learning computer programs that improve their performance with experience. Topics include decision trees, neural networks, statistical methods, genetic algorithms, Bayesian learning methods, explanation-based goal regression, reinforcement learning, and learning frameworks. Includes an applied machine learning component that provides exposure to established algorithms and machine learning programs",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-678.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "machine-learning",
+      "networking",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 679",
+    "subject": "CIS",
+    "course_number": "679",
+    "title": "Special Topics in Database Management",
+    "description": "This course covers emerging trends in database management systems to help students identify topics for research during and beyond the course. Specific contents and level of emphasis of each topic will be determined by the interests and expertise of faculty and students",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 673 or CIS 660",
+    "prerequisite_codes": [
+      "CIS 673",
+      "CIS 660"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-679.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 680",
+    "subject": "CIS",
+    "course_number": "680",
+    "title": "Special Topics in Computer Information Systems",
+    "description": "Discussion of current advances in computer information systems theory, methodologies, and support systems.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-680.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 685",
+    "subject": "CIS",
+    "course_number": "685",
+    "title": "Computing Practicum",
+    "description": "Full-time or part-time field-based experience in an area of computing under the supervision of an industry mentor.",
+    "credits_min": 1.0,
+    "credits_max": 3.0,
+    "credits_text": "1 to 3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-685.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 690",
+    "subject": "CIS",
+    "course_number": "690",
+    "title": "Thesis Research Preparation",
+    "description": "Faculty-supervised study and research on a suitable topic in computer information systems",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Consent of thesis advisor",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-690.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 691",
+    "subject": "CIS",
+    "course_number": "691",
+    "title": "Health Informatics and Bioinformatics Capstone",
+    "description": "An integrative Capstone that synthesizes topics covered in health or bioinformatics. Promotes advanced writing and broad perspectives on issues in contemporary informatics and project management. Students will demonstrate their ability to integrate concepts into a practical situation by leading discussions and presenting a paper on a current topic",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "B or better in CIS 635 , CIS 660 , CIS 671 , and either CIS 665 or CIS 678",
+    "prerequisite_codes": [
+      "CIS 635",
+      "CIS 660",
+      "CIS 671",
+      "CIS 665",
+      "CIS 678"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-691.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 692",
+    "subject": "CIS",
+    "course_number": "692",
+    "title": "Master's Capstone",
+    "description": "An integrative Capstone course in which students will synthesize topics from their degree program in order to solve a practical computing problem individually or in a group",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Permission of graduate program director and completion of the Responsible Conduct of Research Training within last three years",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-692.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 693",
+    "subject": "CIS",
+    "course_number": "693",
+    "title": "Master's Project",
+    "description": "Individual student project involving the development or evaluation of a complex computing application or system",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Program director approval and the completion of the Responsible Conduct of Research Training within last three years",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-693.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "capstone"
+      ]
+    }
+  },
+  {
+    "code": "CIS 695",
+    "subject": "CIS",
+    "course_number": "695",
+    "title": "Master's Thesis",
+    "description": "Continuation of faculty supervised study and research on topic identified in CIS 690",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Consent of Thesis Committee and completion of the Responsible Conduct of Research Training within last three years",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-695.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "capstone"
+      ]
+    }
+  },
+  {
+    "code": "CIS 696",
+    "subject": "CIS",
+    "course_number": "696",
+    "title": "Continuation of Master's Project or Thesis Research",
+    "description": "Continuation of work related to the master's project or thesis phase of the graduate student's program. Registration is required after all respective project or thesis credits are completed and the project or thesis is not completed. Work will be performed under the supervision of the project advisor or thesis committee chair",
+    "credits_min": 1.0,
+    "credits_max": 1.0,
+    "credits_text": "1",
+    "prerequisites_text": "Completion of all required project or thesis credits and completion of the Responsible Conduct of Research Training within last three years",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-696.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CIS 697",
+    "subject": "CIS",
+    "course_number": "697",
+    "title": "Professional Learning",
+    "description": "Graduate credit awarded for professional learning acquired through noncredit courses, structured, noncredit professional development programs, and professional work experiences.",
+    "credits_min": 1.0,
+    "credits_max": 3.0,
+    "credits_text": "1 to 3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-697.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CIS 699",
+    "subject": "CIS",
+    "course_number": "699",
+    "title": "Directed Readings in Computer Science",
+    "description": "Independent supervised reading on selected topics in computer information systems or software engineering. Credits and topics must be prearranged with a faculty member and approved by the department",
+    "credits_min": 1.0,
+    "credits_max": 3.0,
+    "credits_text": "1 to 3",
+    "prerequisites_text": "Consent of course advisor",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-699.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "software-engineering",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 241",
+    "subject": "CYB",
+    "course_number": "241",
+    "title": "Linux and Python for Cybersecurity",
+    "description": "This course introduces students to techniques for securing Linux systems, applications, and data. Coverage will include best practices for securely administering accounts, data, services, and processes. Additionally, tools and Python scripting will be covered to automate logging, security testing, auditing, and other security and system management tasks. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 162",
+    "prerequisite_codes": [
+      "CIS 162"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-241.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 258",
+    "subject": "CYB",
+    "course_number": "258",
+    "title": "CYB 258",
+    "description": "Referenced as a prerequisite on a CIS / CS program course; detail page not ingested.",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-258.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CYB 420",
+    "subject": "CYB",
+    "course_number": "420",
+    "title": "Trustworthy AI",
+    "description": "This course explores the integration of cybersecurity risk management and trustworthy AI principles. It focuses on identifying and mitigating risks while ensuring ethical, fair, and transparent AI systems. Students will develop strategies to secure AI technologies and promote accountability. Offered fall and winter semesters. Dual-listed with CYB 520",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "AI 201",
+    "prerequisite_codes": [
+      "AI 201"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-420.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence",
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 453",
+    "subject": "CYB",
+    "course_number": "453",
+    "title": "Ethical Hacking",
+    "description": "This course will introduce widely used ethical hacking techniques and help students develop their system hardening skills. Well-known tools for penetration testing will be introduced in hands-on activities. The knowledge base and skill set for a certified ethical hacker will be covered. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 237 or CIS 337 or CIS 457",
+    "prerequisite_codes": [
+      "CIS 237",
+      "CIS 337",
+      "CIS 457"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-453.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CYB 455",
+    "subject": "CYB",
+    "course_number": "455",
+    "title": "Applied Cryptography",
+    "description": "Applied modern cryptographic and cryptanalysis techniques. Emphasis on the use of cryptographic mechanisms to secure large systems, and ways in which cryptographic mechanisms can fall vulnerable to cryptanalysis in deployed systems. Topics include symmetric ciphers, asymmetric ciphers, digital signatures, message authentication, cryptographic protocols, cryptanalysis techniques, and public-key infrastructure. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admitted to CIS major, CIS 241 or CYB 241, and either CIS 337 or CIS 457",
+    "prerequisite_codes": [
+      "CIS 241",
+      "CYB 241",
+      "CIS 337",
+      "CIS 457"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-455.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CYB 456",
+    "subject": "CYB",
+    "course_number": "456",
+    "title": "Reverse Engineering and Malware Analysis",
+    "description": "Software reverse engineering including analysis techniques and disassembly algorithms. Component life cycle and the impact of the security of system components on the security of the whole system. Malware analysis techniques including the application of software reverse engineering to malware analysis and common methods used to protect malware against reverse engineering. Dual-listed with CYB 556 . Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CYB 241 and CYB 258",
+    "prerequisite_codes": [
+      "CYB 241",
+      "CYB 258"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-456.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "security",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 475",
+    "subject": "CYB",
+    "course_number": "475",
+    "title": "Wireless Networks and Security",
+    "description": "This course provides an in-depth exploration of wireless networking technologies, architectures, protocols, and security mechanisms. Students will study the fundamental principles of wireless communications, various wireless standards (Wi-Fi, Bluetooth, 5G) and security vulnerabilities. The course will emphasize the challenges of securing wireless networks, addressing encryption, authentication, and intrusion detection strategies. Dual-listed with CYB 575",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 337 or CIS 457",
+    "prerequisite_codes": [
+      "CIS 337",
+      "CIS 457"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-475.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking",
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 500",
+    "subject": "CYB",
+    "course_number": "500",
+    "title": "Linux and Python Scripting for Cybersecurity",
+    "description": "This course is designed to provide cybersecurity students with foundational knowledge and hands-on skills in Linux, Python, and shell scripting for cybersecurity applications. The course will cover how to automate tasks, analyze data, secure systems, and improve overall efficiency in cybersecurity operations. Offered all semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-500.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 520",
+    "subject": "CYB",
+    "course_number": "520",
+    "title": "Trustworthy AI",
+    "description": "This course explores the integration of cybersecurity risk management and trustworthy AI principles. It focuses on identifying and mitigating risks while ensuring ethical, fair, and transparent AI systems. Students will develop strategies to secure AI technologies and promote accountability. Offered fall and winter semesters. Dual-listed with CYB 420",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to a College of Computing graduate program",
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-520.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "artificial-intelligence",
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 554",
+    "subject": "CYB",
+    "course_number": "554",
+    "title": "CYB 554",
+    "description": "Referenced as a prerequisite on a CIS / CS program course; detail page not ingested.",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-554.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CYB 556",
+    "subject": "CYB",
+    "course_number": "556",
+    "title": "Reverse Engineering and Malware Analysis",
+    "description": "Software reverse engineering including analysis techniques and disassembly algorithms. Component life cycle and the impact of the security of system components on the security of the whole system. Malware analysis techniques including the application of software reverse engineering to malware analysis and common methods used to protect malware against reverse engineering. Dual-listed with CYB 456 . Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CYB 500",
+    "prerequisite_codes": [
+      "CYB 500"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-556.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "security",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 575",
+    "subject": "CYB",
+    "course_number": "575",
+    "title": "Wireless Networks and Security",
+    "description": "This course provides an in-depth exploration of wireless networking technologies, architectures, protocols, and security mechanisms. Students will study the fundamental principles of wireless communications, various wireless standards (Wi-Fi, Bluetooth, 5G) and security vulnerabilities. The course will emphasize the challenges of securing wireless networks, addressing encryption, authentication, and intrusion detection strategies. Dual-listed with CYB 475",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 337 or CIS 457",
+    "prerequisite_codes": [
+      "CIS 337",
+      "CIS 457"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-375.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "networking",
+      "security"
+    ],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "CYB 614",
+    "subject": "CYB",
+    "course_number": "614",
+    "title": "Cybersecurity for Business",
+    "description": "Provides students with the concepts and tools they need to develop a security mindset. Introduces key cybersecurity vocabulary and regulatory frameworks for security, confidentiality, and privacy. Addresses common cyber threats, vulnerabilities, approaches to mitigating the risks, breach testing, and incident response. Offered Fall and Winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Admission to any MS program",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-614.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 615",
+    "subject": "CYB",
+    "course_number": "615",
+    "title": "Cybersecurity Risk Management",
+    "description": "This course addresses the topic of risk management and how risk, threats, and vulnerabilities impact information systems. The course covers assessing and managing risk based on defining an acceptable level of risk for information systems. Threat modeling, business continuity plans, disaster recovery plans, and computer incident response plans are covered",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Graduate standing",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-615.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 616",
+    "subject": "CYB",
+    "course_number": "616",
+    "title": "Cybersecurity Fundamentals",
+    "description": "This course covers fundamental concepts and a broad spectrum of principles in cybersecurity topics, including cryptography, database security, software security, network security, operating system security, web security, malware, web security, and privacy-preserving techniques",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Graduate standing",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-616.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "databases",
+      "networking",
+      "security",
+      "operating-systems"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 617",
+    "subject": "CYB",
+    "course_number": "617",
+    "title": "Digital Forensics and Investigations",
+    "description": "An introduction to the application of digital forensics principles and practices to collect, examine, analyze, and preserve digital evidence in support of cyber forensics investigations in various computing systems. This course is a blended mix of lecture and hands-on exercises to reinforce the concepts discussed in the lecture",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Graduate standing or Admission to the Advanced Cyber Defense Badge",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-617.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 619",
+    "subject": "CYB",
+    "course_number": "619",
+    "title": "Artificial Intelligence and Data Analytics for Cybersecurity",
+    "description": "This course explores the application of artificial intelligence and data analytics techniques to cybersecurity challenges. Students learn how machine learning, anomaly detection, and data-driven methods are used to identify threats, analyze attacks, and support incident response in modern security operations",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CYB 616",
+    "prerequisite_codes": [
+      "CYB 616"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-619.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 645",
+    "subject": "CYB",
+    "course_number": "645",
+    "title": "Network Security",
+    "description": "This course provides the fundamental skills to analyze internal and external security threats to an enterprise network and to implement security mechanisms to protect an organizations information. It also equips students to evaluate network and Internet security issues and develop appropriate security solutions. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 554 and CYB 616",
+    "prerequisite_codes": [
+      "CIS 554",
+      "CYB 616"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-645.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "networking",
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 646",
+    "subject": "CYB",
+    "course_number": "646",
+    "title": "Cloud Security",
+    "description": "This course provides a comprehensive overview of cloud security concepts and best practices. Students will explore cloud architecture, security design principles, data security, platform security, application security, and incident response in the cloud. The course emphasizes practical application through exercises and case studies, preparing students for real-world cloud security challenges. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CYB 616 and CYB 554",
+    "prerequisite_codes": [
+      "CYB 616",
+      "CYB 554"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cyb-646.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "security"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 653",
+    "subject": "CYB",
+    "course_number": "653",
+    "title": "Advanced Ethical Hacking",
+    "description": "This course provides an in-depth exploration of advanced ethical hacking techniques, focusing on penetration testing methodologies, exploit development, advanced network and web application security, and real-world attack scenarios. Students will gain hands-on experience in simulating cyberattacks, bypassing defenses, and implementing security countermeasures. The course emphasizes ethical considerations and legal implications. Offered winter semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CYB 500 and CYB 616",
+    "prerequisite_codes": [
+      "CYB 500",
+      "CYB 616"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-553.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "networking",
+      "security",
+      "web"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "CYB 655",
+    "subject": "CYB",
+    "course_number": "655",
+    "title": "Advanced Applied Cryptography",
+    "description": "This course explores advanced cryptographic techniques and their real-world applications in securing communications, data privacy, authentication, and blockchain technologies. Students will analyze cryptographic protocols, study attacks on cryptosystems, and implement secure cryptographic solutions. The course balances theoretical foundations with practical applications, including hands-on programming and security analysis",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CYB 500 and CYB 616",
+    "prerequisite_codes": [
+      "CYB 500",
+      "CYB 616"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/cis-555.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "security",
+      "programming"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "EGR 185",
+    "subject": "EGR",
+    "course_number": "185",
+    "title": "First-year Engineering Design",
+    "description": "Principles and practice of multidisciplinary engineering analysis and design to construct a working physical prototype of an electromechanical system. The effective communication of design ideas is emphasized. Offered every semester",
+    "credits_min": 2.0,
+    "credits_max": 2.0,
+    "credits_text": "2",
+    "prerequisites_text": "EGR 100 (grade of C or higher), EGR 111 (grade of C or higher), EGR 112 (grade of C or higher), EGR 113 (EGR 113 may be taken concurrently), and MTH 201",
+    "prerequisite_codes": [
+      "EGR 100",
+      "EGR 111",
+      "EGR 112",
+      "EGR 113",
+      "MTH 201"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/egr-185.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "EGR 326",
+    "subject": "EGR",
+    "course_number": "326",
+    "title": "Embedded System Design",
+    "description": "A course in the design and implementation of embedded electronic systems. Topics include digital logic building blocks, programmable logic, microcontrollers, analog interface and support components, timing margin analysis, serial interfacing, signal integrity, heat sinks, and thermal resistance. A significant term project is required. Laboratory. Offered fall semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "EGR 214 , EGR 224 , EGR 226 , and admitted to biomedical, computer, electrical, or interdisciplinary engineering major",
+    "prerequisite_codes": [
+      "EGR 214",
+      "EGR 224",
+      "EGR 226"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/egr-326.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "HCC 304",
+    "subject": "HCC",
+    "course_number": "304",
+    "title": "HCC 304",
+    "description": "Referenced as a prerequisite on a CIS / CS program course; detail page not ingested.",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/hcc-304.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "elective"
+      ]
+    }
+  },
+  {
+    "code": "HCC 431",
+    "subject": "HCC",
+    "course_number": "431",
+    "title": "Human AI Interaction",
+    "description": "This course explores the rapidly evolving field of human-artificial intelligence (AI) interaction. Students will have a brief review of fundamentals of human cognition and artificial intelligence, learn how to design AI-driven human centered intelligent systems, and complete a project to develop a comprehensive understanding of the human-AI interaction landscape. Offered fall and winter semesters. Dual-listed with HCC 531",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "HCC 201 and AI 201",
+    "prerequisite_codes": [
+      "HCC 201",
+      "AI 201"
+    ],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/hcc-431.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "artificial-intelligence",
+      "project"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "MGT 268",
+    "subject": "MGT",
+    "course_number": "268",
+    "title": "Business Processes and Management Information Systems",
+    "description": "This course is designed to give the student an understanding of the importance of common business processes and their relationship with information systems in modern companies. Gaining insight into the integration that good information systems, specifically Enterprise Resource Planning (ERP) systems, foster in an organization. Offered every semester.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/mgt-268.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "MTH 108",
+    "subject": "MTH",
+    "course_number": "108",
+    "title": "Algebra - Stretch I",
+    "description": "First course in a series of two that uses a wholistic approach to exploring algebraic thinking. This entails using symbolic, numeric, and graphic representations to explore the real-world intermediate algebra applications. Topics include operations, equations and functions. Together, MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement requirement. Offered fall and winter semesters.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-108.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "MTH 109",
+    "subject": "MTH",
+    "course_number": "109",
+    "title": "Algebra - Stretch II",
+    "description": "Second course in a series of two that uses a wholistic approach to exploring algebraic thinking. This entails using symbolic, numeric, and graphic representations to explore real-world intermediate algebra applications. Topics include exponential, logarithmic, quadratic, rational, and radical functions. Together, MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 108",
+    "prerequisite_codes": [
+      "MTH 108"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-109.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "MTH 110",
+    "subject": "MTH",
+    "course_number": "110",
+    "title": "Algebra",
+    "description": "A symbolic, numeric, and graphic approach to intermediate algebra with an emphasis on applications. Topics include operations, equations, and inequalities of linear, exponential, logarithmic, quadratic, rational, and radical functions. Please see the mathematics program for placement test details. Offered every semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "Assignment through Grand Valley math placement",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-110.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "MTH 115",
+    "subject": "MTH",
+    "course_number": "115",
+    "title": "MTH 115",
+    "description": "Referenced as a prerequisite on a CIS / CS program course; detail page not ingested.",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-115.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "MTH 122",
+    "subject": "MTH",
+    "course_number": "122",
+    "title": "College Algebra",
+    "description": "A culminating experience in algebra for conceptual understanding and application in other fields. Primary topics include families of functions (polynomial, rational, exponential, logarithmic, and their compositions), algebraic skills for making and using mathematical models, and multiple representations of algebraic relationships. Fulfills General Education Foundations - Mathematical Sciences. Offered every semester Please see the mathematics program for placement details. Graphing calculator required: TI83 or TI84 recommended.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": "Offered every semester Please see the mathematics program for placement details.",
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-122.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "MTH 123",
+    "subject": "MTH",
+    "course_number": "123",
+    "title": "Trigonometry",
+    "description": "A study of the trigonometric functions and their applications with topics including graphing, identities, inverse trigonometric functions, solving triangles, solving equations, and vectors. Fulfills General Education Foundations - Mathematical Sciences. Please see the mathematics program for placement details. Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 122 (may be taken concurrently) or assignment through Grand Valley math placement. Graphing calculator required: TI83 or TI84 recommended",
+    "prerequisite_codes": [
+      "MTH 122"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-123.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "MTH 124",
+    "subject": "MTH",
+    "course_number": "124",
+    "title": "Precalculus: Functions and Models",
+    "description": "Study of preparatory material for calculus using symbolic algebra and trigonometry for solving equations, representing functions, and modeling, plus appropriate technology. Core topics: concept of function, average rate of change of a function, inverse and composite functions, trigonometric functions, exponential and logarithmic functions, and right triangle trigonometry. Fulfills General Education Foundations - Mathematical Sciences. Offered every semester",
+    "credits_min": 5.0,
+    "credits_max": 5.0,
+    "credits_text": "5",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-124.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "MTH 201",
+    "subject": "MTH",
+    "course_number": "201",
+    "title": "Calculus I",
+    "description": "A development of the fundamental concepts of calculus using graphical, numerical, and analytical methods with algebraic and trigonometric functions of a single variable. Limits and continuity, derivatives, indefinite integrals, definite integrals, and the Fundamental Theorem of Calculus; applications of derivatives and integrals. Please see the mathematics program for placement details. Fulfills General Education Foundations - Mathematical Sciences. Offered every semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "Both MTH 122 and MTH 123 ; or MTH 124 ; or assignment through Grand Valley math placement",
+    "prerequisite_codes": [
+      "MTH 122",
+      "MTH 123",
+      "MTH 124"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-201.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "general",
+        "cognate"
+      ]
+    }
+  },
+  {
+    "code": "MTH 225",
+    "subject": "MTH",
+    "course_number": "225",
+    "title": "Discrete Structures: Computer Science",
+    "description": "Introduction to the mathematical foundations of computer science. Topics include number bases and modular arithmetic; symbolic logic, propositions, and quantification; sets, set operations, and functions; combinatorics and combinatorial proof; and recurrence relations and mathematical induction. Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 162 (concurrent enrollment allowed), and one of the following ( MTH 122 or MTH 123 or MTH 124 or MTH 125 ) or assignment through Grand Valley math placement",
+    "prerequisite_codes": [
+      "CIS 162",
+      "MTH 122",
+      "MTH 123",
+      "MTH 124",
+      "MTH 125"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-225.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "general",
+        "cognate"
+      ]
+    }
+  },
+  {
+    "code": "MTH 325",
+    "subject": "MTH",
+    "course_number": "325",
+    "title": "Discrete Structures: Computer Science 2",
+    "description": "Continuation of MTH 225 with emphasis on mathematical proof and graph-related structures. Review of mathematical induction; strong induction and structural induction; direct proof, proof by contraposition, and proof by contradiction; graphs and their representations and properties; relations, equivalence relations, and partial orderings; trees and tree traversals. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 225",
+    "prerequisite_codes": [
+      "MTH 225"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-325.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "general",
+        "cognate"
+      ]
+    }
+  },
+  {
+    "code": "PHI 103",
+    "subject": "PHI",
+    "course_number": "103",
+    "title": "Logic",
+    "description": "What does it mean to think clearly and correctly? What rules govern classification and definition? What is the nature of propositions? What are the rules for correct reasoning? How can we improve our reasoning skills? This course addresses these questions with the help of a standard textbook in classical logic. Fulfills General Education Foundations - Mathematical Sciences. Offered fall and winter semesters.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/phi-103.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "PNH 630",
+    "subject": "PNH",
+    "course_number": "630",
+    "title": "PNH 630",
+    "description": "Referenced as a prerequisite on a CIS / CS program course; detail page not ingested.",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/pnh-630.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "SE 511",
+    "subject": "SE",
+    "course_number": "511",
+    "title": "SE 511",
+    "description": "Referenced as a prerequisite on a CIS / CS program course; detail page not ingested.",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/se-511.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "SE 512",
+    "subject": "SE",
+    "course_number": "512",
+    "title": "Requirements Specification",
+    "description": "",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/se-512.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "software-engineering"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-software-engineering"
+      ]
+    }
+  },
+  {
+    "code": "SE 513",
+    "subject": "SE",
+    "course_number": "513",
+    "title": "Software Testing",
+    "description": "",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/se-513.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "software-engineering"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-software-engineering"
+      ]
+    }
+  },
+  {
+    "code": "SE 522",
+    "subject": "SE",
+    "course_number": "522",
+    "title": "Software Architecture and Design",
+    "description": "",
+    "credits_min": null,
+    "credits_max": null,
+    "credits_text": null,
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/se-522.htm",
+    "catalog_year": "2026-2027",
+    "level": "graduate",
+    "topics": [
+      "software-engineering"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "core-software-engineering"
+      ]
+    }
+  },
+  {
+    "code": "STA 215",
+    "subject": "STA",
+    "course_number": "215",
+    "title": "Introductory Applied Statistics",
+    "description": "A technique-oriented approach to data analysis using statistical techniques. Graphical and numerical summaries of data, multivariable thinking, confidence interval estimation, regression and correlation, testing hypotheses including chi-square tests and one-way analysis of variance. A statistical software package will provide computational assistance. Fulfills General Education Foundations - Mathematical Sciences. Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 , or fulfillment of MTH 110 through Math Placement",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/sta-215.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "cognate"
+      ]
+    }
+  },
+  {
+    "code": "STA 220",
+    "subject": "STA",
+    "course_number": "220",
+    "title": "Statistical Modeling for Engineers",
+    "description": "This is a first course in statistics using modeling as the unifying framework upon which to build understanding of applied statistical analysis. Focus is on applications of statistical modeling with real and simulated data. Topics include descriptive statistics, probability, data management, statistical modeling, and inference. Open only to engineering students. Offered fall and winter semesters",
+    "credits_min": 2.0,
+    "credits_max": 2.0,
+    "credits_text": "2",
+    "prerequisites_text": "MTH 201 . Corequisite: EGR 220",
+    "prerequisite_codes": [
+      "MTH 201",
+      "EGR 220"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/sta-220.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "databases"
+    ],
+    "programs": {}
+  },
+  {
+    "code": "STA 312",
+    "subject": "STA",
+    "course_number": "312",
+    "title": "Probability and Statistics",
+    "description": "Introduction to the basic concepts of probability and statistics using calculus; discrete and continuous probability distributions, sampling, estimation, confidence intervals, tests of hypotheses, regression and correlation, applications, and problem solving. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 201",
+    "prerequisite_codes": [
+      "MTH 201"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/sta-312.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "cognate"
+      ]
+    }
+  },
+  {
+    "code": "STA 330",
+    "subject": "STA",
+    "course_number": "330",
+    "title": "Probability and Statistics for Computing",
+    "description": "Introduction to probability and statistics using simulation and calculus. Topics will include: data types, sampling, descriptive statistics and graphs, discrete and continuous probability distributions, estimation, confidence intervals, t-tests, ANOVA, chi-square tests, regression and correlation. Theory will be motivated and applications will be explored using statistical software. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "C or better in ( CIS 162 or CIS 161 ) and MTH 201",
+    "prerequisite_codes": [
+      "CIS 162",
+      "CIS 161",
+      "MTH 201"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/sta-330.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "cognate"
+      ]
+    }
+  }
+]

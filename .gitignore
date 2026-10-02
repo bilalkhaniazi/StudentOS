@@ -1,0 +1,45 @@
+# Secrets and local env
+.env
+.env.*
+!.env.example
+
+# Private student records — never commit
+private/
+**/private/
+transcripts/
+**/transcripts/
+academic-records/
+sis-exports/
+*transcript*.pdf
+**/*transcript*.pdf
+*Transcript*.pdf
+**/*Transcript*.pdf
+student-*.pdf
+**/student-*.pdf
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+web/node_modules/
+web/.next/
+web/out/
+web/.turbo/
+
+# Data working copies (keep committed snapshots under data/catalog and data/synthetic)
+data/raw/
+*.log
+
+# Local Postgres / Docker volumes
+pgdata/
+postgres-data/
+
+# OS
+.DS_Store
+Thumbs.db

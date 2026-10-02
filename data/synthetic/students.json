@@ -1,0 +1,953 @@
+[
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Undergraduate",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Bachelor of Science",
+    "major": "Computer Science",
+    "majorAndDepartment": "Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": "data-engineer",
+    "careerInterests": [
+      "data pipelines",
+      "cloud platforms",
+      "SQL"
+    ],
+    "remainingCredits": 28,
+    "termCreditPreference": "softCap15",
+    "skills": [
+      {
+        "label": "SQL",
+        "evidence": "coursework"
+      },
+      {
+        "label": "Python",
+        "evidence": "coursework"
+      },
+      {
+        "label": "Cloud computing",
+        "evidence": "coursework"
+      }
+    ],
+    "projects": [],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [
+      {
+        "subject": "CIS",
+        "courseNumber": "162",
+        "code": "CIS 162",
+        "level": null,
+        "title": "Computer Science I",
+        "creditHours": 4,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Fall 2022",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "163",
+        "code": "CIS 163",
+        "level": null,
+        "title": "Computer Science II",
+        "creditHours": 4,
+        "gradeLetter": "A-",
+        "repeatFlag": null,
+        "term": "Winter 2023",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "241",
+        "code": "CIS 241",
+        "level": null,
+        "title": "System-level Programming and Utilities",
+        "creditHours": 3,
+        "gradeLetter": "B+",
+        "repeatFlag": null,
+        "term": "Fall 2023",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "263",
+        "code": "CIS 263",
+        "level": null,
+        "title": "Data Structures and Algorithms",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Winter 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "290",
+        "code": "CIS 290",
+        "level": null,
+        "title": "Professional Responsibilities and Practices",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Fall 2023",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "351",
+        "code": "CIS 351",
+        "level": null,
+        "title": "Computer Organization",
+        "creditHours": 3,
+        "gradeLetter": "B",
+        "repeatFlag": null,
+        "term": "Fall 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "343",
+        "code": "CIS 343",
+        "level": null,
+        "title": "Structure of Programming Languages",
+        "creditHours": 3,
+        "gradeLetter": "B+",
+        "repeatFlag": null,
+        "term": "Fall 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "350",
+        "code": "CIS 350",
+        "level": null,
+        "title": "Introduction to Software Engineering",
+        "creditHours": 3,
+        "gradeLetter": "B",
+        "repeatFlag": null,
+        "term": "Winter 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "353",
+        "code": "CIS 353",
+        "level": null,
+        "title": "Database",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Winter 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "457",
+        "code": "CIS 457",
+        "level": null,
+        "title": "Data Communications",
+        "creditHours": 3,
+        "gradeLetter": "B",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "378",
+        "code": "CIS 378",
+        "level": null,
+        "title": "Applied Machine Learning",
+        "creditHours": 3,
+        "gradeLetter": "A-",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "437",
+        "code": "CIS 437",
+        "level": null,
+        "title": "Cloud Computing",
+        "creditHours": 3,
+        "gradeLetter": "B+",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "335",
+        "code": "CIS 335",
+        "level": null,
+        "title": "Data Mining",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "452",
+        "code": "CIS 452",
+        "level": null,
+        "title": "Operating Systems Concepts",
+        "creditHours": 3,
+        "gradeLetter": null,
+        "repeatFlag": null,
+        "term": "Fall 2026",
+        "termSource": "Term",
+        "status": "in_progress"
+      }
+    ],
+    "editable": true,
+    "synthetic": true,
+    "syntheticId": "synth-bs-data-eng",
+    "displayName": "CS B.S. \u00b7 Data Engineer example",
+    "summary": "Databases, cloud, and applied ML coursework. Kafka, Airflow, and Terraform are still missing from the record."
+  },
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Undergraduate",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Bachelor of Science",
+    "major": "Computer Science",
+    "majorAndDepartment": "Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": null,
+    "careerInterests": [],
+    "remainingCredits": 120,
+    "termCreditPreference": "softCap15",
+    "skills": [],
+    "projects": [],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [],
+    "editable": true,
+    "synthetic": true,
+    "syntheticId": "synth-bs-empty",
+    "displayName": "CS B.S. \u00b7 Empty profile",
+    "summary": "New undergraduate CS profile with no coursework yet."
+  },
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Undergraduate",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Bachelor of Science",
+    "major": "Computer Science",
+    "majorAndDepartment": "Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": "backend-engineer",
+    "careerInterests": [
+      "APIs",
+      "web services",
+      "databases"
+    ],
+    "remainingCredits": 36,
+    "termCreditPreference": "softCap15",
+    "skills": [
+      {
+        "label": "Python",
+        "evidence": "coursework"
+      },
+      {
+        "label": "Web application programming",
+        "evidence": "coursework"
+      }
+    ],
+    "projects": [
+      {
+        "name": "Campus events API",
+        "summary": "REST API for student-org event listings.",
+        "technologies": [
+          "Python",
+          "PostgreSQL"
+        ],
+        "demonstratesSkills": [
+          "API design",
+          "SQL"
+        ]
+      }
+    ],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [
+      {
+        "subject": "CIS",
+        "courseNumber": "162",
+        "code": "CIS 162",
+        "level": null,
+        "title": "Computer Science I",
+        "creditHours": 4,
+        "gradeLetter": "A-",
+        "repeatFlag": null,
+        "term": "Fall 2023",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "163",
+        "code": "CIS 163",
+        "level": null,
+        "title": "Computer Science II",
+        "creditHours": 4,
+        "gradeLetter": "B+",
+        "repeatFlag": null,
+        "term": "Winter 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "241",
+        "code": "CIS 241",
+        "level": null,
+        "title": "System-level Programming and Utilities",
+        "creditHours": 3,
+        "gradeLetter": "B",
+        "repeatFlag": null,
+        "term": "Fall 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "263",
+        "code": "CIS 263",
+        "level": null,
+        "title": "Data Structures and Algorithms",
+        "creditHours": 3,
+        "gradeLetter": "A-",
+        "repeatFlag": null,
+        "term": "Winter 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "290",
+        "code": "CIS 290",
+        "level": null,
+        "title": "Professional Responsibilities and Practices",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Fall 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "350",
+        "code": "CIS 350",
+        "level": null,
+        "title": "Introduction to Software Engineering",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "353",
+        "code": "CIS 353",
+        "level": null,
+        "title": "Database",
+        "creditHours": 3,
+        "gradeLetter": "B+",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "371",
+        "code": "CIS 371",
+        "level": null,
+        "title": "Web Application Programming",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "343",
+        "code": "CIS 343",
+        "level": null,
+        "title": "Structure of Programming Languages",
+        "creditHours": 3,
+        "gradeLetter": "B",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "351",
+        "code": "CIS 351",
+        "level": null,
+        "title": "Computer Organization",
+        "creditHours": 3,
+        "gradeLetter": null,
+        "repeatFlag": null,
+        "term": "Fall 2026",
+        "termSource": "Term",
+        "status": "in_progress"
+      }
+    ],
+    "editable": true,
+    "synthetic": true,
+    "syntheticId": "synth-bs-backend",
+    "displayName": "CS B.S. \u00b7 Backend-leaning",
+    "summary": "Software engineering and web programming emphasis."
+  },
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Undergraduate",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Bachelor of Science",
+    "major": "Computer Science",
+    "majorAndDepartment": "Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": "ml-engineer",
+    "careerInterests": [
+      "machine learning",
+      "data mining"
+    ],
+    "remainingCredits": 40,
+    "termCreditPreference": "softCap15",
+    "skills": [
+      {
+        "label": "Python",
+        "evidence": "coursework"
+      },
+      {
+        "label": "Machine learning",
+        "evidence": "coursework"
+      }
+    ],
+    "projects": [],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [
+      {
+        "subject": "CIS",
+        "courseNumber": "162",
+        "code": "CIS 162",
+        "level": null,
+        "title": "Computer Science I",
+        "creditHours": 4,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Fall 2023",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "163",
+        "code": "CIS 163",
+        "level": null,
+        "title": "Computer Science II",
+        "creditHours": 4,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Winter 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "263",
+        "code": "CIS 263",
+        "level": null,
+        "title": "Data Structures and Algorithms",
+        "creditHours": 3,
+        "gradeLetter": "A-",
+        "repeatFlag": null,
+        "term": "Fall 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "241",
+        "code": "CIS 241",
+        "level": null,
+        "title": "System-level Programming and Utilities",
+        "creditHours": 3,
+        "gradeLetter": "B+",
+        "repeatFlag": null,
+        "term": "Fall 2024",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "290",
+        "code": "CIS 290",
+        "level": null,
+        "title": "Professional Responsibilities and Practices",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Winter 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "353",
+        "code": "CIS 353",
+        "level": null,
+        "title": "Database",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "335",
+        "code": "CIS 335",
+        "level": null,
+        "title": "Data Mining",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "378",
+        "code": "CIS 378",
+        "level": null,
+        "title": "Applied Machine Learning",
+        "creditHours": 3,
+        "gradeLetter": "A-",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "350",
+        "code": "CIS 350",
+        "level": null,
+        "title": "Introduction to Software Engineering",
+        "creditHours": 3,
+        "gradeLetter": null,
+        "repeatFlag": null,
+        "term": "Fall 2026",
+        "termSource": "Term",
+        "status": "in_progress"
+      }
+    ],
+    "editable": true,
+    "synthetic": true,
+    "syntheticId": "synth-bs-ml",
+    "displayName": "CS B.S. \u00b7 ML-leaning",
+    "summary": "Applied machine learning and data mining electives on a CS B.S. core."
+  },
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Undergraduate",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Bachelor of Science",
+    "major": "Computer Science",
+    "majorAndDepartment": "Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": "data-engineer",
+    "careerInterests": [],
+    "remainingCredits": 96,
+    "termCreditPreference": "softCap15",
+    "skills": [],
+    "projects": [],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [
+      {
+        "subject": "CIS",
+        "courseNumber": "162",
+        "code": "CIS 162",
+        "level": null,
+        "title": "Computer Science I",
+        "creditHours": 4,
+        "gradeLetter": "B",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "353",
+        "code": "CIS 353",
+        "level": null,
+        "title": "Database",
+        "creditHours": 3,
+        "gradeLetter": null,
+        "repeatFlag": null,
+        "term": "Winter 2027",
+        "termSource": "Period",
+        "status": "planned"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "437",
+        "code": "CIS 437",
+        "level": null,
+        "title": "Cloud Computing",
+        "creditHours": 3,
+        "gradeLetter": null,
+        "repeatFlag": null,
+        "term": "Fall 2027",
+        "termSource": "Period",
+        "status": "planned"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "452",
+        "code": "CIS 452",
+        "level": null,
+        "title": "Operating Systems Concepts",
+        "creditHours": 3,
+        "gradeLetter": null,
+        "repeatFlag": null,
+        "term": "Fall 2027",
+        "termSource": "Period",
+        "status": "planned"
+      }
+    ],
+    "editable": true,
+    "synthetic": true,
+    "syntheticId": "synth-bs-missing-prereq",
+    "displayName": "CS B.S. \u00b7 Missing prerequisites",
+    "summary": "Planning later CIS courses without the listed catalog prerequisites yet."
+  },
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Undergraduate",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Bachelor of Science",
+    "major": "Computer Science",
+    "majorAndDepartment": "Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": "backend-engineer",
+    "careerInterests": [],
+    "remainingCredits": 84,
+    "termCreditPreference": "softCap15",
+    "skills": [],
+    "projects": [],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [
+      {
+        "subject": "CIS",
+        "courseNumber": "162",
+        "code": "CIS 162",
+        "level": null,
+        "title": "Computer Science I",
+        "creditHours": 4,
+        "gradeLetter": "B+",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "163",
+        "code": "CIS 163",
+        "level": null,
+        "title": "Computer Science II",
+        "creditHours": 4,
+        "gradeLetter": "B",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "241",
+        "code": "CIS 241",
+        "level": null,
+        "title": "System-level Programming and Utilities",
+        "creditHours": 3,
+        "gradeLetter": null,
+        "repeatFlag": null,
+        "term": "Fall 2026",
+        "termSource": "Term",
+        "status": "in_progress"
+      }
+    ],
+    "editable": true,
+    "synthetic": true,
+    "syntheticId": "synth-bs-heavy-load",
+    "displayName": "CS B.S. \u00b7 Heavy remaining load",
+    "summary": "Year-one CS complete; most required CIS courses still remain."
+  },
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Masters",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Master of Science",
+    "major": "Applied Computer Science",
+    "majorAndDepartment": "Applied Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": "data-engineer",
+    "careerInterests": [
+      "data engineering",
+      "databases",
+      "cloud"
+    ],
+    "remainingCredits": 18,
+    "termCreditPreference": "softCap15",
+    "skills": [
+      {
+        "label": "SQL",
+        "evidence": "coursework"
+      },
+      {
+        "label": "Data engineering",
+        "evidence": "coursework"
+      },
+      {
+        "label": "Cloud applications",
+        "evidence": "coursework"
+      }
+    ],
+    "projects": [],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Applied Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [
+      {
+        "subject": "CIS",
+        "courseNumber": "660",
+        "code": "CIS 660",
+        "level": "G",
+        "title": "Data Engineering",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "673",
+        "code": "CIS 673",
+        "level": "G",
+        "title": "Principles of Database Design",
+        "creditHours": 3,
+        "gradeLetter": "A",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "655",
+        "code": "CIS 655",
+        "level": "G",
+        "title": "Cloud Applications Development",
+        "creditHours": 3,
+        "gradeLetter": "B+",
+        "repeatFlag": null,
+        "term": "Fall 2025",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "641",
+        "code": "CIS 641",
+        "level": "G",
+        "title": "Systems Analysis and Design",
+        "creditHours": 3,
+        "gradeLetter": "A-",
+        "repeatFlag": null,
+        "term": "Winter 2026",
+        "termSource": "Period",
+        "status": "completed"
+      },
+      {
+        "subject": "CIS",
+        "courseNumber": "656",
+        "code": "CIS 656",
+        "level": "G",
+        "title": "Distributed Systems",
+        "creditHours": 3,
+        "gradeLetter": null,
+        "repeatFlag": null,
+        "term": "Fall 2026",
+        "termSource": "Term",
+        "status": "in_progress"
+      }
+    ],
+    "editable": true,
+    "synthetic": true,
+    "syntheticId": "synth-ms-data-eng",
+    "displayName": "Applied CS M.S. \u00b7 Data Engineering track",
+    "summary": "Graduate data-engineering core plus cloud. Kafka, Airflow, and Terraform remain a gap versus the proposal example."
+  },
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Masters",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Master of Science",
+    "major": "Applied Computer Science",
+    "majorAndDepartment": "Applied Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": null,
+    "careerInterests": [],
+    "remainingCredits": 33,
+    "termCreditPreference": "softCap15",
+    "skills": [],
+    "projects": [],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Applied Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [],
+    "editable": true,
+    "synthetic": true,
+    "syntheticId": "synth-ms-empty",
+    "displayName": "Applied CS M.S. \u00b7 Empty profile",
+    "summary": "New Applied Computer Science M.S. profile with no coursework yet."
+  },
+  {
+    "institution": "GVSU",
+    "transcriptLevel": "Undergraduate",
+    "transcriptType": "Advising",
+    "college": "College of Computing",
+    "degreeLine": "Bachelor of Science",
+    "major": "Computer Science",
+    "majorAndDepartment": "Computer Science",
+    "catalogYear": "2026-2027",
+    "targetCareer": null,
+    "careerInterests": [],
+    "remainingCredits": null,
+    "termCreditPreference": "softCap15",
+    "skills": [],
+    "projects": [],
+    "certifications": [],
+    "curriculum": [
+      {
+        "kind": "degree",
+        "status": "sought",
+        "college": "College of Computing",
+        "major": "Computer Science",
+        "degreeDateOptional": null
+      }
+    ],
+    "courses": [],
+    "editable": true,
+    "synthetic": false,
+    "syntheticId": "demo-profile",
+    "displayName": "My demo profile",
+    "summary": "Local demo profile you can create and edit. Not a campus account."
+  }
+]

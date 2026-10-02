@@ -1,0 +1,34 @@
+[
+  {
+    "id": "data-engineer",
+    "label": "Data Engineer",
+    "shortLabel": "Data Engineer",
+    "onetSoc": "15-1243.00",
+    "onetTitle": "Database Architects",
+    "summary": "Build pipelines, warehouses, and reliable data platforms. Catalog courses that often show up on this path include databases, cloud, and applied machine learning."
+  },
+  {
+    "id": "cloud-engineer",
+    "label": "Cloud Engineer",
+    "shortLabel": "Cloud",
+    "onetSoc": "15-1299.08",
+    "onetTitle": "Computer Systems Engineers/Architects",
+    "summary": "Design and operate infrastructure and cloud platforms. Look at networking, operating systems, distributed systems, and cloud application courses."
+  },
+  {
+    "id": "backend-engineer",
+    "label": "Backend Engineer",
+    "shortLabel": "Backend",
+    "onetSoc": "15-1252.00",
+    "onetTitle": "Software Developers",
+    "summary": "Build server-side applications and APIs. Software engineering, web programming, databases, and systems courses sit nearby in the catalog."
+  },
+  {
+    "id": "ml-engineer",
+    "label": "ML Engineer",
+    "shortLabel": "ML",
+    "onetSoc": "15-2051.00",
+    "onetTitle": "Data Scientists",
+    "summary": "Train and ship machine-learning systems. Applied machine learning, data mining, databases, and statistics-adjacent CIS courses are the browse starting point."
+  }
+]

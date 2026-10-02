@@ -1,0 +1,57 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: studentos
+      POSTGRES_PASSWORD: studentos
+      POSTGRES_DB: studentos
+    ports:
+      - "54329:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U studentos -d studentos"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://studentos:studentos@db:5432/studentos
+      CATALOG_YEAR: "2026-2027"
+    ports:
+      - "43124:43124"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+      args:
+        API_INTERNAL_URL: http://api:43124
+        NEXT_PUBLIC_DEV_LOGIN: ${NEXT_PUBLIC_DEV_LOGIN:-false}
+    restart: unless-stopped
+    environment:
+      API_INTERNAL_URL: http://api:43124
+      AUTH_URL: http://127.0.0.1:43123
+      AUTH_TRUST_HOST: "true"
+      AUTH_SECRET: ${AUTH_SECRET:-studentos-local-dev-secret-change-me}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-}
+      ALLOWED_EMAIL_DOMAINS: ${ALLOWED_EMAIL_DOMAINS:-mail.gvsu.edu,gvsu.edu}
+      DEV_LOGIN: ${NEXT_PUBLIC_DEV_LOGIN:-false}
+      NEXT_PUBLIC_DEV_LOGIN: ${NEXT_PUBLIC_DEV_LOGIN:-false}
+    ports:
+      - "43123:43123"
+    depends_on:
+      - api
+
+volumes:
+  pgdata:
