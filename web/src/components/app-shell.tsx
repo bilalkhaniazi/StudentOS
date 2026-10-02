@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
-import { BookOpen, GraduationCap, LogOut, Menu, Target, UserRound } from "lucide-react";
+import { BookOpen, GraduationCap, LogOut, Menu, Route, Target, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -20,6 +20,7 @@ const NAV = [
   { href: "/", label: "Overview", icon: GraduationCap },
   { href: "/profile", label: "Profile", icon: UserRound },
   { href: "/career", label: "Career", icon: Target },
+  { href: "/pathways", label: "Pathways", icon: Route },
   { href: "/courses", label: "Courses", icon: BookOpen },
 ];
 

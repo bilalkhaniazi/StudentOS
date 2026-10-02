@@ -1,6 +1,7 @@
 import type {
   Career,
   CatalogCourse,
+  CatalogProgram,
   Meta,
   ResumeImportResult,
   StudentProfile,
@@ -42,6 +43,7 @@ export const setMyCareer = (targetCareer: string) =>
     body: JSON.stringify({ targetCareer }),
   });
 export const getCareers = () => api<Career[]>("/api/careers");
+export const getPrograms = () => api<CatalogProgram[]>("/api/programs");
 export const getCourses = (params: Record<string, string | undefined> = {}) => {
   const q = new URLSearchParams();
   for (const [k, v] of Object.entries(params)) {

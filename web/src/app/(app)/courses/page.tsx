@@ -81,11 +81,11 @@ export default function CoursesPage() {
         <p className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground">
           Capability 5 · browse
         </p>
-        <h1 className="mt-2 font-heading text-3xl">Explore GVSU CIS courses</h1>
+        <h1 className="mt-2 font-heading text-3xl">Explore GVSU computing courses</h1>
         <p className="mt-2 max-w-2xl text-muted-foreground">
           Structured fields from the public 2026–2027 catalog: code, title, credits, description, and
-          prerequisites when the course page lists them. Course intelligence (skills and career
-          contribution) arrives in a later slice.
+          prerequisites when the course page lists them. Open Pathways for the CS B.S. and Applied CS
+          M.S. required/elective maps and graduate badges.
         </p>
       </div>
 

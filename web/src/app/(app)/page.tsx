@@ -79,7 +79,8 @@ export default function OverviewPage() {
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
           This is your GVSU student record in StudentOS — degree, majors, badges, and coursework from
-          a Banner advising transcript. Pick a career target and browse the CIS catalog.
+          a Banner advising transcript. Open Pathways for the full CS B.S. and Applied CS M.S. maps,
+          then browse the CIS catalog.
         </p>
       </section>
 
@@ -160,9 +161,14 @@ export default function OverviewPage() {
                 ? `${badges.length} post-baccalaureate badge${badges.length === 1 ? "" : "s"}`
                 : "No badge listed"}
             </p>
-            <Button size="sm" render={<Link href="/courses" />}>
-              Browse courses
-            </Button>
+            <div className="flex flex-wrap gap-2">
+              <Button size="sm" render={<Link href="/pathways" />}>
+                Degree pathways
+              </Button>
+              <Button size="sm" variant="outline" render={<Link href="/courses" />}>
+                Browse courses
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>

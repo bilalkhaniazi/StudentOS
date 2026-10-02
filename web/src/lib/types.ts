@@ -85,6 +85,50 @@ export type CatalogCourse = {
   programs: Record<string, string[]>;
   prerequisiteCourses?: CatalogCourse[];
   unlocksCourses?: CatalogCourse[];
+  badges?: string[];
+};
+
+export type PathwayCourse = {
+  code: string;
+  title: string;
+  credits_min?: number | null;
+  credits_max?: number | null;
+  credits_text?: string | null;
+  section: string;
+  year?: string;
+  badge_id?: string;
+};
+
+export type BadgeSlot = {
+  kind: "all" | "choose_n";
+  n: number;
+  courses: PathwayCourse[];
+};
+
+export type CatalogBadge = {
+  id: string;
+  name: string;
+  kind: string;
+  credits: number;
+  course_count: number;
+  source_url: string;
+  slots: BadgeSlot[];
+  courses: PathwayCourse[];
+};
+
+export type CatalogProgram = {
+  id: string;
+  title: string;
+  degree_line: string;
+  major: string;
+  level: string;
+  source_url: string;
+  catalog_year: string;
+  overview?: string[];
+  courses: PathwayCourse[];
+  suggested_order?: PathwayCourse[];
+  badges?: CatalogBadge[];
+  rules?: Record<string, unknown>;
 };
 
 export type Session = {

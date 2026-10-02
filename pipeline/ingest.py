@@ -20,7 +20,6 @@ from typing import Any
 from urllib.parse import urljoin
 
 import pandas as pd
-import psycopg2
 import requests
 from bs4 import BeautifulSoup
 
@@ -59,6 +58,45 @@ PROGRAM_PAGES = {
         "degree_line": "Master of Science",
         "major": "Applied Computer Science",
         "level": "Masters",
+    },
+}
+
+BADGE_PAGES = {
+    "biomedical-informatics": {
+        "name": "Biomedical Informatics",
+        "url": f"{BASE}/catalog/program/badge-in-biomedical-informatics.htm",
+    },
+    "cybersecurity": {
+        "name": "Cybersecurity",
+        "url": f"{BASE}/catalog/program/badge-in-cybersecurity.htm",
+    },
+    "data-analytics": {
+        "name": "Data Analytics",
+        "url": f"{BASE}/catalog/program/badge-in-data-analytics.htm",
+    },
+    "database-management": {
+        "name": "Database Management",
+        "url": f"{BASE}/catalog/program/badge-in-database-management.htm",
+    },
+    "distributed-computing": {
+        "name": "Distributed Computing",
+        "url": f"{BASE}/catalog/program/badge-in-distributed-computing.htm",
+    },
+    "information-systems-management": {
+        "name": "Information Systems Management",
+        "url": f"{BASE}/catalog/program/badge-in-information-systems-management.htm",
+    },
+    "software-design-and-development": {
+        "name": "Software Design and Development",
+        "url": f"{BASE}/catalog/program/badge-in-software-design-and-development.htm",
+    },
+    "software-engineering": {
+        "name": "Software Engineering",
+        "url": f"{BASE}/catalog/program/badge-in-software-engineering.htm",
+    },
+    "web-and-mobile-computing": {
+        "name": "Web and Mobile Computing",
+        "url": f"{BASE}/catalog/program/badge-in-web-and-mobile-computing.htm",
     },
 }
 
@@ -121,7 +159,10 @@ def fetch(s: requests.Session, url: str, retries: int = 3) -> str | None:
 
 
 def soup_text(html: str) -> BeautifulSoup:
-    return BeautifulSoup(html, "lxml")
+    try:
+        return BeautifulSoup(html, "lxml")
+    except Exception:
+        return BeautifulSoup(html, "html.parser")
 
 
 def decode_href(href: str) -> str:
@@ -133,10 +174,12 @@ def parse_credits(raw: str | None) -> tuple[float | None, float | None, str | No
         return None, None, None
     cleaned = re.sub(r"\s+", " ", raw).strip()
     m = re.search(
-        r"Credits?:\s*(\d+(?:\.\d+)?)(?:\s*to\s*(\d+(?:\.\d+)?))?",
+        r"(?:Credits?:\s*)?(\d+(?:\.\d+)?)(?:\s*to\s*(\d+(?:\.\d+)?))?(?:\s*credits?)?",
         cleaned,
         re.I,
     )
+    if not m:
+        m = re.fullmatch(r"(\d+(?:\.\d+)?)(?:\s*to\s*(\d+(?:\.\d+)?))?", cleaned, re.I)
     if not m:
         return None, None, None
     lo, hi = m.group(1), m.group(2)
@@ -317,56 +360,18 @@ def parse_course_page(html: str, url: str, fallback: dict[str, Any] | None = Non
     }
 
 
-def parse_program_page(html: str, program_id: str, page_url: str) -> dict[str, Any]:
-    soup = soup_text(html)
-    for tag in soup(["script", "style", "header", "footer", "nav"]):
-        tag.decompose()
-    main = soup.find("main") or soup
-    text = main.get_text("\n", strip=True)
-    courses: list[dict[str, Any]] = []
-    current_section = "general"
-    for raw_line in text.splitlines():
-        line = re.sub(r"\s+", " ", raw_line).strip()
-        if not line:
-            continue
-        lower = line.lower()
-        if "suggested order of coursework" in lower:
-            if courses:
-                break
-            continue
-        if "required computer science" in lower:
-            current_section = "required"
-        elif "elective computer science" in lower:
-            current_section = "elective"
-        elif "required non-computing" in lower or "cognate" in lower:
-            current_section = "cognate"
-        elif line.lower() in {"core", "core courses"} or lower.startswith("core courses"):
-            current_section = "core"
-        elif "badge" in lower and "course" in lower:
-            current_section = "badge"
-        elif line.lower() == "electives" or lower.startswith("electives"):
-            current_section = "elective"
-        elif "capstone" in lower:
-            current_section = "capstone"
-        elif "data engineering" == lower.strip("1234. "):
-            current_section = "core-data-engineering"
-        elif "management of systems" in lower:
-            current_section = "core-systems-development"
-        elif "software engineering" == lower.strip("1234. "):
-            current_section = "core-software-engineering"
-        elif lower.strip("1234. ") == "networking":
-            current_section = "core-networking"
-        m = LISTING_RE.search(line)
-        if not m:
-            continue
+def _listing_rows(line: str, section: str, program_id: str) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for m in LISTING_RE.finditer(line):
         subj, num, title, credits_raw = (
             m.group(1).upper(),
             m.group(2),
-            m.group(3).strip(),
+            m.group(3).strip(" -"),
             m.group(4),
         )
+        title = re.sub(r"\s+", " ", title).strip()
         credits_min, credits_max, credits_text = parse_credits(credits_raw)
-        courses.append(
+        rows.append(
             {
                 "code": f"{subj} {num}",
                 "subject": subj,
@@ -375,12 +380,107 @@ def parse_program_page(html: str, program_id: str, page_url: str) -> dict[str, A
                 "credits_min": credits_min,
                 "credits_max": credits_max,
                 "credits_text": credits_text,
-                "section": current_section,
+                "section": section,
                 "program_id": program_id,
             }
         )
+    return rows
+
+
+def _program_section_for(line: str, current: str) -> str:
+    lower = line.lower().strip()
+    if "suggested order of coursework" in lower:
+        return "suggested-order"
+    if lower.startswith("year one") or lower == "year 1":
+        return "suggested-year-1"
+    if lower.startswith("year two") or lower == "year 2":
+        return "suggested-year-2"
+    if lower.startswith("year three") or lower == "year 3":
+        return "suggested-year-3"
+    if lower.startswith("year four") or lower == "year 4":
+        return "suggested-year-4"
+    if "bachelor of science degree requirements" in lower:
+        return "foundation"
+    if "required computer science courses" in lower:
+        return "required"
+    if "elective computer science courses" in lower:
+        return "elective"
+    if "required non-computing" in lower:
+        return "cognate"
+    if "select one math elective" in lower:
+        return "math-elective"
+    if "physical sciences or life sciences" in lower or "has a lab component" in lower:
+        return "science-lab"
+    if lower in {"core", "core courses"} or lower.startswith("core courses"):
+        return "core"
+    if "badge courses" in lower:
+        return "badge"
+    if lower.strip("1234. ") == "data engineering":
+        return "core-data-engineering"
+    if "management of systems" in lower:
+        return "core-systems-development"
+    if lower.strip("1234. ") == "software engineering":
+        return "core-software-engineering"
+    if lower.strip("1234. ") == "networking":
+        return "core-networking"
+    if lower == "electives" or lower.startswith("electives"):
+        return "elective"
+    if lower == "capstone" or lower.startswith("capstone"):
+        return "capstone"
+    return current
+
+
+def parse_program_page(html: str, program_id: str, page_url: str) -> dict[str, Any]:
+    soup = soup_text(html)
+    for tag in soup(["script", "style", "header", "footer", "nav"]):
+        tag.decompose()
+    main = soup.find("main") or soup
+    text = main.get_text("\n", strip=True)
+    courses: list[dict[str, Any]] = []
+    suggested: list[dict[str, Any]] = []
+    current_section = "general"
+    overview_notes: list[str] = []
+    for raw_line in text.splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line:
+            continue
+        listings = _listing_rows(line, current_section, program_id)
+        if not listings:
+            nxt = _program_section_for(line, current_section)
+            if nxt != current_section:
+                current_section = nxt
+            elif program_id == "applied-cs-ms" and len(overview_notes) < 6:
+                low = line.lower()
+                if "33 credit" in low or "11 three-credit" in low or "at least one badge" in low:
+                    overview_notes.append(line)
+            continue
+        if current_section.startswith("suggested"):
+            year = {
+                "suggested-year-1": "Year One",
+                "suggested-year-2": "Year Two",
+                "suggested-year-3": "Year Three",
+                "suggested-year-4": "Year Four",
+            }.get(current_section, "Sequence")
+            for row in listings:
+                suggested.append({**row, "year": year, "section": "suggested"})
+            continue
+        if " or " in line.lower() and len(listings) >= 2 and current_section in {"cognate", "foundation"}:
+            for row in listings:
+                row["section"] = "stats-choice"
+                row["choice_group"] = "statistics"
+        courses.extend(listings)
+
     info = PROGRAM_PAGES[program_id]
-    return {
+    unique: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    for row in courses:
+        key = (row["code"], row["section"])
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(row)
+
+    payload: dict[str, Any] = {
         "id": program_id,
         "title": info["title"],
         "degree_line": info["degree_line"],
@@ -388,6 +488,135 @@ def parse_program_page(html: str, program_id: str, page_url: str) -> dict[str, A
         "level": info["level"],
         "source_url": page_url,
         "catalog_year": CATALOG_YEAR,
+        "overview": overview_notes,
+        "courses": unique,
+        "suggested_order": suggested,
+        "badges": [],
+        "rules": _program_rules(program_id, unique),
+    }
+    return payload
+
+
+def _program_rules(program_id: str, courses: list[dict[str, Any]]) -> dict[str, Any]:
+    if program_id == "applied-cs-ms":
+        return {
+            "total_credits": 33,
+            "course_count": 11,
+            "core": {
+                "credits": 9,
+                "choose_areas": 3,
+                "of_areas": 4,
+                "note": "Complete one course in three of the four core areas.",
+            },
+            "badge": {
+                "credits": 9,
+                "course_count": 3,
+                "choose": 1,
+                "note": "Complete at least one College of Computing graduate badge (three courses).",
+            },
+            "electives": {
+                "credits_min": 9,
+                "credits_max": 12,
+                "note": "Take enough electives to reach 33 credits. Electives are graduate computing courses not used as core, badge, or capstone.",
+            },
+            "capstone": {
+                "credits": 3,
+                "note": "CIS 693 Master's Project, or CIS 695 Master's Thesis (taken twice for 6 credits). Internship only with Graduate Program Director approval.",
+            },
+        }
+    required_n = sum(1 for c in courses if c["section"] == "required")
+    elective_n = sum(1 for c in courses if c["section"] == "elective")
+    return {
+        "total_credits": None,
+        "core": {
+            "note": "Complete every required Computer Science course with a minimum 2.0 GPA.",
+            "course_count": required_n,
+        },
+        "electives": {
+            "choose": 4,
+            "of": elective_n,
+            "note": "Select four elective Computer Science courses from the catalog list.",
+        },
+        "cognate": {
+            "note": "Complete the non-computing cognates, including one statistics choice, one math elective, and one lab science.",
+        },
+        "capstone": {
+            "note": "CIS 467 Computer Science Project is the major capstone. CIS 490 Internship is also required (2 to 5 credits).",
+        },
+    }
+
+
+def _badge_structure_kind(line: str, current: str) -> str:
+    low = line.lower()
+    if "choose 3 of the following" in low or "choose three of the following" in low:
+        return "choose-3"
+    if "and two of the following" in low or "and 2 of the following" in low:
+        return "choose-2"
+    if "and 1 of the following" in low or "and one of the following" in low:
+        return "choose-1"
+    if "students must take" in low:
+        return "required"
+    return current
+
+
+def parse_badge_page(html: str, badge_id: str, info: dict[str, Any]) -> dict[str, Any]:
+    soup = soup_text(html)
+    for tag in soup(["script", "style", "header", "footer", "nav"]):
+        tag.decompose()
+    main = soup.find("main") or soup
+    text = main.get_text("\n", strip=True)
+    kind = "required"
+    slots: list[dict[str, Any]] = []
+    required: list[dict[str, Any]] = []
+    choose_from: list[dict[str, Any]] = []
+    choose_n = 0
+    for raw_line in text.splitlines():
+        line = re.sub(r"\s+", " ", raw_line).strip()
+        if not line:
+            continue
+        kind = _badge_structure_kind(line, kind)
+        listings = _listing_rows(line, kind, badge_id)
+        if not listings:
+            continue
+        # A single line of "A OR B" is one choose-1 slot.
+        if " or " in line.lower() and len(listings) >= 2:
+            slots.append({"kind": "choose_n", "n": 1, "courses": listings})
+            continue
+        if kind == "required":
+            required.extend(listings)
+        elif kind.startswith("choose-"):
+            choose_n = int(kind.split("-")[1])
+            choose_from.extend(listings)
+        else:
+            required.extend(listings)
+    if required:
+        slots.insert(0, {"kind": "all", "n": len(required), "courses": required})
+    if choose_from:
+        slots.append({"kind": "choose_n", "n": choose_n or 1, "courses": choose_from})
+    if not slots:
+        # Distributed Computing-style: all listed courses are required.
+        all_rows = []
+        for raw_line in text.splitlines():
+            all_rows.extend(_listing_rows(re.sub(r"\s+", " ", raw_line).strip(), "required", badge_id))
+        if all_rows:
+            slots = [{"kind": "all", "n": len(all_rows), "courses": all_rows}]
+    courses: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for slot in slots:
+        for row in slot["courses"]:
+            if row["code"] in seen:
+                continue
+            seen.add(row["code"])
+            courses.append(row)
+    return {
+        "id": badge_id,
+        "name": info["name"],
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": info["url"],
+        "catalog_year": CATALOG_YEAR,
+        "slots": slots,
         "courses": courses,
     }
 
@@ -435,6 +664,44 @@ def fetch_catalog(live: bool) -> tuple[list[dict[str, Any]], list[dict[str, Any]
                     "credits_text": row["credits_text"],
                 },
             )
+
+    badges: list[dict[str, Any]] = []
+    for badge_id, info in BADGE_PAGES.items():
+        page = fetch(s, info["url"])
+        if not page:
+            print(f"warn: missing badge page {info['url']}", file=sys.stderr)
+            continue
+        badge = parse_badge_page(page, badge_id, info)
+        badges.append(badge)
+        for row in badge["courses"]:
+            listings.setdefault(
+                row["code"],
+                {
+                    "code": row["code"],
+                    "subject": row["subject"],
+                    "course_number": row["course_number"],
+                    "title": row["title"],
+                    "source_url": guess_course_url(row["code"]),
+                    "listing_subject": row["subject"],
+                    "credits_min": row["credits_min"],
+                    "credits_max": row["credits_max"],
+                    "credits_text": row["credits_text"],
+                },
+            )
+
+    for program in programs:
+        if program["id"] == "applied-cs-ms":
+            program["badges"] = badges
+            for badge in badges:
+                for row in badge["courses"]:
+                    program["courses"].append(
+                        {
+                            **row,
+                            "section": f"badge-{badge['id']}",
+                            "program_id": "applied-cs-ms",
+                            "badge_id": badge["id"],
+                        }
+                    )
 
     courses: dict[str, dict[str, Any]] = {}
 
@@ -486,6 +753,10 @@ def fetch_catalog(live: bool) -> tuple[list[dict[str, Any]], list[dict[str, Any]
             sections = course["programs"].setdefault(program["id"], [])
             if row["section"] not in sections:
                 sections.append(row["section"])
+            if row.get("badge_id"):
+                badges_on = course.setdefault("badges", [])
+                if row["badge_id"] not in badges_on:
+                    badges_on.append(row["badge_id"])
 
     # Stub nodes for prerequisite courses not already in the catalog snapshot
     extra_codes: set[str] = set()
@@ -530,8 +801,10 @@ def fetch_catalog(live: bool) -> tuple[list[dict[str, Any]], list[dict[str, Any]
         "attribution": "Grand Valley State University public catalog. Structured fields only. Not official SIS.",
         "subject_pages": SUBJECT_PAGES,
         "program_pages": {k: v["url"] for k, v in PROGRAM_PAGES.items()},
+        "badge_pages": {k: v["url"] for k, v in BADGE_PAGES.items()},
         "course_count": len(course_list),
         "program_count": len(programs),
+        "badge_count": len(next((p.get("badges") or [] for p in programs if p["id"] == "applied-cs-ms"), [])),
     }
     return course_list, programs, meta
 
@@ -592,6 +865,8 @@ CREATE TABLE IF NOT EXISTS sessions (
 
 
 def connect(dsn: str):
+    import psycopg2
+
     return psycopg2.connect(dsn)
 
 
@@ -642,15 +917,25 @@ def json_safe(value: Any) -> Any:
     return value
 
 
-def write_catalog(conn, courses: pd.DataFrame, programs: pd.DataFrame, meta: dict[str, Any]) -> None:
+def write_catalog(conn, courses: pd.DataFrame, programs: pd.DataFrame | list[dict[str, Any]], meta: dict[str, Any]) -> None:
     from pipeline.synthetic import CAREERS  # type: ignore
+
+    if isinstance(programs, pd.DataFrame):
+        program_rows = [json_safe(row.to_dict()) for _, row in programs.iterrows()]
+    else:
+        program_rows = [json_safe(row) for row in programs]
 
     with conn.cursor() as cur:
         cur.execute(SCHEMA_SQL)
-        cur.execute("TRUNCATE TABLE edges, sessions, nodes CASCADE")
-        for _, program in programs.iterrows():
-            props = json_safe(program.to_dict())
-            upsert_node(cur, f"program:{program['id']}", "program", props)
+        cur.execute(
+            """
+            SELECT id, properties FROM nodes WHERE type = 'student'
+            """
+        )
+        students = cur.fetchall()
+        cur.execute("DELETE FROM nodes WHERE type IN ('course', 'program', 'career', 'meta')")
+        for program in program_rows:
+            upsert_node(cur, f"program:{program['id']}", "program", program)
 
         for _, course in courses.iterrows():
             props = json_safe(course.to_dict())
@@ -659,7 +944,6 @@ def write_catalog(conn, courses: pd.DataFrame, programs: pd.DataFrame, meta: dic
             node_id = f"course:{course['code']}"
             upsert_node(cur, node_id, "course", props)
 
-        # Prerequisite edges: src is prerequisite of dst
         for _, course in courses.iterrows():
             codes = json_safe(course.get("prerequisite_codes") or [])
             dst = f"course:{course['code']}"
@@ -673,6 +957,29 @@ def write_catalog(conn, courses: pd.DataFrame, programs: pd.DataFrame, meta: dic
             upsert_node(cur, f"career:{career['id']}", "career", career)
 
         upsert_node(cur, "meta:catalog", "meta", meta)
+
+        for student_id, properties in students:
+            props = properties
+            if isinstance(props, str):
+                props = json.loads(props)
+            for entry in props.get("courses") or []:
+                if entry.get("status") != "completed":
+                    continue
+                course_node = f"course:{entry.get('code')}"
+                cur.execute("SELECT 1 FROM nodes WHERE id = %s", (course_node,))
+                if not cur.fetchone():
+                    continue
+                upsert_edge(
+                    cur,
+                    student_id,
+                    "completed",
+                    course_node,
+                    {
+                        "gradeLetter": entry.get("gradeLetter"),
+                        "term": entry.get("term"),
+                        "creditHours": entry.get("creditHours"),
+                    },
+                )
     conn.commit()
 
 
@@ -691,12 +998,11 @@ def main() -> int:
         save_snapshot(courses, programs, meta)
         print(f"wrote snapshot: {len(courses)} courses, {len(programs)} programs")
 
-    cdf, pdf = clean_frames(courses, programs)
+    cdf, _pdf = clean_frames(courses, programs)
     conn = connect(args.dsn)
     try:
-        # Allow `python pipeline/ingest.py` without installing the package.
         sys.path.insert(0, str(ROOT))
-        write_catalog(conn, cdf, pdf, meta)
+        write_catalog(conn, cdf, programs, meta)
     finally:
         conn.close()
     print(f"loaded {len(cdf)} courses into PostgreSQL")
