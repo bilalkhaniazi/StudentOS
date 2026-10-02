@@ -174,6 +174,8 @@ class ParsedTranscript:
     college: str | None = None
     degreeLine: str | None = None
     major: str | None = None
+    majors: list[str] = field(default_factory=list)
+    badges: list[dict] = field(default_factory=list)
     courses: list[ParsedCourse] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
     method: str = "text"
@@ -222,6 +224,60 @@ def _is_noise(line: str) -> bool:
     if low in {"and", "department", "computing", "science"}:
         return True
     return False
+
+
+def extract_badges(lines: list[str]) -> list[dict]:
+    """Read Awarded Post-Baccalaureate Badge blocks. Ignores name, ID, and GPA."""
+    badges: list[dict] = []
+    count = len(lines)
+    for i, line in enumerate(lines):
+        low = line.lower()
+        prev = lines[i - 1].lower() if i else ""
+        if "post-baccalaureate" not in low and not (low == "badge" and "post-baccalaureate" in prev):
+            continue
+        college = None
+        awarded_on = None
+        parts: list[str] = []
+        take_major = False
+        for cur in lines[i : min(count, i + 18)]:
+            cl = cur.lower()
+            if cl.startswith("institution credit") or cl.startswith("attempt") or _PERIOD_RE.search(cur):
+                break
+            if "college of computing" in cl:
+                college = "College of Computing"
+                continue
+            if cl in {"college", "major", "department", "awarded", "degree date", "badge", "post-baccalaureate"}:
+                if cl == "major":
+                    take_major = True
+                continue
+            date = re.fullmatch(r"(\d{1,2}/\d{1,2}/\d{2,4})", cur)
+            if date:
+                awarded_on = date.group(1)
+                continue
+            if take_major and not _is_noise(cur) and "http" not in cl:
+                cleaned = cur.replace(", Undeclared", "").replace("Undeclared", "").strip(" ,")
+                if cleaned.lower() in {"college of", "computing", "science"}:
+                    continue
+                if cleaned:
+                    parts.append(cleaned)
+        name = re.sub(r"\s+", " ", " ".join(parts)).strip()
+        compact = _norm_title(name)
+        if "database" in compact and "management" in compact:
+            name = "Database Management"
+        if not name:
+            continue
+        if any(_norm_title(b["name"]) == _norm_title(name) for b in badges):
+            continue
+        badges.append(
+            {
+                "name": name,
+                "kind": "Post-Baccalaureate Badge",
+                "college": college,
+                "status": "awarded",
+                "awardedOn": awarded_on,
+            }
+        )
+    return badges
 
 
 def _looks_like_qp(value: float, credits: float | None) -> bool:
@@ -411,12 +467,18 @@ def parse_banner(text: str, method: str = "text") -> ParsedTranscript:
         cleaned = line.replace(", Undeclared", "").strip()
         if cleaned in {"Applied Computer Science", "Computer Science"}:
             parsed.major = cleaned
+            if cleaned not in parsed.majors:
+                parsed.majors.append(cleaned)
             return
         if low.startswith("applied computer"):
             parsed.major = "Applied Computer Science"
+            if parsed.major not in parsed.majors:
+                parsed.majors.append(parsed.major)
             return
         if low in {"computer science", "computer science, undeclared"}:
             parsed.major = "Computer Science"
+            if parsed.major not in parsed.majors:
+                parsed.majors.append(parsed.major)
 
     for line in lines:
         low = line.lower()
@@ -502,6 +564,8 @@ def parse_banner(text: str, method: str = "text") -> ParsedTranscript:
         group.extend(line.split())
 
     dump_group()
+
+    parsed.badges = extract_badges(lines)
 
     # Deduplicate exact code+term+status, keep the richer title.
     merged: dict[tuple[str, str | None, str], ParsedCourse] = {}
@@ -759,6 +823,8 @@ def parsed_to_payload(parsed: ParsedTranscript) -> dict:
         "college": parsed.college,
         "degreeLine": parsed.degreeLine,
         "major": parsed.major,
+        "majors": parsed.majors,
+        "badges": parsed.badges,
         "completed": completed,
         "inProgress": in_progress,
         "remaining": remaining,

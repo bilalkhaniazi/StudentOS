@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { EmptyState, ErrorState } from "@/components/empty-state";
-import { getCareers, getProfile, getSession, setCareer } from "@/lib/api";
+import { getCareers, getMe, setMyCareer } from "@/lib/api";
 import type { Career, StudentProfile } from "@/lib/types";
 import { toast } from "sonner";
 
@@ -21,13 +21,7 @@ export default function CareerPage() {
     setLoading(true);
     setError(null);
     try {
-      const session = await getSession();
-      if (!session.activeProfileId) {
-        setProfile(null);
-        setCareers(await getCareers());
-        return;
-      }
-      const [p, c] = await Promise.all([getProfile(session.activeProfileId), getCareers()]);
+      const [p, c] = await Promise.all([getMe(), getCareers()]);
       setProfile(p);
       setCareers(c);
     } catch (err) {
@@ -45,7 +39,7 @@ export default function CareerPage() {
     if (!profile) return;
     setSaving(id);
     try {
-      const next = await setCareer(profile.syntheticId, id);
+      const next = await setMyCareer(id);
       setProfile(next);
       toast.success(`Target career set to ${careers.find((c) => c.id === id)?.label}`);
     } catch (err) {
@@ -60,8 +54,8 @@ export default function CareerPage() {
   if (!profile) {
     return (
       <EmptyState
-        title="No profile selected"
-        body="Switch to a synthetic CS student or create a demo profile before choosing a career."
+        title="Sign in to choose a career"
+        body="StudentOS opens your own profile after Google sign-in. There is no demo student switcher."
       />
     );
   }
@@ -69,15 +63,15 @@ export default function CareerPage() {
   return (
     <div className="space-y-8">
       <div>
-        <p className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground">Capability 2</p>
+        <p className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground">Career target</p>
         <h1 className="mt-2 font-heading text-3xl">Select a target career</h1>
         <p className="mt-2 max-w-2xl text-muted-foreground">
           These four paths are the locked prototype careers. Match scores and skill-gap labels are not
-          computed yet — this slice only stores the choice on the student record.
+          computed yet — this slice only stores the choice on your record.
         </p>
       </div>
       <p className="text-sm">
-        Active profile: <span className="font-medium">{profile.displayName}</span>
+        Signed in as <span className="font-medium">{profile.displayName}</span>
         {profile.targetCareer ? (
           <>
             {" "}

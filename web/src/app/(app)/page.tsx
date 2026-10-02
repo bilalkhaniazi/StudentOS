@@ -2,21 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ArrowRight, BookOpen, Target, UserRound } from "lucide-react";
+import { ArrowRight, Award, BookOpen, Target, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { EmptyState, ErrorState } from "@/components/empty-state";
-import {
-  careerLabel,
-  createDemoProfile,
-  getCareers,
-  getCourses,
-  getMeta,
-  getProfile,
-  getSession,
-} from "@/lib/api";
+import { careerLabel, getCareers, getCourses, getMe, getMeta } from "@/lib/api";
 import type { Career, CatalogCourse, Meta, StudentProfile } from "@/lib/types";
 
 export default function OverviewPage() {
@@ -31,13 +23,7 @@ export default function OverviewPage() {
     setLoading(true);
     setError(null);
     try {
-      const session = await getSession();
-      const [p, c, m, courses] = await Promise.all([
-        session.activeProfileId ? getProfile(session.activeProfileId) : Promise.resolve(null),
-        getCareers(),
-        getMeta(),
-        getCourses(),
-      ]);
+      const [p, c, m, courses] = await Promise.all([getMe(), getCareers(), getMeta(), getCourses()]);
       setProfile(p);
       setCareers(c);
       setMeta(m);
@@ -78,98 +64,108 @@ export default function OverviewPage() {
 
   const completed = profile?.courses.filter((c) => c.status === "completed") ?? [];
   const career = careerLabel(profile?.targetCareer, careers);
-  const isEmptyProfile = !profile || (profile.courses.length === 0 && !profile.targetCareer && profile.syntheticId === "demo-profile");
+  const majors = profile?.majors?.length ? profile.majors : profile?.major ? [profile.major] : [];
+  const badges = profile?.badges ?? [];
+  const needsTranscript = !profile?.degreeLine && completed.length === 0;
 
   return (
     <div className="space-y-10">
       <section className="space-y-3">
         <p className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground">
-          Milestone 4 · Slice A
+          Your record
         </p>
         <h1 className="font-heading text-3xl leading-tight md:text-4xl">
-          Plan the next CIS course from a real GVSU catalog.
+          {profile?.displayName ? `Welcome, ${profile.displayName}.` : "Your academic profile"}
         </h1>
         <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
-          Enter an academic profile, pick Data Engineer (or Cloud, Backend, ML), and browse Computer
-          Science B.S. and Applied Computer Science M.S. courses — including catalog prerequisites.
-          Skill gaps and match scores are not in this slice.
+          This is your GVSU student record in StudentOS — degree, majors, badges, and coursework from
+          a Banner advising transcript. Pick a career target and browse the CIS catalog.
         </p>
       </section>
 
-      {isEmptyProfile ? (
+      {needsTranscript ? (
         <EmptyState
-          title="No demo profile filled in yet"
-          body="Create a local profile, or switch to a synthetic CS student in the header. The empty B.S. and M.S. records are there on purpose."
+          title="No transcript on this profile yet"
+          body="Upload your Banner advising PDF on Profile. StudentOS will fill degree, majors, badges, and courses, then discard the file."
           action={
-            <div className="flex flex-wrap gap-2">
-              <Button render={<Link href="/profile" />}>Open profile</Button>
-              <Button
-                variant="outline"
-                onClick={async () => {
-                  await createDemoProfile();
-                  await load();
-                }}
-              >
-                Start a blank demo profile
-              </Button>
-            </div>
+            <Button render={<Link href="/profile" />}>Open your profile</Button>
           }
         />
-      ) : (
-        <div className="grid gap-4 md:grid-cols-3">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <UserRound className="size-4" /> {profile?.displayName}
-              </CardTitle>
-              <CardDescription>
-                {profile?.degreeLine} · {profile?.major}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-2 text-sm">
-              <p>
-                {completed.length} completed course{completed.length === 1 ? "" : "s"} on this record.
-              </p>
-              <Button size="sm" variant="outline" render={<Link href="/profile" />}>
-                Edit profile
+      ) : null}
+
+      <div className="grid gap-4 md:grid-cols-3">
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <UserRound className="size-4" /> {profile?.displayName || "Student"}
+            </CardTitle>
+            <CardDescription>
+              {[profile?.degreeLine, majors.join(" · ")].filter(Boolean).join(" · ") ||
+                "Degree and major appear after a transcript upload."}
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm">
+            {profile?.college ? <p>{profile.college}</p> : null}
+            {profile?.email ? <p className="text-muted-foreground">{profile.email}</p> : null}
+            <p>
+              {completed.length} completed course{completed.length === 1 ? "" : "s"} on this record.
+            </p>
+            <div className="flex flex-wrap gap-1">
+              {badges.length ? (
+                badges.map((badge) => (
+                  <Badge key={badge.name} variant="secondary">
+                    {badge.kind}: {badge.name}
+                  </Badge>
+                ))
+              ) : (
+                <span className="text-muted-foreground">No Banner badge on file.</span>
+              )}
+            </div>
+            <Button size="sm" variant="outline" render={<Link href="/profile" />}>
+              View profile
+            </Button>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Target className="size-4" /> Target career
+            </CardTitle>
+            <CardDescription>
+              {career ?? "Not selected yet. Choose Data Engineer, Cloud, Backend, or ML."}
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {career ? <Badge>{career}</Badge> : null}
+            <div className="mt-3">
+              <Button size="sm" render={<Link href="/career" />}>
+                Choose career <ArrowRight className="size-4" />
               </Button>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Target className="size-4" /> Target career
-              </CardTitle>
-              <CardDescription>
-                {career ?? "Not selected. Pick Data Engineer to walk the proposal example."}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              {career ? <Badge>{career}</Badge> : null}
-              <div className="mt-3">
-                <Button size="sm" render={<Link href="/career" />}>
-                  Choose career <ArrowRight className="size-4" />
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <BookOpen className="size-4" /> Catalog
-              </CardTitle>
-              <CardDescription>
-                {meta?.courseCount ?? 0} courses ingested for {meta?.catalog_year ?? "the current catalog year"}.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Button size="sm" render={<Link href="/courses" />}>
-                Browse courses
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
-      )}
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <BookOpen className="size-4" /> Catalog
+            </CardTitle>
+            <CardDescription>
+              {meta?.courseCount ?? 0} CIS courses ingested for {meta?.catalog_year ?? "the current catalog year"}.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <p className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Award className="size-4" />
+              {badges.length
+                ? `${badges.length} post-baccalaureate badge${badges.length === 1 ? "" : "s"}`
+                : "No badge listed"}
+            </p>
+            <Button size="sm" render={<Link href="/courses" />}>
+              Browse courses
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
 
       <section className="space-y-4">
         <div className="flex items-end justify-between gap-4">

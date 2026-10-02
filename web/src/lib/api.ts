@@ -1,4 +1,11 @@
-import type { Career, CatalogCourse, Meta, Session, StudentProfile, TranscriptImportResult } from "./types";
+import type {
+  Career,
+  CatalogCourse,
+  Meta,
+  ResumeImportResult,
+  StudentProfile,
+  TranscriptImportResult,
+} from "./types";
 
 async function parseError(res: Response): Promise<string> {
   const text = await res.text();
@@ -23,23 +30,14 @@ export async function api<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export const getMeta = () => api<Meta>("/api/meta");
-export const getSession = () => api<Session>("/api/session");
-export const setSession = (activeProfileId: string) =>
-  api<Session>("/api/session", {
-    method: "PUT",
-    body: JSON.stringify({ activeProfileId }),
-  });
-export const getProfiles = () => api<StudentProfile[]>("/api/profiles");
-export const getProfile = (id: string) => api<StudentProfile>(`/api/profiles/${id}`);
-export const createDemoProfile = () =>
-  api<StudentProfile>("/api/profiles", { method: "POST" });
-export const updateProfile = (id: string, body: Partial<StudentProfile>) =>
-  api<StudentProfile>(`/api/profiles/${id}`, {
+export const getMe = () => api<StudentProfile>("/api/me");
+export const updateMe = (body: Partial<StudentProfile>) =>
+  api<StudentProfile>("/api/me", {
     method: "PUT",
     body: JSON.stringify(body),
   });
-export const setCareer = (id: string, targetCareer: string) =>
-  api<StudentProfile>(`/api/profiles/${id}/career`, {
+export const setMyCareer = (targetCareer: string) =>
+  api<StudentProfile>("/api/me/career", {
     method: "PUT",
     body: JSON.stringify({ targetCareer }),
   });
@@ -55,11 +53,16 @@ export const getCourses = (params: Record<string, string | undefined> = {}) => {
 export const getCourse = (code: string) =>
   api<CatalogCourse>(`/api/courses/${encodeURIComponent(code)}`);
 
-export async function importTranscript(file: File, profileId?: string) {
+export async function importTranscript(file: File) {
   const body = new FormData();
   body.append("file", file);
-  const suffix = profileId ? `?profile_id=${encodeURIComponent(profileId)}` : "";
-  return api<TranscriptImportResult>(`/api/transcripts/import${suffix}`, { method: "POST", body });
+  return api<TranscriptImportResult>("/api/me/transcript", { method: "POST", body });
+}
+
+export async function importResume(file: File) {
+  const body = new FormData();
+  body.append("file", file);
+  return api<ResumeImportResult>("/api/me/resume", { method: "POST", body });
 }
 
 export function courseHref(code: string) {

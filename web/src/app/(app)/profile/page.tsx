@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
-import { FileUp, Loader2 } from "lucide-react";
+import { FileText, FileUp, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,15 +10,9 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
 import { EmptyState, ErrorState } from "@/components/empty-state";
-import {
-  createDemoProfile,
-  getCourses,
-  getProfile,
-  getSession,
-  importTranscript,
-  updateProfile,
-} from "@/lib/api";
+import { getCourses, getMe, importResume, importTranscript, updateMe } from "@/lib/api";
 import type { CatalogCourse, CourseEntry, StudentProfile } from "@/lib/types";
 
 export default function ProfilePage() {
@@ -32,16 +26,13 @@ export default function ProfilePage() {
   const [term, setTerm] = useState("Fall 2026");
   const [status, setStatus] = useState<CourseEntry["status"]>("completed");
   const [importing, setImporting] = useState(false);
+  const [resumeBusy, setResumeBusy] = useState(false);
 
   async function load() {
     setLoading(true);
     setError(null);
     try {
-      const session = await getSession();
-      const [courses, p] = await Promise.all([
-        getCourses(),
-        session.activeProfileId ? getProfile(session.activeProfileId) : Promise.resolve(null),
-      ]);
+      const [courses, p] = await Promise.all([getCourses(), getMe()]);
       setCatalog(courses.courses);
       setProfile(p);
     } catch (err) {
@@ -75,12 +66,7 @@ export default function ProfilePage() {
     if (!profile) return;
     setSaving(true);
     try {
-      const next = await updateProfile(profile.syntheticId, {
-        displayName: profile.displayName,
-        transcriptLevel: profile.transcriptLevel,
-        college: profile.college,
-        degreeLine: profile.degreeLine,
-        major: profile.major,
+      const next = await updateMe({
         catalogYear: profile.catalogYear,
         remainingCredits: profile.remainingCredits,
         careerInterests: profile.careerInterests,
@@ -129,17 +115,16 @@ export default function ProfilePage() {
   }
 
   async function onTranscript(file: File | undefined, input: HTMLInputElement) {
-    if (!file || !profile) return;
+    if (!file) return;
     setImporting(true);
     try {
-      const result = await importTranscript(file, profile.syntheticId);
+      const result = await importTranscript(file);
       input.value = "";
       if (!result.parsed) {
         toast.error(result.message);
         return;
       }
-      const next = await getProfile(profile.syntheticId);
-      setProfile(next);
+      setProfile(await getMe());
       toast.success(result.message);
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Upload failed");
@@ -148,26 +133,34 @@ export default function ProfilePage() {
     }
   }
 
+  async function onResume(file: File | undefined, input: HTMLInputElement) {
+    if (!file) return;
+    setResumeBusy(true);
+    try {
+      const result = await importResume(file);
+      input.value = "";
+      setProfile(await getMe());
+      toast.success(result.message);
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Resume upload failed");
+    } finally {
+      setResumeBusy(false);
+    }
+  }
+
   if (loading) return <Skeleton className="h-96 w-full" />;
   if (error) return <ErrorState body={error} onRetry={load} />;
   if (!profile) {
     return (
       <EmptyState
-        title="No profile in this identity slot"
-        body="Create a local demo profile. This is not a GVSU account."
-        action={
-          <Button
-            onClick={async () => {
-              setProfile(await createDemoProfile());
-            }}
-          >
-            Create demo profile
-          </Button>
-        }
+        title="Sign in to open your profile"
+        body="StudentOS uses the Google account you signed in with. There is no demo student to pick."
       />
     );
   }
 
+  const majors = profile.majors?.length ? profile.majors : profile.major ? [profile.major] : [];
+  const badges = profile.badges ?? [];
   const interestsText = profile.careerInterests.join(", ");
 
   return (
@@ -175,93 +168,75 @@ export default function ProfilePage() {
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground">
-            Capability 1
+            Your profile
           </p>
-          <h1 className="mt-2 font-heading text-3xl">Academic profile</h1>
+          <h1 className="mt-2 font-heading text-3xl">{profile.displayName}</h1>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-            Upload a Banner advising transcript or add catalog courses by hand. StudentOS reads the PDF
-            in memory and discards it. Name, student ID, and GPA are not saved.
+            {profile.email ?? "Signed-in GVSU student"}. Degree, majors, and badges come from a Banner
+            advising transcript. Uploads are read in memory and discarded.
           </p>
         </div>
-        <div className="flex gap-2">
-          <Button
-            variant="outline"
-            onClick={async () => {
-              const created = await createDemoProfile();
-              setProfile(created);
-              toast.success("Demo profile reset to empty");
-            }}
-          >
-            Reset demo profile
-          </Button>
-          <Button onClick={save} disabled={saving}>
-            {saving ? "Saving…" : "Save profile"}
-          </Button>
-        </div>
+        <Button onClick={save} disabled={saving}>
+          {saving ? "Saving…" : "Save coursework"}
+        </Button>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
         <Card>
           <CardHeader>
-            <CardTitle>Program</CardTitle>
-            <CardDescription>{profile.syntheticId}</CardDescription>
+            <CardTitle>Degree and majors</CardTitle>
+            <CardDescription>
+              Filled from Banner. Your name stays the Google sign-in name.
+            </CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-3">
-            <div className="grid gap-1.5">
-              <Label htmlFor="displayName">Display name</Label>
-              <Input
-                id="displayName"
-                value={profile.displayName}
-                onChange={(e) => patch("displayName", e.target.value)}
-              />
+          <CardContent className="space-y-4 text-sm">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">Name</p>
+              <p className="font-heading text-lg">{profile.displayName}</p>
             </div>
-            <div className="grid gap-1.5">
-              <Label htmlFor="level">Transcript level</Label>
-              <select
-                id="level"
-                className="h-8 rounded-lg border border-input bg-transparent px-2 text-sm"
-                value={profile.transcriptLevel}
-                onChange={(e) => {
-                  const level = e.target.value as StudentProfile["transcriptLevel"];
-                  patch("transcriptLevel", level);
-                  if (level === "Masters") {
-                    patch("degreeLine", "Master of Science");
-                    patch("major", "Applied Computer Science");
-                  } else {
-                    patch("degreeLine", "Bachelor of Science");
-                    patch("major", "Computer Science");
-                  }
-                }}
-              >
-                <option value="Undergraduate">Undergraduate</option>
-                <option value="Masters">Masters</option>
-              </select>
+            <div>
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">Current degree</p>
+              <p className="text-base">
+                {profile.degreeLine || "Not on file yet — upload a transcript."}
+              </p>
+              {profile.transcriptLevel ? (
+                <p className="text-muted-foreground">{profile.transcriptLevel}</p>
+              ) : null}
             </div>
-            <div className="grid gap-1.5">
-              <Label htmlFor="college">College</Label>
-              <Input
-                id="college"
-                value={profile.college ?? ""}
-                onChange={(e) => patch("college", e.target.value)}
-              />
+            <div>
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">Major</p>
+              {majors.length ? (
+                <ul className="mt-1 space-y-1">
+                  {majors.map((major) => (
+                    <li key={major}>{major}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-muted-foreground">No major listed yet.</p>
+              )}
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div className="grid gap-1.5">
-                <Label htmlFor="degree">Degree line</Label>
-                <Input
-                  id="degree"
-                  value={profile.degreeLine ?? ""}
-                  onChange={(e) => patch("degreeLine", e.target.value)}
-                />
-              </div>
-              <div className="grid gap-1.5">
-                <Label htmlFor="major">Major</Label>
-                <Input
-                  id="major"
-                  value={profile.major ?? ""}
-                  onChange={(e) => patch("major", e.target.value)}
-                />
-              </div>
+            {profile.college ? <p>{profile.college}</p> : null}
+            <Separator />
+            <div>
+              <p className="text-xs uppercase tracking-wide text-muted-foreground">Banner badge</p>
+              {badges.length ? (
+                <ul className="mt-2 space-y-2">
+                  {badges.map((badge) => (
+                    <li key={badge.name} className="flex flex-wrap items-center gap-2">
+                      <Badge variant="secondary">{badge.kind}</Badge>
+                      <span>{badge.name}</span>
+                      {badge.awardedOn ? (
+                        <span className="text-muted-foreground">Awarded {badge.awardedOn}</span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-1 text-muted-foreground">
+                  No post-baccalaureate badge on this transcript. If you earned one, it appears under
+                  Awarded on the Banner advising PDF.
+                </p>
+              )}
             </div>
             <div className="grid grid-cols-2 gap-3">
               <div className="grid gap-1.5">
@@ -279,10 +254,7 @@ export default function ProfilePage() {
                   type="number"
                   value={profile.remainingCredits ?? ""}
                   onChange={(e) =>
-                    patch(
-                      "remainingCredits",
-                      e.target.value === "" ? null : Number(e.target.value)
-                    )
+                    patch("remainingCredits", e.target.value === "" ? null : Number(e.target.value))
                   }
                 />
               </div>
@@ -303,82 +275,112 @@ export default function ProfilePage() {
                 }
               />
             </div>
-            <div className="grid gap-1.5">
-              <Label htmlFor="skills">Self-reported skills (comma separated)</Label>
-              <Input
-                id="skills"
-                value={profile.skills.map((s) => s.label).join(", ")}
-                onChange={(e) =>
-                  patch(
-                    "skills",
-                    e.target.value
-                      .split(",")
-                      .map((s) => s.trim())
-                      .filter(Boolean)
-                      .map((label) => ({ label, evidence: "self_report" as const }))
-                  )
-                }
-              />
-            </div>
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Transcript import</CardTitle>
-            <CardDescription>
-              Anyone signed in can upload their own Banner advising PDF. The file is read, then thrown
-              away — it is not stored on this PC’s StudentOS folder or in git.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4 text-sm">
-            <Alert>
-              <FileUp />
-              <AlertTitle>How to get the PDF from Banner</AlertTitle>
-              <AlertDescription>
-                <ol className="mt-2 list-decimal space-y-1 pl-4 text-muted-foreground">
-                  <li>
-                    Open{" "}
-                    <a
-                      className="font-medium text-foreground underline-offset-2 hover:underline"
-                      href="https://www.gvsu.edu/banner/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      https://www.gvsu.edu/banner/
-                    </a>
-                  </li>
-                  <li>Sign in with your GVSU email and password (on Banner, not in StudentOS).</li>
-                  <li>Choose Student, then Student Records, then View Academic Transcript.</li>
-                  <li>Select Transcript Level (Undergraduate or Masters) and Transcript Type (Advising).</li>
-                  <li>Print the page and save it as a PDF. Name it whatever you like.</li>
-                  <li>Upload that PDF here.</li>
-                </ol>
-              </AlertDescription>
-            </Alert>
-            <div className="grid gap-1.5">
-              <Label htmlFor="transcript">PDF file</Label>
-              <Input
-                id="transcript"
-                type="file"
-                accept="application/pdf,.pdf"
-                disabled={importing}
-                onChange={(e) => onTranscript(e.target.files?.[0], e.currentTarget)}
-              />
-            </div>
-            {importing ? (
-              <p className="flex items-center gap-2 text-muted-foreground">
-                <Loader2 className="size-4 animate-spin" />
-                Reading the transcript. The file is not being saved.
-              </p>
-            ) : (
-              <p className="text-muted-foreground">
-                Completed, in-progress, and still-needed catalog courses are listed below. You can still
-                add or remove rows by catalog code.
-              </p>
-            )}
-          </CardContent>
-        </Card>
+        <div className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>Transcript import</CardTitle>
+              <CardDescription>
+                Upload your own Banner advising PDF. The file is read, then thrown away.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4 text-sm">
+              <Alert>
+                <FileUp />
+                <AlertTitle>How to get the PDF from Banner</AlertTitle>
+                <AlertDescription>
+                  <ol className="mt-2 list-decimal space-y-1 pl-4 text-muted-foreground">
+                    <li>
+                      Open{" "}
+                      <a
+                        className="font-medium text-foreground underline-offset-2 hover:underline"
+                        href="https://www.gvsu.edu/banner/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        https://www.gvsu.edu/banner/
+                      </a>
+                    </li>
+                    <li>Sign in with your GVSU email and password (on Banner, not in StudentOS).</li>
+                    <li>Choose Student, then Student Records, then View Academic Transcript.</li>
+                    <li>
+                      Select Transcript Level (Undergraduate or Masters) and Transcript Type (Advising).
+                    </li>
+                    <li>Print the page and save it as a PDF. Name it whatever you like.</li>
+                    <li>Upload that PDF here.</li>
+                  </ol>
+                </AlertDescription>
+              </Alert>
+              <div className="grid gap-1.5">
+                <Label htmlFor="transcript">PDF file</Label>
+                <Input
+                  id="transcript"
+                  type="file"
+                  accept="application/pdf,.pdf"
+                  disabled={importing}
+                  onChange={(e) => onTranscript(e.target.files?.[0], e.currentTarget)}
+                />
+              </div>
+              {importing ? (
+                <p className="flex items-center gap-2 text-muted-foreground">
+                  <Loader2 className="size-4 animate-spin" />
+                  Reading the transcript. The file is not being saved.
+                </p>
+              ) : (
+                <p className="text-muted-foreground">
+                  Completed, in-progress, and still-needed catalog courses are listed below.
+                </p>
+              )}
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Resume</CardTitle>
+              <CardDescription>
+                Upload a PDF or Word resume. StudentOS reads it in memory and discards it. Skill and
+                project extraction is next.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4 text-sm">
+              <Alert>
+                <FileText />
+                <AlertTitle>How to upload a resume</AlertTitle>
+                <AlertDescription>
+                  Use a PDF if you can. Word (.doc or .docx) is fine too. The file is not stored on
+                  this PC’s StudentOS folder or in git.
+                </AlertDescription>
+              </Alert>
+              <div className="grid gap-1.5">
+                <Label htmlFor="resume">Resume file</Label>
+                <Input
+                  id="resume"
+                  type="file"
+                  accept="application/pdf,.pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  disabled={resumeBusy}
+                  onChange={(e) => onResume(e.target.files?.[0], e.currentTarget)}
+                />
+              </div>
+              {resumeBusy ? (
+                <p className="flex items-center gap-2 text-muted-foreground">
+                  <Loader2 className="size-4 animate-spin" />
+                  Reading the resume. The file is not being saved.
+                </p>
+              ) : profile.resumeFilename ? (
+                <p>
+                  Last resume read: <span className="font-medium">{profile.resumeFilename}</span>
+                  {profile.resumeReadAt ? (
+                    <span className="text-muted-foreground"> · file discarded</span>
+                  ) : null}
+                </p>
+              ) : (
+                <p className="text-muted-foreground">No resume read yet.</p>
+              )}
+            </CardContent>
+          </Card>
+        </div>
       </div>
 
       <Card>
@@ -445,7 +447,7 @@ export default function ProfilePage() {
           {profile.courses.length === 0 ? (
             <EmptyState
               title="No courses on this record"
-              body="Upload a Banner advising transcript, search the ingested CIS catalog above, or switch to a synthetic student to see a filled example."
+              body="Upload a Banner advising transcript, or search the ingested CIS catalog above."
             />
           ) : (
             <div className="space-y-6">

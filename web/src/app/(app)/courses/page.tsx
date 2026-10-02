@@ -9,7 +9,7 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { EmptyState, ErrorState } from "@/components/empty-state";
-import { courseHref, getCourses, getProfile, getSession } from "@/lib/api";
+import { courseHref, getCourses, getMe } from "@/lib/api";
 import type { CatalogCourse, StudentProfile } from "@/lib/types";
 
 const LEVELS = [
@@ -37,11 +37,9 @@ export default function CoursesPage() {
     setLoading(true);
     setError(null);
     try {
-      const [list, session] = await Promise.all([getCourses(), getSession()]);
+      const [list, me] = await Promise.all([getCourses(), getMe()]);
       setCourses(list.courses);
-      if (session.activeProfileId) {
-        setProfile(await getProfile(session.activeProfileId));
-      }
+      setProfile(me);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not load the catalog.");
     } finally {

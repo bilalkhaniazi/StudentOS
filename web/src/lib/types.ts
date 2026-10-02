@@ -14,16 +14,27 @@ export type CourseEntry = {
   status: CourseStatus;
 };
 
+export type BadgeEntry = {
+  name: string;
+  kind: string;
+  college?: string | null;
+  status: "awarded" | "pending" | "none";
+  awardedOn?: string | null;
+};
+
 export type StudentProfile = {
   syntheticId: string;
   displayName: string;
+  email?: string | null;
   institution: string;
-  transcriptLevel: "Undergraduate" | "Masters";
+  transcriptLevel: "Undergraduate" | "Masters" | null;
   transcriptType: string;
   college?: string | null;
   degreeLine?: string | null;
   major?: string | null;
+  majors: string[];
   majorAndDepartment?: string | null;
+  badges: BadgeEntry[];
   catalogYear?: string | null;
   targetCareer?: string | null;
   careerInterests: string[];
@@ -39,6 +50,8 @@ export type StudentProfile = {
   }[];
   certifications: { name: string; taggedSkills: string[] }[];
   courses: CourseEntry[];
+  resumeFilename?: string | null;
+  resumeReadAt?: string | null;
   editable?: boolean;
   synthetic?: boolean;
 };
@@ -91,12 +104,22 @@ export type TranscriptImportResult = {
   college?: string | null;
   degreeLine?: string | null;
   major?: string | null;
+  majors: string[];
+  badges: BadgeEntry[];
   remainingCredits?: number | null;
   method?: string | null;
   warnings: string[];
   completed: CourseEntry[];
   inProgress: CourseEntry[];
   remaining: CourseEntry[];
+};
+
+export type ResumeImportResult = {
+  accepted: boolean;
+  stored: boolean;
+  filename: string | null;
+  profileId?: string | null;
+  message: string;
 };
 
 export type Meta = {

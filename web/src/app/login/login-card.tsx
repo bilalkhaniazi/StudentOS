@@ -182,7 +182,7 @@ export function LoginCard({
             className="h-12 w-12 md:hidden"
           />
           <p className="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white/80">
-            Local student demo
+            GVSU student sign-in
           </p>
         </header>
 
@@ -281,7 +281,7 @@ export function LoginCard({
         </div>
 
         <footer className="mt-auto flex flex-col gap-1 border-t border-white/15 pt-5 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
-          <p>Local student demo for GVSU Computer Science. Not official Grand Valley software.</p>
+          <p>Student project for GVSU Computer Science. Not official Grand Valley software.</p>
           <p>Wordmark from the public gvsu.edu website.</p>
         </footer>
       </div>

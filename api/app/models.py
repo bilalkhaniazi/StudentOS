@@ -44,16 +44,27 @@ class CurriculumBlock(BaseModel):
     degreeDateOptional: str | None = None
 
 
+class BadgeEntry(BaseModel):
+    name: str
+    kind: str = "Post-Baccalaureate Badge"
+    college: str | None = None
+    status: Literal["awarded", "pending", "none"] = "awarded"
+    awardedOn: str | None = None
+
+
 class StudentProfile(BaseModel):
     syntheticId: str
     displayName: str
+    email: str | None = None
     institution: str = "GVSU"
-    transcriptLevel: Literal["Undergraduate", "Masters"] = "Undergraduate"
+    transcriptLevel: Literal["Undergraduate", "Masters"] | None = None
     transcriptType: str = "Advising"
-    college: str | None = "College of Computing"
+    college: str | None = None
     degreeLine: str | None = None
     major: str | None = None
+    majors: list[str] = Field(default_factory=list)
     majorAndDepartment: str | None = None
+    badges: list[BadgeEntry] = Field(default_factory=list)
     catalogYear: str | None = "2026-2027"
     targetCareer: str | None = None
     careerInterests: list[str] = Field(default_factory=list)
@@ -65,18 +76,23 @@ class StudentProfile(BaseModel):
     certifications: list[CertificationEntry] = Field(default_factory=list)
     curriculum: list[CurriculumBlock] = Field(default_factory=list)
     courses: list[CourseEntry] = Field(default_factory=list)
+    resumeFilename: str | None = None
+    resumeReadAt: str | None = None
     editable: bool = True
     synthetic: bool = False
 
 
 class ProfileUpdate(BaseModel):
     displayName: str | None = None
+    email: str | None = None
     transcriptLevel: Literal["Undergraduate", "Masters"] | None = None
     transcriptType: str | None = None
     college: str | None = None
     degreeLine: str | None = None
     major: str | None = None
+    majors: list[str] | None = None
     majorAndDepartment: str | None = None
+    badges: list[BadgeEntry] | None = None
     catalogYear: str | None = None
     targetCareer: str | None = None
     careerInterests: list[str] | None = None
@@ -87,6 +103,13 @@ class ProfileUpdate(BaseModel):
     certifications: list[CertificationEntry] | None = None
     curriculum: list[CurriculumBlock] | None = None
     courses: list[CourseEntry] | None = None
+    resumeFilename: str | None = None
+    resumeReadAt: str | None = None
+
+
+class IdentityEnsure(BaseModel):
+    email: str
+    displayName: str | None = None
 
 
 class SessionUpdate(BaseModel):
@@ -107,6 +130,8 @@ class TranscriptImportResult(BaseModel):
     college: str | None = None
     degreeLine: str | None = None
     major: str | None = None
+    majors: list[str] = Field(default_factory=list)
+    badges: list[BadgeEntry] = Field(default_factory=list)
     remainingCredits: float | None = None
     method: str | None = None
     warnings: list[str] = Field(default_factory=list)
@@ -114,3 +139,11 @@ class TranscriptImportResult(BaseModel):
     inProgress: list[CourseEntry] = Field(default_factory=list)
     remaining: list[CourseEntry] = Field(default_factory=list)
     mappedCourses: list[dict[str, Any]] = Field(default_factory=list)
+
+
+class ResumeImportResult(BaseModel):
+    accepted: bool
+    stored: bool = False
+    filename: str | None = None
+    profileId: str | None = None
+    message: str

@@ -6,7 +6,7 @@ This folder is the copy you run on your PC. Put it at:
 
 Then open **START-HERE.md**. You do not need to write code.
 
-StudentOS is a student decision tool for Grand Valley Computer Science. It uses the public course catalog and invented demo students. It is a local demo. It is not Banner, not course registration, and not official Grand Valley software. Students sign in with Google using a GVSU email.
+StudentOS is a student decision tool for Grand Valley Computer Science. It uses the public course catalog. Each signed-in GVSU Google account has its own academic profile. It is not Banner, not course registration, and not official Grand Valley software.
 
 ## Start the demo
 
@@ -23,12 +23,12 @@ If you already started it once, opening Docker Desktop is enough — StudentOS c
 You can:
 
 - Sign in with Google (GVSU student emails only)
-- Open an academic profile (degree, major, courses with letter grades, interests, skills)
-- Switch among eight invented CS students (six B.S., two Applied CS M.S.)
+- Open **your** academic profile (Google name, current degree, majors, Banner badge if you have one)
+- Upload a Banner advising transcript and a resume (both are read in memory and discarded)
 - Pick a target career: Data Engineer, Cloud Engineer, Backend Engineer, or ML Engineer
 - Browse GVSU CIS courses, including credits and prerequisites when the public catalog lists them
 
-Transcript upload reads a Banner advising PDF in memory and discards it. Completed, in-progress, and still-needed catalog courses are listed on Profile. Name, student ID, and GPA are not saved.
+Transcript upload lists completed, in-progress, and still-needed catalog courses. Student ID and GPA are not saved. Your name is the Google sign-in name.
 
 ## Folder layout
 
@@ -60,4 +60,4 @@ Skill-gap labels, Career Match Score, personalized recommendations, job-market i
 
 ## Privacy
 
-Demo profiles are invented. They do not contain real names, IDs, or GPAs. Never commit transcripts or a filled-in `.env` that has secrets.
+Each signed-in GVSU Google account has its own profile (name and email from Google). Banner student ID and GPA are not saved. Never commit transcripts, resumes, or a filled-in `.env` that has secrets.

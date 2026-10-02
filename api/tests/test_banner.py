@@ -316,6 +316,37 @@ class BannerParseTests(unittest.TestCase):
         course = next(c for c in parsed.completed() if c.courseNumber == "673")
         self.assertEqual(course.gradeLetter, "A")
 
+    def test_awarded_post_baccalaureate_badge(self):
+        text = """
+        Academic Transcript
+        Transcript Level
+        Masters
+        Curriculum Information
+        Master of Science
+        College of Computing
+        Applied Computer Science, Undeclared
+        Awarded
+        Awarded
+        Degree Date
+        Post-Baccalaureate
+        05/02/2026
+        Badge
+        College
+        Major
+        College of Computing
+        Database
+        Management
+        Institution Credit
+        Period : Winter 2025
+        CIS 660 G Data Engineering A 3.000 12.00
+        """
+        parsed = parse_banner(text)
+        self.assertEqual(parsed.degreeLine, "Master of Science")
+        self.assertEqual(parsed.major, "Applied Computer Science")
+        self.assertEqual([b["name"] for b in parsed.badges], ["Database Management"])
+        self.assertEqual(parsed.badges[0]["kind"], "Post-Baccalaureate Badge")
+        self.assertEqual(parsed.badges[0]["awardedOn"], "05/02/2026")
+
 
 if __name__ == "__main__":
     unittest.main()

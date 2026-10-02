@@ -1,20 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 import { BookOpen, GraduationCap, LogOut, Menu, Target, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import {
   Sheet,
   SheetContent,
@@ -22,9 +12,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { createDemoProfile, getProfiles, getSession, setSession } from "@/lib/api";
+import { useState } from "react";
 import { PUBLIC_APP_ORIGIN } from "@/lib/auth-config";
-import type { StudentProfile } from "@/lib/types";
 import { cn } from "@/lib/utils";
 
 const NAV = [
@@ -36,29 +25,10 @@ const NAV = [
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const router = useRouter();
   const { data: session } = useSession();
-  const [profiles, setProfiles] = useState<StudentProfile[]>([]);
-  const [activeId, setActiveId] = useState<string>("demo-profile");
   const [open, setOpen] = useState(false);
+  const name = session?.user?.name?.trim();
   const email = session?.user?.email;
-
-  async function load() {
-    const [session, list] = await Promise.all([getSession(), getProfiles()]);
-    setProfiles(list);
-    setActiveId(session.activeProfileId || "demo-profile");
-  }
-
-  useEffect(() => {
-    load().catch(() => undefined);
-  }, [pathname]);
-
-  async function onSwitch(id: string | null) {
-    if (!id) return;
-    await setSession(id);
-    setActiveId(id);
-    router.refresh();
-  }
 
   async function onSignOut() {
     try {
@@ -68,16 +38,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     }
     window.location.replace(`${PUBLIC_APP_ORIGIN}/login`);
   }
-
-  async function onNewDemo() {
-    const created = await createDemoProfile();
-    await load();
-    setActiveId(created.syntheticId);
-    router.push("/profile");
-  }
-
-  const synthetics = profiles.filter((p) => p.synthetic);
-  const demos = profiles.filter((p) => !p.synthetic);
 
   const links = (
     <nav className="flex flex-col gap-1 md:flex-row md:items-center md:gap-0.5">
@@ -117,9 +77,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           </Link>
           <div className="hidden flex-1 md:block">{links}</div>
           <div className="ml-auto flex items-center gap-2">
-            <span className="hidden max-w-[160px] truncate text-[11px] text-white/75 lg:inline" title={email ?? undefined}>
-              {email ?? "Signed in"}
-            </span>
+            <div className="hidden text-right lg:block">
+              <p className="max-w-[200px] truncate text-sm font-medium leading-tight" title={name ?? undefined}>
+                {name || "Signed in"}
+              </p>
+              {email ? (
+                <p className="max-w-[200px] truncate text-[11px] text-white/70" title={email}>
+                  {email}
+                </p>
+              ) : null}
+            </div>
             <Button
               type="button"
               size="sm"
@@ -130,29 +97,6 @@ export function AppShell({ children }: { children: React.ReactNode }) {
               <LogOut className="size-3.5" />
               Sign out
             </Button>
-            <Select value={activeId} onValueChange={(value) => onSwitch(value as string)}>
-              <SelectTrigger className="h-8 max-w-[220px] border-white/20 bg-white/5 text-left text-xs text-[color:var(--header-foreground)] md:max-w-[280px]">
-                <SelectValue placeholder="Choose a profile" />
-              </SelectTrigger>
-              <SelectContent align="end" className="min-w-64">
-                <SelectGroup>
-                  <SelectLabel>Demo profile</SelectLabel>
-                  {demos.map((p) => (
-                    <SelectItem key={p.syntheticId} value={p.syntheticId}>
-                      {p.displayName}
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-                <SelectGroup>
-                  <SelectLabel>Synthetic CS students</SelectLabel>
-                  {synthetics.map((p) => (
-                    <SelectItem key={p.syntheticId} value={p.syntheticId}>
-                      {p.displayName}
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger
                 render={
@@ -172,16 +116,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                 </SheetHeader>
                 <div className="px-2">{links}</div>
                 <div className="space-y-2 px-4">
+                  {name ? <p className="text-sm font-medium">{name}</p> : null}
                   {email ? <p className="truncate text-xs text-muted-foreground">{email}</p> : null}
-                  <Button type="button" variant="outline" className="w-full" onClick={onNewDemo}>
-                    Reset my demo profile
-                  </Button>
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    className="w-full"
-                    onClick={onSignOut}
-                  >
+                  <Button type="button" variant="ghost" className="w-full" onClick={onSignOut}>
                     Sign out
                   </Button>
                 </div>
@@ -194,10 +131,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-border bg-card/50">
         <div className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between md:px-6">
           <p>
-            Course titles, credits, and prerequisites are structured fields from the GVSU{" "}
-            {profiles.length ? "2026–2027" : ""} public catalog. Not official SIS.
+            Course titles, credits, and prerequisites are structured fields from the GVSU public
+            catalog. Not official SIS.
           </p>
-          <p>Local student demo. Not official Grand Valley software. Campus SSO is not used here.</p>
+          <p>Not official Grand Valley software. Campus SSO is not used here.</p>
         </div>
       </footer>
     </div>

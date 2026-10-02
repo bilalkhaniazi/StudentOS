@@ -643,7 +643,7 @@ def json_safe(value: Any) -> Any:
 
 
 def write_catalog(conn, courses: pd.DataFrame, programs: pd.DataFrame, meta: dict[str, Any]) -> None:
-    from pipeline.synthetic import CAREERS, SYNTHETIC_STUDENTS, DEMO_PROFILE  # type: ignore
+    from pipeline.synthetic import CAREERS  # type: ignore
 
     with conn.cursor() as cur:
         cur.execute(SCHEMA_SQL)
@@ -672,35 +672,7 @@ def write_catalog(conn, courses: pd.DataFrame, programs: pd.DataFrame, meta: dic
         for career in CAREERS:
             upsert_node(cur, f"career:{career['id']}", "career", career)
 
-        for student in SYNTHETIC_STUDENTS + [DEMO_PROFILE]:
-            node_id = f"student:{student['syntheticId']}"
-            upsert_node(cur, node_id, "student", student)
-            for entry in student.get("courses") or []:
-                course_node = f"course:{entry['code']}"
-                cur.execute("SELECT 1 FROM nodes WHERE id = %s", (course_node,))
-                if not cur.fetchone():
-                    continue
-                if entry.get("status") == "completed":
-                    upsert_edge(
-                        cur,
-                        node_id,
-                        "completed",
-                        course_node,
-                        {
-                            "gradeLetter": entry.get("gradeLetter"),
-                            "term": entry.get("term"),
-                            "creditHours": entry.get("creditHours"),
-                        },
-                    )
-
         upsert_node(cur, "meta:catalog", "meta", meta)
-        cur.execute(
-            """
-            INSERT INTO sessions (identity_id, active_profile_id)
-            VALUES ('local-demo', 'demo-profile')
-            ON CONFLICT (identity_id) DO NOTHING
-            """
-        )
     conn.commit()
 
 
