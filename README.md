@@ -24,7 +24,7 @@ You can:
 
 - Sign in with Google (GVSU student emails only)
 - Open **your** academic profile (Google name, current degree, majors, Banner badge if you have one)
-- Upload a Banner advising transcript and a resume (both are read in memory and discarded)
+- Upload a Banner advising transcript and a resume (parsed into profile fields, then discarded)
 - See the Computer Science B.S. and Applied CS M.S. pathways, including graduate badges
 - Pick a target career: Data Engineer, Cloud Engineer, Backend Engineer, or ML Engineer
 - Browse GVSU computing courses, including credits, descriptions, and prerequisites when the public catalog lists them
