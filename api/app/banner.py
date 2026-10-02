@@ -205,6 +205,12 @@ def _is_noise(line: str) -> bool:
         return True
     if low in _HEADER_WORDS or low.strip("[]") in _HEADER_WORDS:
         return True
+    if "ellucian" in low or "all rights reserved" in low or "2013-2023" in low:
+        return True
+    if re.fullmatch(r"[©@?]", low):
+        return True
+    if re.fullmatch(r"\d{4}-\d{4}", low):
+        return True
     if any(low.startswith(p) for p in _NOISE_PREFIXES):
         return True
     if re.fullmatch(r"\d{1,2}/\d", low):
@@ -307,10 +313,10 @@ def _flush_course(
         return None
     subject = None
     number = None
-    grade = None
     credits = None
     level = None
     qp = None
+    grades: list[str] = []
     title_parts: list[str] = []
     for tok in tokens:
         sub = _fix_subject(tok)
@@ -327,8 +333,8 @@ def _flush_course(
         if _LEVEL_RE.fullmatch(tok) and level is None:
             level = tok.upper()
             continue
-        if _GRADE_RE.fullmatch(tok) and grade is None:
-            grade = _canon_grade(tok)
+        if _GRADE_RE.fullmatch(tok):
+            grades.append(_canon_grade(tok))
             continue
         cred = _CREDITS_RE.fullmatch(tok)
         if cred and credits is None:
@@ -350,8 +356,13 @@ def _flush_course(
     if title:
         title = re.sub(r"\s+", " ", title)
         title = title.replace("Master s ", "Master's ").replace("Masters Project", "Master's Project")
-    if status == "completed" and not grade and qp is not None:
-        grade = _letter_from_quality(qp, credits)
+    grade = None
+    if status == "completed":
+        qp_letter = _letter_from_quality(qp, credits) if qp is not None else None
+        if qp_letter:
+            grade = qp_letter
+        elif grades:
+            grade = grades[-1]
     if status == "in_progress":
         grade = None
     if level is None and int(number) >= 500:
@@ -549,13 +560,23 @@ def attach_catalog(
             if len(titled) == 1:
                 hit = titled[0]
                 notes.append(f"Mapped {course.code} to {hit['code']} using the catalog title.")
-            elif numbered:
-                cis = [c for c in numbered if c.get("subject") == "CIS"]
-                if course.subject == "CIS" and len(cis) == 1:
-                    hit = cis[0]
-                elif len(numbered) == 1:
-                    hit = numbered[0]
-                    notes.append(f"Mapped {course.code} to {hit['code']} using the catalog number.")
+            else:
+                blob = title_key
+                unique_hits = [
+                    rows[0]
+                    for key, rows in by_title.items()
+                    if len(rows) == 1 and len(key) >= 12 and key in blob
+                ]
+                if len(unique_hits) == 1:
+                    hit = unique_hits[0]
+                    notes.append(f"Mapped {course.code} to {hit['code']} using the catalog title.")
+                elif numbered:
+                    cis = [c for c in numbered if c.get("subject") == "CIS"]
+                    if course.subject == "CIS" and len(cis) == 1:
+                        hit = cis[0]
+                    elif len(numbered) == 1:
+                        hit = numbered[0]
+                        notes.append(f"Mapped {course.code} to {hit['code']} using the catalog number.")
         if hit:
             if course.code != hit["code"]:
                 course.subject = hit.get("subject") or course.subject
@@ -589,9 +610,21 @@ def _recover_catalog_titles(parsed: ParsedTranscript, unique_titles: dict[str, l
         own = _norm_title(course.title)
         for key, row in singles.items():
             code = row.get("code")
-            if not code or code in taken:
+            if not code:
                 continue
             if key not in blob or own == key:
+                continue
+            if not course.catalogMatched:
+                course.subject = row.get("subject") or code.split(" ")[0]
+                course.courseNumber = str(row.get("course_number") or code.split(" ")[-1])
+                course.code = code
+                course.title = row.get("title")
+                course.catalogMatched = True
+                course.warnings.append(f"Mapped to {code} using the catalog title.")
+                parsed.warnings.append(f"Mapped to {code} using the catalog title.")
+                taken.add(code)
+                break
+            if code in taken:
                 continue
             extras.append(
                 ParsedCourse(

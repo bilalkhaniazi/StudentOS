@@ -295,6 +295,26 @@ class BannerParseTests(unittest.TestCase):
         self.assertEqual(in_progress["CIS 671"].term, "Fall 2026")
         self.assertNotIn("CIS 695", {c.code for c in parsed.courses if c.status == "planned"})
         self.assertEqual(in_progress["CIS 693"].title, "Master's Project")
+        self.assertNotIn("CIS 69", in_progress)
+
+    def test_quality_points_win_over_ocr_level_letter(self):
+        text = """
+        Academic Transcript
+        Transcript Level
+        Masters
+        Institution Credit
+        Period : Fall 2025
+        CIS
+        673
+        D
+        Principles of Database Design
+        A
+        3.000
+        12.00
+        """
+        parsed = parse_banner(text, method="ocr")
+        course = next(c for c in parsed.completed() if c.courseNumber == "673")
+        self.assertEqual(course.gradeLetter, "A")
 
 
 if __name__ == "__main__":
