@@ -266,6 +266,36 @@ class BannerParseTests(unittest.TestCase):
         self.assertIn("Database Architecture", titles["CIS 676"] or "")
         self.assertIn("Machine Learning", titles["CIS 678"] or "")
 
+    def test_ocr_drops_digit_from_capstone_number(self):
+        text = """
+        Academic Transcript
+        Transcript Level
+        Masters
+        Applied Computer Science
+        Institution Credit
+        Period : Winter 2025
+        CIS 660 G Data Engineering A 3.000 12.00
+        Course(s) in Progress
+        Term: Fall 2026
+        CIS
+        671
+        InformationVisualization
+        3.000
+        CIS
+        69
+        G
+        Master's Project
+        3.000
+        """
+        parsed = parse_banner(text, method="ocr")
+        parsed = attach_catalog(parsed, CATALOG, PROGRAMS)
+        in_progress = {c.code: c for c in parsed.in_progress()}
+        self.assertIn("CIS 671", in_progress)
+        self.assertIn("CIS 693", in_progress)
+        self.assertEqual(in_progress["CIS 671"].term, "Fall 2026")
+        self.assertNotIn("CIS 695", {c.code for c in parsed.courses if c.status == "planned"})
+        self.assertEqual(in_progress["CIS 693"].title, "Master's Project")
+
 
 if __name__ == "__main__":
     unittest.main()

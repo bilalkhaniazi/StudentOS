@@ -114,6 +114,7 @@ _TOC_NAV = {
     "courses in progress",
 }
 _COURSE_NO_RE = re.compile(r"^(\d{3})$")
+_SHORT_NO_RE = re.compile(r"^(\d{2})$")
 _CREDITS_RE = re.compile(r"^(\d{1,2}\.000)$")
 _GRADE_RE = re.compile(r"^(?:[A-D][+-]?|F|CR|NC|AU|P|N|I|W|IP)$", re.I)
 _QP_RE = re.compile(r"^(\d{1,2}\.\d{2})$")
@@ -246,6 +247,18 @@ def _canon_grade(tok: str) -> str:
     return token.upper()
 
 
+def _is_course_number_token(tok: str, tokens: list[str], idx: int) -> bool:
+    if _COURSE_NO_RE.fullmatch(tok) and 100 <= int(tok) <= 799:
+        return True
+    # Print-to-PDF OCR often drops a digit from 693 → "69" + level "G".
+    if not (_SHORT_NO_RE.fullmatch(tok) and 50 <= int(tok) <= 99):
+        return False
+    nearby = tokens[max(0, idx - 2) : min(len(tokens), idx + 4)]
+    if any(_LEVEL_RE.fullmatch(t) for t in nearby):
+        return True
+    return any(_fix_subject(t) for t in tokens[max(0, idx - 2) : idx + 1])
+
+
 def _courses_from_tokens(
     tokens: list[str],
     *,
@@ -253,11 +266,7 @@ def _courses_from_tokens(
     term_source: str | None,
     status: str,
 ) -> list[ParsedCourse]:
-    number_idxs = [
-        i
-        for i, tok in enumerate(tokens)
-        if _COURSE_NO_RE.fullmatch(tok) and 100 <= int(tok) <= 799
-    ]
+    number_idxs = [i for i, tok in enumerate(tokens) if _is_course_number_token(tok, tokens, i)]
     courses: list[ParsedCourse] = []
     for n, idx in enumerate(number_idxs):
         prev_idx = number_idxs[n - 1] if n else -8
@@ -310,6 +319,9 @@ def _flush_course(
                 subject = sub
             continue
         if _COURSE_NO_RE.fullmatch(tok) and number is None and 100 <= int(tok) <= 799:
+            number = tok
+            continue
+        if _SHORT_NO_RE.fullmatch(tok) and number is None and 50 <= int(tok) <= 99:
             number = tok
             continue
         if _LEVEL_RE.fullmatch(tok) and level is None:
@@ -557,10 +569,48 @@ def attach_catalog(
         else:
             course.catalogMatched = False
 
+    _recover_catalog_titles(parsed, unique_titles=by_title)
+
     taken = {c.code for c in parsed.courses}
     remaining = remaining_program_courses(parsed, programs, catalog, taken)
     parsed.courses.extend(remaining)
     return parsed
+
+
+def _recover_catalog_titles(parsed: ParsedTranscript, unique_titles: dict[str, list[dict]]) -> None:
+    """If OCR glued a second catalog title onto a row, emit that course too."""
+    singles = {key: rows[0] for key, rows in unique_titles.items() if len(rows) == 1 and len(key) >= 12}
+    taken = {c.code for c in parsed.courses}
+    extras: list[ParsedCourse] = []
+    for course in parsed.courses:
+        blob = _norm_title(course.title)
+        if not blob:
+            continue
+        own = _norm_title(course.title)
+        for key, row in singles.items():
+            code = row.get("code")
+            if not code or code in taken:
+                continue
+            if key not in blob or own == key:
+                continue
+            extras.append(
+                ParsedCourse(
+                    subject=row.get("subject") or code.split(" ")[0],
+                    courseNumber=str(row.get("course_number") or code.split(" ")[-1]),
+                    code=code,
+                    title=row.get("title"),
+                    creditHours=row.get("credits_min") or course.creditHours,
+                    level=course.level,
+                    term=course.term,
+                    termSource=course.termSource,
+                    status=course.status,
+                    catalogMatched=True,
+                    warnings=[f"Recovered {code} from text on {course.code}."],
+                )
+            )
+            taken.add(code)
+            parsed.warnings.append(f"Recovered {code} from text on {course.code}.")
+    parsed.courses.extend(extras)
 
 
 def remaining_program_courses(
