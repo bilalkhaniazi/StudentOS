@@ -31,7 +31,8 @@ function GoogleMark() {
 
 function errorCopy(
   code: string | undefined,
-  domainLabel: string
+  domainLabel: string,
+  googleConfigured: boolean
 ): { title: string; body: string; icon: "cancel" | "domain" | "config" | "network" | "generic" } | null {
   if (!code) return null;
   const normalized = code.toLowerCase();
@@ -52,6 +53,13 @@ function errorCopy(
   }
 
   if (normalized === "configuration" || normalized === "missing-config") {
+    if (googleConfigured) {
+      return {
+        icon: "generic",
+        title: "Google sign-in hit a configuration error",
+        body: "The Google keys are on this PC. Open http://127.0.0.1:43123 (not localhost) and try Continue with Google again.",
+      };
+    }
     return {
       icon: "config",
       title: "Google sign-in is not set up on this PC yet",
@@ -102,7 +110,7 @@ export function LoginCard({
 }) {
   const [busy, setBusy] = useState<"google" | "dev" | null>(null);
   const [localError, setLocalError] = useState<string | undefined>();
-  const shown = errorCopy(localError ?? errorCode, domainLabel);
+  const shown = errorCopy(localError ?? errorCode, domainLabel, googleConfigured);
   const Icon =
     shown?.icon === "domain"
       ? ShieldAlert

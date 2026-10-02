@@ -1,3 +1,4 @@
+import { connection } from "next/server";
 import { redirect } from "next/navigation";
 import { auth } from "@/auth";
 import {
@@ -26,6 +27,7 @@ export default async function LoginPage({
   }
 
   const params = await searchParams;
+  await connection();
   const domains = allowedEmailDomains();
 
   return (

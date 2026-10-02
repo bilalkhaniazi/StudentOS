@@ -14,8 +14,13 @@ export const GOOGLE_CALLBACK_URL = `${PUBLIC_APP_ORIGIN}/api/auth/callback/googl
  */
 export const DEFAULT_ALLOWED_EMAIL_DOMAINS = ["mail.gvsu.edu", "gvsu.edu"] as const;
 
+function runtimeEnv(name: string): string {
+  // Bracket access so Next.js does not inline empty values at Docker build time.
+  return (process.env[name] ?? "").trim();
+}
+
 export function allowedEmailDomains(): string[] {
-  const raw = process.env.ALLOWED_EMAIL_DOMAINS?.trim();
+  const raw = runtimeEnv("ALLOWED_EMAIL_DOMAINS");
   if (!raw) {
     return [...DEFAULT_ALLOWED_EMAIL_DOMAINS];
   }
@@ -33,12 +38,19 @@ export function isAllowedEmail(email: string | null | undefined): boolean {
 }
 
 export function isGoogleOAuthConfigured(): boolean {
-  return Boolean(process.env.GOOGLE_CLIENT_ID?.trim() && process.env.GOOGLE_CLIENT_SECRET?.trim());
+  return Boolean(runtimeEnv("GOOGLE_CLIENT_ID") && runtimeEnv("GOOGLE_CLIENT_SECRET"));
+}
+
+export function googleClientId(): string {
+  return runtimeEnv("GOOGLE_CLIENT_ID");
+}
+
+export function googleClientSecret(): string {
+  return runtimeEnv("GOOGLE_CLIENT_SECRET");
 }
 
 export function isDevLoginEnabled(): boolean {
-  const flag = process.env.DEV_LOGIN ?? process.env.NEXT_PUBLIC_DEV_LOGIN;
-  return flag === "true";
+  return (runtimeEnv("DEV_LOGIN") || runtimeEnv("NEXT_PUBLIC_DEV_LOGIN")) === "true";
 }
 
 export function formatDomainList(domains: string[] = allowedEmailDomains()): string {
