@@ -41,6 +41,7 @@ services:
     environment:
       API_INTERNAL_URL: http://api:43124
       AUTH_URL: http://127.0.0.1:43123
+      NEXTAUTH_URL: http://127.0.0.1:43123
       AUTH_TRUST_HOST: "true"
       AUTH_SECRET: ${AUTH_SECRET:-studentos-local-dev-secret-change-me}
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}

@@ -7,7 +7,11 @@ import {
   isAllowedEmail,
   isDevLoginEnabled,
   isGoogleOAuthConfigured,
+  PUBLIC_APP_ORIGIN,
 } from "@/lib/auth-config";
+
+process.env.AUTH_URL ??= PUBLIC_APP_ORIGIN;
+process.env.NEXTAUTH_URL ??= PUBLIC_APP_ORIGIN;
 
 export const { handlers, auth, signIn, signOut } = NextAuth(() => {
   const providers = [];
@@ -17,6 +21,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth(() => {
       Google({
         clientId: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        // Auth.js otherwise builds this from the request host (often "localhost"),
+        // which Google rejects because the client is registered for 127.0.0.1.
+        redirectProxyUrl: `${PUBLIC_APP_ORIGIN}/api/auth`,
       })
     );
   }

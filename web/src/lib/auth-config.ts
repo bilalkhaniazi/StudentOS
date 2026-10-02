@@ -1,4 +1,12 @@
 /**
+ * Canonical public origin. Must match the Google OAuth JavaScript origin
+ * and redirect URI. Do not use localhost — Google treats it as a different host.
+ */
+export const PUBLIC_APP_ORIGIN = "http://127.0.0.1:43123";
+
+export const GOOGLE_CALLBACK_URL = `${PUBLIC_APP_ORIGIN}/api/auth/callback/google`;
+
+/**
  * Single place to change which emails may sign in.
  *
  * Override with ALLOWED_EMAIL_DOMAINS in `.env` (comma-separated, no @).
