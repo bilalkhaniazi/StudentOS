@@ -29,11 +29,42 @@ class ProjectEntry(BaseModel):
     summary: str | None = None
     technologies: list[str] = Field(default_factory=list)
     demonstratesSkills: list[str] = Field(default_factory=list)
+    source: str | None = None
+
+
+class ExperienceEntry(BaseModel):
+    organization: str
+    title: str
+    location: str | None = None
+    startDate: str | None = None
+    endDate: str | None = None
+    current: bool = False
+    summary: str | None = None
+    highlights: list[str] = Field(default_factory=list)
+    source: str | None = None
+
+
+class EducationEntry(BaseModel):
+    institution: str
+    degree: str | None = None
+    field: str | None = None
+    location: str | None = None
+    startDate: str | None = None
+    endDate: str | None = None
+    current: bool = False
+    source: str | None = None
+
+
+class LanguageEntry(BaseModel):
+    name: str
+    proficiency: str | None = None
+    source: str | None = None
 
 
 class CertificationEntry(BaseModel):
     name: str
     taggedSkills: list[str] = Field(default_factory=list)
+    source: str | None = None
 
 
 class CurriculumBlock(BaseModel):
@@ -71,13 +102,18 @@ class StudentProfile(BaseModel):
     remainingCredits: float | None = None
     termCreditPreference: str = "softCap15"
     summary: str | None = None
+    studentType: Literal["international", "domestic", "unknown"] | None = None
     skills: list[SkillEntry] = Field(default_factory=list)
     projects: list[ProjectEntry] = Field(default_factory=list)
+    experiences: list[ExperienceEntry] = Field(default_factory=list)
+    education: list[EducationEntry] = Field(default_factory=list)
+    languages: list[LanguageEntry] = Field(default_factory=list)
     certifications: list[CertificationEntry] = Field(default_factory=list)
     curriculum: list[CurriculumBlock] = Field(default_factory=list)
     courses: list[CourseEntry] = Field(default_factory=list)
     resumeFilename: str | None = None
     resumeReadAt: str | None = None
+    resumeParsed: dict[str, Any] | None = None
     editable: bool = True
     synthetic: bool = False
 
@@ -98,13 +134,18 @@ class ProfileUpdate(BaseModel):
     careerInterests: list[str] | None = None
     remainingCredits: float | None = None
     summary: str | None = None
+    studentType: Literal["international", "domestic", "unknown"] | None = None
     skills: list[SkillEntry] | None = None
     projects: list[ProjectEntry] | None = None
+    experiences: list[ExperienceEntry] | None = None
+    education: list[EducationEntry] | None = None
+    languages: list[LanguageEntry] | None = None
     certifications: list[CertificationEntry] | None = None
     curriculum: list[CurriculumBlock] | None = None
     courses: list[CourseEntry] | None = None
     resumeFilename: str | None = None
     resumeReadAt: str | None = None
+    resumeParsed: dict[str, Any] | None = None
 
 
 class IdentityEnsure(BaseModel):
@@ -144,6 +185,17 @@ class TranscriptImportResult(BaseModel):
 class ResumeImportResult(BaseModel):
     accepted: bool
     stored: bool = False
+    parsed: bool = False
     filename: str | None = None
     profileId: str | None = None
     message: str
+    method: str | None = None
+    warnings: list[str] = Field(default_factory=list)
+    summary: str | None = None
+    experienceCount: int = 0
+    projectCount: int = 0
+    skillCount: int = 0
+    educationCount: int = 0
+    languageCount: int = 0
+    certificationCount: int = 0
+    studentTypeHint: str | None = None

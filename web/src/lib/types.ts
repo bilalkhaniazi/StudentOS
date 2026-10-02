@@ -22,6 +22,43 @@ export type BadgeEntry = {
   awardedOn?: string | null;
 };
 
+export type ProjectEntry = {
+  name: string;
+  summary?: string | null;
+  technologies: string[];
+  demonstratesSkills: string[];
+  source?: string | null;
+};
+
+export type ExperienceEntry = {
+  organization: string;
+  title: string;
+  location?: string | null;
+  startDate?: string | null;
+  endDate?: string | null;
+  current?: boolean;
+  summary?: string | null;
+  highlights?: string[];
+  source?: string | null;
+};
+
+export type EducationEntry = {
+  institution: string;
+  degree?: string | null;
+  field?: string | null;
+  location?: string | null;
+  startDate?: string | null;
+  endDate?: string | null;
+  current?: boolean;
+  source?: string | null;
+};
+
+export type LanguageEntry = {
+  name: string;
+  proficiency?: string | null;
+  source?: string | null;
+};
+
 export type StudentProfile = {
   syntheticId: string;
   displayName: string;
@@ -41,17 +78,22 @@ export type StudentProfile = {
   remainingCredits?: number | null;
   termCreditPreference?: string;
   summary?: string | null;
+  studentType?: "international" | "domestic" | "unknown" | null;
   skills: { label: string; evidence: string }[];
-  projects: {
-    name: string;
-    summary?: string | null;
-    technologies: string[];
-    demonstratesSkills: string[];
-  }[];
-  certifications: { name: string; taggedSkills: string[] }[];
+  projects: ProjectEntry[];
+  experiences: ExperienceEntry[];
+  education: EducationEntry[];
+  languages: LanguageEntry[];
+  certifications: { name: string; taggedSkills: string[]; source?: string | null }[];
   courses: CourseEntry[];
   resumeFilename?: string | null;
   resumeReadAt?: string | null;
+  resumeParsed?: {
+    method?: string;
+    warnings?: string[];
+    emailsFound?: number;
+    phonesFound?: number;
+  } | null;
   editable?: boolean;
   synthetic?: boolean;
 };
@@ -161,9 +203,20 @@ export type TranscriptImportResult = {
 export type ResumeImportResult = {
   accepted: boolean;
   stored: boolean;
+  parsed?: boolean;
   filename: string | null;
   profileId?: string | null;
   message: string;
+  method?: string | null;
+  warnings?: string[];
+  summary?: string | null;
+  experienceCount?: number;
+  projectCount?: number;
+  skillCount?: number;
+  educationCount?: number;
+  languageCount?: number;
+  certificationCount?: number;
+  studentTypeHint?: string | null;
 };
 
 export type Meta = {

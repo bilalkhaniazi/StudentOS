@@ -148,6 +148,14 @@ def _node_to_profile(row: dict) -> dict:
     props.setdefault("email", None)
     props.setdefault("resumeFilename", None)
     props.setdefault("resumeReadAt", None)
+    props.setdefault("resumeParsed", None)
+    props.setdefault("studentType", None)
+    props.setdefault("experiences", [])
+    props.setdefault("education", [])
+    props.setdefault("languages", [])
+    props.setdefault("projects", props.get("projects") or [])
+    props.setdefault("skills", props.get("skills") or [])
+    props.setdefault("certifications", props.get("certifications") or [])
     return props
 
 
@@ -544,44 +552,91 @@ async def import_resume(
 ) -> ResumeImportResult:
     from datetime import datetime, timezone
 
+    from api.app.resume import merge_resume_into_profile, parse_resume_bytes
+
     name = file.filename or "resume"
     lower = name.lower()
     allowed = (".pdf", ".doc", ".docx", ".txt")
     if not any(lower.endswith(ext) for ext in allowed):
         raise HTTPException(
             status_code=400,
-            detail="Upload a PDF or Word resume (.pdf, .doc, .docx).",
+            detail="Upload a PDF, Word, or text resume (.pdf, .docx, .doc, .txt).",
         )
     data = await file.read()
     if not data:
         raise HTTPException(status_code=400, detail="That file was empty.")
     if len(data) > 8 * 1024 * 1024:
         raise HTTPException(status_code=400, detail="That resume is too large. Try a PDF under 8 MB.")
-    del data
 
     session = get_session()
     target_id = profile_id or session.get("activeProfileId")
     if not target_id:
+        del data
         raise HTTPException(status_code=400, detail="Sign in first so the resume can attach to your profile.")
-    existing = db.fetch_one(
-        "SELECT id FROM nodes WHERE id = %s AND type = 'student'",
+    row = db.fetch_one(
+        "SELECT id, properties FROM nodes WHERE id = %s AND type = 'student'",
         (f"student:{target_id}",),
     )
-    if not existing:
+    if not row:
+        del data
         raise HTTPException(status_code=404, detail="No student profile is signed in.")
 
+    try:
+        parsed = parse_resume_bytes(data, name)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Could not read that resume. Try a text PDF or .docx. ({exc})",
+        ) from exc
+    finally:
+        data = b""
+
+    props = row["properties"]
+    if isinstance(props, str):
+        props = json.loads(props)
+    merge_resume_into_profile(props, parsed)
     stamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-    update_profile(
-        target_id,
-        ProfileUpdate(resumeFilename=name, resumeReadAt=stamp),
+    props["resumeFilename"] = name
+    props["resumeReadAt"] = stamp
+    props["syntheticId"] = target_id
+    db.execute(
+        "UPDATE nodes SET properties = %s WHERE id = %s",
+        (db.as_json(props), f"student:{target_id}"),
+    )
+
+    got_any = bool(
+        parsed.experiences
+        or parsed.projects
+        or parsed.skills
+        or parsed.education
+        or parsed.languages
+        or parsed.summary
+    )
+    message = (
+        f"Parsed {name} in memory and discarded the file. "
+        f"Found {len(parsed.experiences)} experience(s), {len(parsed.projects)} project(s), "
+        f"{len(parsed.skills)} skill(s). Review and edit below — or enter details manually."
+        if got_any
+        else (
+            f"Read {name} in memory and discarded it, but could not confidently extract sections. "
+            "Enter experience, projects, and skills manually below."
+        )
     )
     return ResumeImportResult(
         accepted=True,
         stored=False,
+        parsed=got_any,
         filename=name,
         profileId=target_id,
-        message=(
-            f"Read {name} in memory and discarded it. Resume parsing is next; "
-            "the file was not saved."
-        ),
+        message=message,
+        method=parsed.method,
+        warnings=parsed.warnings,
+        summary=parsed.summary,
+        experienceCount=len(parsed.experiences),
+        projectCount=len(parsed.projects),
+        skillCount=len(parsed.skills),
+        educationCount=len(parsed.education),
+        languageCount=len(parsed.languages),
+        certificationCount=len(parsed.certifications),
+        studentTypeHint=parsed.studentTypeHint,
     )

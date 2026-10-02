@@ -14,6 +14,23 @@ import { Badge } from "@/components/ui/badge";
 import { EmptyState, ErrorState } from "@/components/empty-state";
 import { getCourses, getMe, importResume, importTranscript, updateMe } from "@/lib/api";
 import type { CatalogCourse, CourseEntry, StudentProfile } from "@/lib/types";
+import { ResumeProfileSections } from "./resume-sections";
+
+function normalizeProfile(p: StudentProfile): StudentProfile {
+  return {
+    ...p,
+    skills: p.skills ?? [],
+    projects: p.projects ?? [],
+    experiences: p.experiences ?? [],
+    education: p.education ?? [],
+    languages: p.languages ?? [],
+    certifications: p.certifications ?? [],
+    courses: p.courses ?? [],
+    badges: p.badges ?? [],
+    majors: p.majors ?? [],
+    careerInterests: p.careerInterests ?? [],
+  };
+}
 
 export default function ProfilePage() {
   const [loading, setLoading] = useState(true);
@@ -34,7 +51,7 @@ export default function ProfilePage() {
     try {
       const [courses, p] = await Promise.all([getCourses(), getMe()]);
       setCatalog(courses.courses);
-      setProfile(p);
+      setProfile(normalizeProfile(p));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Could not load the profile.");
     } finally {
@@ -73,8 +90,14 @@ export default function ProfilePage() {
         skills: profile.skills,
         courses: profile.courses,
         summary: profile.summary,
+        studentType: profile.studentType,
+        experiences: profile.experiences,
+        education: profile.education,
+        projects: profile.projects,
+        languages: profile.languages,
+        certifications: profile.certifications,
       });
-      setProfile(next);
+      setProfile(normalizeProfile(next));
       toast.success("Profile saved");
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Save failed");
@@ -124,7 +147,7 @@ export default function ProfilePage() {
         toast.error(result.message);
         return;
       }
-      setProfile(await getMe());
+      setProfile(normalizeProfile(await getMe()));
       toast.success(result.message);
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Upload failed");
@@ -139,7 +162,7 @@ export default function ProfilePage() {
     try {
       const result = await importResume(file);
       input.value = "";
-      setProfile(await getMe());
+      setProfile(normalizeProfile(await getMe()));
       toast.success(result.message);
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Resume upload failed");
@@ -172,12 +195,13 @@ export default function ProfilePage() {
           </p>
           <h1 className="mt-2 font-heading text-3xl">{profile.displayName}</h1>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-            {profile.email ?? "Signed-in GVSU student"}. Degree, majors, and badges come from a Banner
-            advising transcript. Uploads are read in memory and discarded.
+            {profile.email ?? "Signed-in GVSU student"}. Degree and majors come from a Banner
+            advising transcript. Resume details can be uploaded or entered by hand below. Uploads are
+            read in memory and discarded.
           </p>
         </div>
         <Button onClick={save} disabled={saving}>
-          {saving ? "Saving…" : "Save coursework"}
+          {saving ? "Saving…" : "Save profile"}
         </Button>
       </div>
 
@@ -340,8 +364,9 @@ export default function ProfilePage() {
             <CardHeader>
               <CardTitle>Resume</CardTitle>
               <CardDescription>
-                Upload a PDF or Word resume. StudentOS reads it in memory and discards it. Skill and
-                project extraction is next.
+                Upload a PDF, Word, or text resume. StudentOS extracts experience, projects, skills,
+                education, and languages into the sections below, then discards the file. You can also
+                skip the upload and enter everything manually.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4 text-sm">
@@ -349,8 +374,9 @@ export default function ProfilePage() {
                 <FileText />
                 <AlertTitle>How to upload a resume</AlertTitle>
                 <AlertDescription>
-                  Use a PDF if you can. Word (.doc or .docx) is fine too. The file is not stored on
-                  this PC’s StudentOS folder or in git.
+                  Prefer a text-based PDF or .docx. Scanned PDFs are OCR’d when needed. Different
+                  layouts are supported when sections use common headings (Experience, Projects,
+                  Skills). The file is not stored on this PC’s StudentOS folder or in git.
                 </AlertDescription>
               </Alert>
               <div className="grid gap-1.5">
@@ -358,7 +384,7 @@ export default function ProfilePage() {
                 <Input
                   id="resume"
                   type="file"
-                  accept="application/pdf,.pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  accept="application/pdf,.pdf,.doc,.docx,.txt,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain"
                   disabled={resumeBusy}
                   onChange={(e) => onResume(e.target.files?.[0], e.currentTarget)}
                 />
@@ -366,22 +392,44 @@ export default function ProfilePage() {
               {resumeBusy ? (
                 <p className="flex items-center gap-2 text-muted-foreground">
                   <Loader2 className="size-4 animate-spin" />
-                  Reading the resume. The file is not being saved.
+                  Reading and parsing the resume. The file is not being saved.
                 </p>
               ) : profile.resumeFilename ? (
-                <p>
-                  Last resume read: <span className="font-medium">{profile.resumeFilename}</span>
-                  {profile.resumeReadAt ? (
+                <div className="space-y-1">
+                  <p>
+                    Last resume read: <span className="font-medium">{profile.resumeFilename}</span>
                     <span className="text-muted-foreground"> · file discarded</span>
+                  </p>
+                  {profile.resumeParsed?.method ? (
+                    <p className="text-muted-foreground">
+                      Extracted via {profile.resumeParsed.method}
+                      {(profile.experiences?.length || 0) +
+                        (profile.projects?.length || 0) +
+                        (profile.skills?.length || 0) >
+                      0
+                        ? ` · ${(profile.experiences || []).length} experience(s), ${(profile.projects || []).length} project(s), ${(profile.skills || []).length} skill(s)`
+                        : ""}
+                    </p>
                   ) : null}
-                </p>
+                  {(profile.resumeParsed?.warnings || []).length ? (
+                    <ul className="list-disc pl-4 text-muted-foreground">
+                      {profile.resumeParsed!.warnings!.map((warning) => (
+                        <li key={warning}>{warning}</li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
               ) : (
-                <p className="text-muted-foreground">No resume read yet.</p>
+                <p className="text-muted-foreground">
+                  No resume read yet. Upload one, or fill the resume sections below by hand.
+                </p>
               )}
             </CardContent>
           </Card>
         </div>
       </div>
+
+      <ResumeProfileSections profile={profile} onChange={patch} />
 
       <Card>
         <CardHeader>
