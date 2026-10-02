@@ -440,10 +440,16 @@ def parse_program_page(html: str, program_id: str, page_url: str) -> dict[str, A
     suggested: list[dict[str, Any]] = []
     current_section = "general"
     overview_notes: list[str] = []
-    for raw_line in text.splitlines():
-        line = re.sub(r"\s+", " ", raw_line).strip()
-        if not line:
-            continue
+    blocks: list[str] = []
+    for el in main.find_all(["h2", "h3", "h4", "p", "li"]):
+        line = re.sub(r"\s+", " ", el.get_text(" ", strip=True)).strip()
+        if line:
+            blocks.append(line)
+    if not blocks:
+        blocks = [re.sub(r"\s+", " ", line).strip() for line in text.splitlines() if line.strip()]
+    for line in blocks:
+        if line.lower().startswith("if you are in need"):
+            break
         listings = _listing_rows(line, current_section, program_id)
         if not listings:
             nxt = _program_section_for(line, current_section)
@@ -550,9 +556,9 @@ def _badge_structure_kind(line: str, current: str) -> str:
     low = line.lower()
     if "choose 3 of the following" in low or "choose three of the following" in low:
         return "choose-3"
-    if "and two of the following" in low or "and 2 of the following" in low:
+    if "two of the following" in low or "2 of the following" in low:
         return "choose-2"
-    if "and 1 of the following" in low or "and one of the following" in low:
+    if "1 of the following" in low or "one of the following" in low:
         return "choose-1"
     if "students must take" in low:
         return "required"
@@ -564,27 +570,43 @@ def parse_badge_page(html: str, badge_id: str, info: dict[str, Any]) -> dict[str
     for tag in soup(["script", "style", "header", "footer", "nav"]):
         tag.decompose()
     main = soup.find("main") or soup
-    text = main.get_text("\n", strip=True)
+    heading = None
+    for h in main.find_all(["h2", "h3", "h4"]):
+        if "requirement" in h.get_text(" ", strip=True).lower():
+            heading = h
+    blocks: list[str] = []
+    if heading:
+        for sib in heading.find_next_siblings():
+            if sib.name in {"h1", "h2", "h3", "h4"}:
+                break
+            if sib.name in {"ul", "ol"}:
+                for li in sib.find_all("li", recursive=False) or sib.find_all("li"):
+                    t = re.sub(r"\s+", " ", li.get_text(" ", strip=True)).strip()
+                    if t:
+                        blocks.append(t)
+                continue
+            t = re.sub(r"\s+", " ", sib.get_text(" ", strip=True)).strip()
+            if t:
+                blocks.append(t)
+    else:
+        blocks = [re.sub(r"\s+", " ", line).strip() for line in main.get_text("\n", strip=True).splitlines()]
+
     kind = "required"
     slots: list[dict[str, Any]] = []
     required: list[dict[str, Any]] = []
     choose_from: list[dict[str, Any]] = []
     choose_n = 0
-    for raw_line in text.splitlines():
-        line = re.sub(r"\s+", " ", raw_line).strip()
-        if not line:
-            continue
+    for line in blocks:
+        if line.lower().startswith("if you are in need"):
+            break
         kind = _badge_structure_kind(line, kind)
         listings = _listing_rows(line, kind, badge_id)
         if not listings:
             continue
-        # A single line of "A OR B" is one choose-1 slot.
         if " or " in line.lower() and len(listings) >= 2:
             slots.append({"kind": "choose_n", "n": 1, "courses": listings})
             continue
-        if kind == "required":
-            required.extend(listings)
-        elif kind.startswith("choose-"):
+        if kind.startswith("choose-"):
             choose_n = int(kind.split("-")[1])
             choose_from.extend(listings)
         else:
@@ -593,13 +615,6 @@ def parse_badge_page(html: str, badge_id: str, info: dict[str, Any]) -> dict[str
         slots.insert(0, {"kind": "all", "n": len(required), "courses": required})
     if choose_from:
         slots.append({"kind": "choose_n", "n": choose_n or 1, "courses": choose_from})
-    if not slots:
-        # Distributed Computing-style: all listed courses are required.
-        all_rows = []
-        for raw_line in text.splitlines():
-            all_rows.extend(_listing_rows(re.sub(r"\s+", " ", raw_line).strip(), "required", badge_id))
-        if all_rows:
-            slots = [{"kind": "all", "n": len(all_rows), "courses": all_rows}]
     courses: list[dict[str, Any]] = []
     seen: set[str] = set()
     for slot in slots:

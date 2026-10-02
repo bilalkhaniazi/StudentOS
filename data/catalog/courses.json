@@ -532,6 +532,205 @@
     "programs": {}
   },
   {
+    "code": "BIO 120",
+    "subject": "BIO",
+    "course_number": "120",
+    "title": "General Biology I",
+    "description": "Introduction to cell structure and physiology, growth and development, and genetics. Offered every semester. Fulfills General Education Foundations - Life Sciences with a lab",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "High school chemistry, CHM 109 , or CHM 125 and CHM 126 strongly recommended ( CHM 109 or CHM 125 and CHM 126 may be taken concurrently). For students with a strong science background or interest in science",
+    "prerequisite_codes": [
+      "CHM 109",
+      "CHM 125",
+      "CHM 126"
+    ],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/bio-120.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "BIO 121",
+    "subject": "BIO",
+    "course_number": "121",
+    "title": "General Biology II",
+    "description": "Students will be introduced to the diversity of living organisms, emphasizing fundamental biological processes operating at the scale of individual organisms. Form and function of organisms will be studied in ecological and evolutionary contexts. Students will explore and apply experimental design and quantitative analysis of data within these contexts. Offered every semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "MTH 108 and MTH 109 , or MTH 110 (may be taken concurrently), or fulfillment of MTH 110 through Math Placement",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/bio-121.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "BMS 202",
+    "subject": "BMS",
+    "course_number": "202",
+    "title": "Anatomy and Physiology",
+    "description": "An introduction to the human body, its form and function. With the study of each system, correlations between its function and the functions of other systems are emphasized. Lecture and laboratory. Fulfills General Education Foundations - Life Sciences with a lab. Offered fall and winter semesters.",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered fall and winter semesters.",
+    "source_url": "https://www.gvsu.edu/catalog/course/bms-202.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "CHM 109",
+    "subject": "CHM",
+    "course_number": "109",
+    "title": "Introductory Chemistry",
+    "description": "An introductory study of general chemistry that presents the basic chemical principles and their applications. Designed for general education and students in programs that require a chemistry background but not the rigor of a full year of general chemistry. Does not count toward a chemistry major. Fulfills General Education Foundations - Physical Sciences with a lab. Offered every semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "MTH 110 or MTH 109 (May be taken concurrently)",
+    "prerequisite_codes": [
+      "MTH 110",
+      "MTH 109"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/chm-109.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
+    "code": "CHM 125",
+    "subject": "CHM",
+    "course_number": "125",
+    "title": "Principles of Chemistry I Lecture",
+    "description": "First semester of the two-semester general chemistry sequence for the sciences. This course covers atomic structure and the periodic table, intermolecular forces, chemical bonding, stoichiometry, basic chemical reactions, and thermochemistry. Fulfills General Education Foundations - Physical Science with a Lab with concurrent enrollment in CHM 126. Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "High school chemistry, MTH 110 (or equivalent by placement or exam), and CHM 126 (may be taken concurrently)",
+    "prerequisite_codes": [
+      "MTH 110",
+      "CHM 126"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/chm-125.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "CHM 126",
+    "subject": "CHM",
+    "course_number": "126",
+    "title": "Principles of Chemistry I Lab",
+    "description": "An introduction to laboratory techniques and procedures of general chemistry. The course teaches essential laboratory techniques, proper safety procedures, data collection, and analysis. Labs will cover topics like solution preparation, gases, chemical reactions, stoichiometry, intermolecular forces, and chromatography. Fulfills General Education Foundations - Physical Science with a Lab with concurrent enrollment in CHM 125 . Offered every semester",
+    "credits_min": 1.0,
+    "credits_max": 1.0,
+    "credits_text": "1",
+    "prerequisites_text": "CHM 125 (may be taken concurrently)",
+    "prerequisite_codes": [
+      "CHM 125"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/chm-126.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "CHM 127",
+    "subject": "CHM",
+    "course_number": "127",
+    "title": "Principles of Chemistry II Lecture",
+    "description": "The second semester in the two-semester general chemistry sequence for the sciences. Builds on the theoretical foundation of CHM 125 to develop the concepts of equilibria, solubility, acids and bases, kinetics, and thermodynamics. Offered every semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "CHM 125 , CHM 126 , ( MTH 122 or MTH 124 or MTH 125 or equivalent by placement or exam), and CHM 128 (may be taken concurrently)",
+    "prerequisite_codes": [
+      "CHM 125",
+      "CHM 126",
+      "MTH 122",
+      "MTH 124",
+      "MTH 125",
+      "CHM 128"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/chm-127.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "CHM 128",
+    "subject": "CHM",
+    "course_number": "128",
+    "title": "Principles of Chemistry II Lab",
+    "description": "An introduction to laboratory techniques and procedures of general chemistry. Offered every semester",
+    "credits_min": 1.0,
+    "credits_max": 1.0,
+    "credits_text": "1",
+    "prerequisites_text": "CHM 125 , CHM 126 , and CHM 127 ( CHM 127 may be taken concurrently)",
+    "prerequisite_codes": [
+      "CHM 125",
+      "CHM 126",
+      "CHM 127"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/chm-128.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
     "code": "CIS 100",
     "subject": "CIS",
     "course_number": "100",
@@ -2334,7 +2533,7 @@
     ],
     "programs": {
       "cs-bs": [
-        "capstone"
+        "required"
       ]
     }
   },
@@ -2443,9 +2642,15 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-software-engineering"
+        "core-software-engineering",
+        "badge-cybersecurity",
+        "badge-software-engineering"
       ]
-    }
+    },
+    "badges": [
+      "cybersecurity",
+      "software-engineering"
+    ]
   },
   {
     "code": "CIS 554",
@@ -2468,9 +2673,13 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-networking"
+        "core-networking",
+        "badge-distributed-computing"
       ]
-    }
+    },
+    "badges": [
+      "distributed-computing"
+    ]
   },
   {
     "code": "CIS 564",
@@ -2534,7 +2743,18 @@
       "data-mining",
       "programming"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-biomedical-informatics",
+        "badge-data-analytics",
+        "badge-database-management"
+      ]
+    },
+    "badges": [
+      "biomedical-informatics",
+      "data-analytics",
+      "database-management"
+    ]
   },
   {
     "code": "CIS 641",
@@ -2557,9 +2777,15 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-systems-development"
+        "core-systems-development",
+        "badge-information-systems-management",
+        "badge-software-design-and-development"
       ]
-    }
+    },
+    "badges": [
+      "information-systems-management",
+      "software-design-and-development"
+    ]
   },
   {
     "code": "CIS 642",
@@ -2584,9 +2810,13 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-systems-development"
+        "core-systems-development",
+        "badge-information-systems-management"
       ]
-    }
+    },
+    "badges": [
+      "information-systems-management"
+    ]
   },
   {
     "code": "CIS 643",
@@ -2608,7 +2838,14 @@
     "topics": [
       "project"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-information-systems-management"
+      ]
+    },
+    "badges": [
+      "information-systems-management"
+    ]
   },
   {
     "code": "CIS 655",
@@ -2629,7 +2866,14 @@
       "cloud",
       "security"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-web-and-mobile-computing"
+      ]
+    },
+    "badges": [
+      "web-and-mobile-computing"
+    ]
   },
   {
     "code": "CIS 656",
@@ -2654,9 +2898,13 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-networking"
+        "core-networking",
+        "badge-distributed-computing"
       ]
-    }
+    },
+    "badges": [
+      "distributed-computing"
+    ]
   },
   {
     "code": "CIS 657",
@@ -2676,7 +2924,16 @@
     "topics": [
       "mobile"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-software-design-and-development",
+        "badge-web-and-mobile-computing"
+      ]
+    },
+    "badges": [
+      "software-design-and-development",
+      "web-and-mobile-computing"
+    ]
   },
   {
     "code": "CIS 658",
@@ -2696,7 +2953,18 @@
     "topics": [
       "web"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-distributed-computing",
+        "badge-software-design-and-development",
+        "badge-web-and-mobile-computing"
+      ]
+    },
+    "badges": [
+      "distributed-computing",
+      "software-design-and-development",
+      "web-and-mobile-computing"
+    ]
   },
   {
     "code": "CIS 660",
@@ -2719,9 +2987,17 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-data-engineering"
+        "core-data-engineering",
+        "badge-biomedical-informatics",
+        "badge-database-management",
+        "badge-software-design-and-development"
       ]
-    }
+    },
+    "badges": [
+      "biomedical-informatics",
+      "database-management",
+      "software-design-and-development"
+    ]
   },
   {
     "code": "CIS 661",
@@ -2741,7 +3017,14 @@
     "topics": [
       "project"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-biomedical-informatics"
+      ]
+    },
+    "badges": [
+      "biomedical-informatics"
+    ]
   },
   {
     "code": "CIS 662",
@@ -2786,7 +3069,16 @@
     "catalog_year": "2026-2027",
     "level": "graduate",
     "topics": [],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-biomedical-informatics",
+        "badge-database-management"
+      ]
+    },
+    "badges": [
+      "biomedical-informatics",
+      "database-management"
+    ]
   },
   {
     "code": "CIS 671",
@@ -2807,7 +3099,18 @@
       "programming",
       "visualization"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-biomedical-informatics",
+        "badge-data-analytics",
+        "badge-database-management"
+      ]
+    },
+    "badges": [
+      "biomedical-informatics",
+      "data-analytics",
+      "database-management"
+    ]
   },
   {
     "code": "CIS 672",
@@ -2850,9 +3153,15 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-data-engineering"
+        "core-data-engineering",
+        "badge-database-management",
+        "badge-software-design-and-development"
       ]
-    }
+    },
+    "badges": [
+      "database-management",
+      "software-design-and-development"
+    ]
   },
   {
     "code": "CIS 675",
@@ -2897,7 +3206,14 @@
       "distributed-systems",
       "programming"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-database-management"
+      ]
+    },
+    "badges": [
+      "database-management"
+    ]
   },
   {
     "code": "CIS 677",
@@ -2920,7 +3236,14 @@
       "distributed-systems",
       "programming"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-data-analytics"
+      ]
+    },
+    "badges": [
+      "data-analytics"
+    ]
   },
   {
     "code": "CIS 678",
@@ -2942,7 +3265,14 @@
       "networking",
       "programming"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-data-analytics"
+      ]
+    },
+    "badges": [
+      "data-analytics"
+    ]
   },
   {
     "code": "CIS 679",
@@ -2965,7 +3295,14 @@
     "topics": [
       "databases"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-database-management"
+      ]
+    },
+    "badges": [
+      "database-management"
+    ]
   },
   {
     "code": "CIS 680",
@@ -3177,6 +3514,28 @@
       "programming"
     ],
     "programs": {}
+  },
+  {
+    "code": "COM 201",
+    "subject": "COM",
+    "course_number": "201",
+    "title": "Speech",
+    "description": "Introduction to the theory and practice of speech with an emphasis on the development of public speaking skills. The class emphasizes kinds of speeches, audiences, organization, delivery, and critical assessment of speech performances. Fulfills one of the Social and Behavioral Sciences requirements. Offered every semester.",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/com-201.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "cognate"
+      ]
+    }
   },
   {
     "code": "CYB 241",
@@ -3494,7 +3853,14 @@
     "topics": [
       "security"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-cybersecurity"
+      ]
+    },
+    "badges": [
+      "cybersecurity"
+    ]
   },
   {
     "code": "CYB 616",
@@ -3517,7 +3883,14 @@
       "security",
       "operating-systems"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-cybersecurity"
+      ]
+    },
+    "badges": [
+      "cybersecurity"
+    ]
   },
   {
     "code": "CYB 617",
@@ -3537,7 +3910,14 @@
     "topics": [
       "security"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-cybersecurity"
+      ]
+    },
+    "badges": [
+      "cybersecurity"
+    ]
   },
   {
     "code": "CYB 619",
@@ -3561,7 +3941,14 @@
       "artificial-intelligence",
       "security"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-cybersecurity"
+      ]
+    },
+    "badges": [
+      "cybersecurity"
+    ]
   },
   {
     "code": "CYB 645",
@@ -3657,7 +4044,14 @@
       "security",
       "programming"
     ],
-    "programs": {}
+    "programs": {
+      "applied-cs-ms": [
+        "badge-cybersecurity"
+      ]
+    },
+    "badges": [
+      "cybersecurity"
+    ]
   },
   {
     "code": "EGR 185",
@@ -3708,14 +4102,36 @@
     "programs": {}
   },
   {
+    "code": "GEO 111",
+    "subject": "GEO",
+    "course_number": "111",
+    "title": "Exploring the Earth",
+    "description": "Introduction to the study of earth materials and processes, including minerals, rocks, mineral deposits, weathering, erosion, volcanism, and mountain building. Lectures, laboratories, and field trips. Fulfills General Education Foundations - Physical Sciences with a lab. Offered every semester.",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": null,
+    "prerequisite_codes": [],
+    "offered": "Offered every semester.",
+    "source_url": "https://www.gvsu.edu/catalog/course/geo-111.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
     "code": "HCC 304",
     "subject": "HCC",
     "course_number": "304",
-    "title": "HCC 304",
-    "description": "Referenced as a prerequisite on a CIS / CS program course; detail page not ingested.",
-    "credits_min": null,
-    "credits_max": null,
-    "credits_text": null,
+    "title": "Usability Design and Evaluation",
+    "description": "",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
     "prerequisites_text": null,
     "prerequisite_codes": [],
     "offered": null,
@@ -3910,6 +4326,28 @@
     "programs": {}
   },
   {
+    "code": "MTH 125",
+    "subject": "MTH",
+    "course_number": "125",
+    "title": "Survey of Calculus",
+    "description": "A study of the concepts of calculus for students majoring in business, economics, life sciences, and social sciences. Differentiation and integration of algebraic, exponential, and logarithmic functions. Emphasis on applications. Fulfills General Education Foundations - Mathematical Sciences. Please see the mathematics program for placement details. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 108 and MTH 109 ,or MTH 110 , or fulfillment of MTH 110 through Math Placement",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-125.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {}
+  },
+  {
     "code": "MTH 201",
     "subject": "MTH",
     "course_number": "201",
@@ -3931,8 +4369,58 @@
     "topics": [],
     "programs": {
       "cs-bs": [
-        "general",
+        "foundation",
         "cognate"
+      ]
+    }
+  },
+  {
+    "code": "MTH 202",
+    "subject": "MTH",
+    "course_number": "202",
+    "title": "Calculus II",
+    "description": "Continuation of MTH 201 using graphical, numerical, and analytic methods to study exponential, logarithmic, hyperbolic, and inverse trigonometric functions. Indeterminate forms, improper integrals, integration techniques, sequences and series, Taylor polynomials, and power series. Offered every semester",
+    "credits_min": 4.0,
+    "credits_max": 4.0,
+    "credits_text": "4",
+    "prerequisites_text": "MTH 201",
+    "prerequisite_codes": [
+      "MTH 201"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-202.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "math-elective"
+      ]
+    }
+  },
+  {
+    "code": "MTH 204",
+    "subject": "MTH",
+    "course_number": "204",
+    "title": "Linear Algebra I",
+    "description": "An introduction to systems of linear equations emphasizing conceptual understanding and computational thinking. Primary topics include solutions to linear systems, vector and matrix algebra, span and linear independence, bases, eigenvectors, and eigenvalues. Applications will be integrated throughout the course. Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 122 and MTH 123 ; or MTH 124 ; or assignment through Grand Valley math placement",
+    "prerequisite_codes": [
+      "MTH 122",
+      "MTH 123",
+      "MTH 124"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-204.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "math-elective"
       ]
     }
   },
@@ -3962,10 +4450,33 @@
     ],
     "programs": {
       "cs-bs": [
-        "general",
+        "foundation",
         "cognate"
       ]
     }
+  },
+  {
+    "code": "MTH 315",
+    "subject": "MTH",
+    "course_number": "315",
+    "title": "Discrete Mathematics",
+    "description": "Basic and advanced counting techniques, including the Pigeonhole Principle and inclusion-exclusion; recurrence relations; partial orderings; and graph theory, special paths, planarity, chromatic number, networks, trees, traversals, and digraphs. Algorithms and proof techniques. Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "MTH 210",
+    "prerequisite_codes": [
+      "MTH 210"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-315.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "networking",
+      "programming"
+    ],
+    "programs": {}
   },
   {
     "code": "MTH 325",
@@ -3987,8 +4498,36 @@
     "topics": [],
     "programs": {
       "cs-bs": [
-        "general",
+        "foundation",
         "cognate"
+      ]
+    }
+  },
+  {
+    "code": "MTH 465",
+    "subject": "MTH",
+    "course_number": "465",
+    "title": "Automata and Theory of Computation",
+    "description": "Introduction to basic mathematical models of computation and the finite representation of infinite objects. Finite automata, regular languages, nondeterminism, pushdown automata, context-free languages, Turing machines and variants, halting problems, time complexity of algorithms, and NP-Complete problems. Cross-listed with CIS 465",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "CIS 162 and either MTH 315 or MTH 325",
+    "prerequisite_codes": [
+      "CIS 162",
+      "MTH 315",
+      "MTH 325"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/mth-465.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "math-elective"
       ]
     }
   },
@@ -4009,6 +4548,105 @@
     "level": "undergraduate",
     "topics": [],
     "programs": {}
+  },
+  {
+    "code": "PHY 220",
+    "subject": "PHY",
+    "course_number": "220",
+    "title": "General Physics I",
+    "description": "The first half of a two-semester noncalculus sequence with a laboratory; recommended for life science majors. Kinematics, vectors, Newtonian mechanics, gravity, work, conservation of energy and momentum, fluids, and properties of matter. Fulfills General Education Foundations - Physical Sciences with a lab. Offered every semester",
+    "credits_min": 5.0,
+    "credits_max": 5.0,
+    "credits_text": "5",
+    "prerequisites_text": "MTH 122 and MTH 123",
+    "prerequisite_codes": [
+      "MTH 122",
+      "MTH 123"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/phy-220.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "PHY 221",
+    "subject": "PHY",
+    "course_number": "221",
+    "title": "General Physics II",
+    "description": "The second half of a standard one-year noncalculus sequence with a laboratory; recommended for life science majors. Electricity and magnetism, fields, simple electrical circuits, light and optics, and introduction to quantum and nuclear phenomena. Offered every semester",
+    "credits_min": 5.0,
+    "credits_max": 5.0,
+    "credits_text": "5",
+    "prerequisites_text": "PHY 220",
+    "prerequisite_codes": [
+      "PHY 220"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/phy-221.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "PHY 230",
+    "subject": "PHY",
+    "course_number": "230",
+    "title": "Principles of Physics I",
+    "description": "The first course in a two-course calculus-based sequence for students of science, mathematics, and engineering with a laboratory. Topics include vectors, kinematics, dynamics, work, conservation of energy, linear and angular momentum, gravitation, mechanical waves and oscillations, and sound. Fulfills General Education Foundations - Physical Sciences with a lab. Offered every semester",
+    "credits_min": 5.0,
+    "credits_max": 5.0,
+    "credits_text": "5",
+    "prerequisites_text": "MTH 201 . Corequisite: MTH 202",
+    "prerequisite_codes": [
+      "MTH 201",
+      "MTH 202"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/phy-230.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
+  },
+  {
+    "code": "PHY 231",
+    "subject": "PHY",
+    "course_number": "231",
+    "title": "Principles of Physics II",
+    "description": "The second course in a two-semester sequence for students of science and engineering, with a laboratory. Topics include thermodynamics, Coulomb's law, electric fields and potential energy, Gauss's law, circuits, electrical waves and oscillations, Maxwell's equations, and optics. Offered every semester",
+    "credits_min": 5.0,
+    "credits_max": 5.0,
+    "credits_text": "5",
+    "prerequisites_text": "PHY 230 and MTH 202",
+    "prerequisite_codes": [
+      "PHY 230",
+      "MTH 202"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/phy-231.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "science-lab"
+      ]
+    }
   },
   {
     "code": "PNH 630",
@@ -4032,19 +4670,30 @@
     "code": "SE 511",
     "subject": "SE",
     "course_number": "511",
-    "title": "SE 511",
-    "description": "Referenced as a prerequisite on a CIS / CS program course; detail page not ingested.",
-    "credits_min": null,
-    "credits_max": null,
-    "credits_text": null,
+    "title": "Introduction to Software Engineering",
+    "description": "",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
     "prerequisites_text": null,
     "prerequisite_codes": [],
     "offered": null,
     "source_url": "https://www.gvsu.edu/catalog/course/se-511.htm",
     "catalog_year": "2026-2027",
     "level": "graduate",
-    "topics": [],
-    "programs": {}
+    "topics": [
+      "software-engineering"
+    ],
+    "programs": {
+      "applied-cs-ms": [
+        "badge-software-design-and-development",
+        "badge-software-engineering"
+      ]
+    },
+    "badges": [
+      "software-design-and-development",
+      "software-engineering"
+    ]
   },
   {
     "code": "SE 512",
@@ -4052,9 +4701,9 @@
     "course_number": "512",
     "title": "Requirements Specification",
     "description": "",
-    "credits_min": null,
-    "credits_max": null,
-    "credits_text": null,
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
     "prerequisites_text": null,
     "prerequisite_codes": [],
     "offered": null,
@@ -4066,9 +4715,13 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-software-engineering"
+        "core-software-engineering",
+        "badge-software-engineering"
       ]
-    }
+    },
+    "badges": [
+      "software-engineering"
+    ]
   },
   {
     "code": "SE 513",
@@ -4076,9 +4729,9 @@
     "course_number": "513",
     "title": "Software Testing",
     "description": "",
-    "credits_min": null,
-    "credits_max": null,
-    "credits_text": null,
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
     "prerequisites_text": null,
     "prerequisite_codes": [],
     "offered": null,
@@ -4090,9 +4743,13 @@
     ],
     "programs": {
       "applied-cs-ms": [
-        "core-software-engineering"
+        "core-software-engineering",
+        "badge-software-engineering"
       ]
-    }
+    },
+    "badges": [
+      "software-engineering"
+    ]
   },
   {
     "code": "SE 522",
@@ -4100,9 +4757,9 @@
     "course_number": "522",
     "title": "Software Architecture and Design",
     "description": "",
-    "credits_min": null,
-    "credits_max": null,
-    "credits_text": null,
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
     "prerequisites_text": null,
     "prerequisite_codes": [],
     "offered": null,
@@ -4140,7 +4797,35 @@
     "topics": [],
     "programs": {
       "cs-bs": [
-        "cognate"
+        "stats-choice"
+      ]
+    }
+  },
+  {
+    "code": "STA 216",
+    "subject": "STA",
+    "course_number": "216",
+    "title": "Intermediate Applied Statistics",
+    "description": "Project-oriented introduction to major statistical techniques using a statistical package such as SAS or SPSS. Hypothesis testing, t-test, multivariate regression, analysis of variance, analysis of covariance, chi-square tests, and nonparametric statistics. Offered every semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "STA 215 , or STA 225 , or STA 312",
+    "prerequisite_codes": [
+      "STA 215",
+      "STA 225",
+      "STA 312"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/sta-216.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {
+      "cs-bs": [
+        "math-elective"
       ]
     }
   },
@@ -4168,6 +4853,30 @@
     "programs": {}
   },
   {
+    "code": "STA 225",
+    "subject": "STA",
+    "course_number": "225",
+    "title": "Introductory Business Statistics",
+    "description": "A technique-oriented approach to statistical problems with emphasis on business applications. Descriptive statistics, normal probability distribution, estimation, and hypothesis testing for quantitative and categorical variables. Linear regression models for a response variable using one or more explanatory variables. Data analysis is performed in Excel. Fulfills General Education Foundations - Mathematical Sciences. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Both MTH 108 and MTH 109 , or MTH 110 , or equivalent",
+    "prerequisite_codes": [
+      "MTH 108",
+      "MTH 109",
+      "MTH 110"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/sta-225.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "project"
+    ],
+    "programs": {}
+  },
+  {
     "code": "STA 312",
     "subject": "STA",
     "course_number": "312",
@@ -4187,7 +4896,7 @@
     "topics": [],
     "programs": {
       "cs-bs": [
-        "cognate"
+        "stats-choice"
       ]
     }
   },
@@ -4208,6 +4917,59 @@
     ],
     "offered": null,
     "source_url": "https://www.gvsu.edu/catalog/course/sta-330.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [],
+    "programs": {
+      "cs-bs": [
+        "stats-choice"
+      ]
+    }
+  },
+  {
+    "code": "STA 418",
+    "subject": "STA",
+    "course_number": "418",
+    "title": "Statistical Computing and Graphics with R",
+    "description": "An introduction to statistical programming and graphics using the object-oriented statistical language R. Skills in writing R code to perform statistical analyses, graphics, and simulations are developed. Emphasis will be on solving real problems with hands-on work including randomization statistics, time series, data mining, and big data analysis. Cross-listed with STA 518 . Offered fall semester",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "STA 215 or STA 220 or STA 312 ; and STA 216 or CIS 162",
+    "prerequisite_codes": [
+      "STA 215",
+      "STA 220",
+      "STA 312",
+      "STA 216",
+      "CIS 162"
+    ],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/sta-418.htm",
+    "catalog_year": "2026-2027",
+    "level": "undergraduate",
+    "topics": [
+      "data-mining",
+      "programming"
+    ],
+    "programs": {
+      "cs-bs": [
+        "math-elective"
+      ]
+    }
+  },
+  {
+    "code": "WRT 350",
+    "subject": "WRT",
+    "course_number": "350",
+    "title": "Business Communication",
+    "description": "Training in communication skills for business and the professions. Assignments cover varieties of information management, including handling research, gathering data, writing reports, manuals, directions, and correspondence, and making oral presentations. Offered fall and winter semesters",
+    "credits_min": 3.0,
+    "credits_max": 3.0,
+    "credits_text": "3",
+    "prerequisites_text": "Fulfillment of General Education Foundations - Writing",
+    "prerequisite_codes": [],
+    "offered": null,
+    "source_url": "https://www.gvsu.edu/catalog/course/wrt-350.htm",
     "catalog_year": "2026-2027",
     "level": "undergraduate",
     "topics": [],

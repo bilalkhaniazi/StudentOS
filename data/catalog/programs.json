@@ -7,16 +7,17 @@
     "level": "Undergraduate",
     "source_url": "https://www.gvsu.edu/catalog/program/bachelor-of-science-in-computer-science.htm",
     "catalog_year": "2026-2027",
+    "overview": [],
     "courses": [
       {
         "code": "MTH 201",
         "subject": "MTH",
         "course_number": "201",
         "title": "Calculus I",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "general",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "foundation",
         "program_id": "cs-bs"
       },
       {
@@ -24,10 +25,10 @@
         "subject": "MTH",
         "course_number": "225",
         "title": "Discrete Structures: Computer Science",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "general",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "foundation",
         "program_id": "cs-bs"
       },
       {
@@ -35,10 +36,10 @@
         "subject": "MTH",
         "course_number": "325",
         "title": "Discrete Structures: Computer Science 2",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "general",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "foundation",
         "program_id": "cs-bs"
       },
       {
@@ -46,9 +47,9 @@
         "subject": "CIS",
         "course_number": "162",
         "title": "Computer Science I",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -57,9 +58,9 @@
         "subject": "CIS",
         "course_number": "163",
         "title": "Computer Science II",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -68,9 +69,9 @@
         "subject": "CIS",
         "course_number": "241",
         "title": "System-level Programming and Utilities",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -79,9 +80,9 @@
         "subject": "CIS",
         "course_number": "263",
         "title": "Data Structures and Algorithms",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -90,9 +91,9 @@
         "subject": "CIS",
         "course_number": "290",
         "title": "Professional Responsibilities and Practices",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -101,9 +102,9 @@
         "subject": "CIS",
         "course_number": "343",
         "title": "Structure of Programming Languages",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -112,9 +113,9 @@
         "subject": "CIS",
         "course_number": "350",
         "title": "Introduction to Software Engineering",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -123,9 +124,9 @@
         "subject": "CIS",
         "course_number": "351",
         "title": "Computer Organization",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -134,9 +135,9 @@
         "subject": "CIS",
         "course_number": "353",
         "title": "Database",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -145,9 +146,9 @@
         "subject": "CIS",
         "course_number": "452",
         "title": "Operating Systems Concepts",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -156,9 +157,9 @@
         "subject": "CIS",
         "course_number": "457",
         "title": "Data Communications",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -167,9 +168,9 @@
         "subject": "CIS",
         "course_number": "467",
         "title": "Computer Science Project",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "required",
         "program_id": "cs-bs"
       },
@@ -178,10 +179,10 @@
         "subject": "CIS",
         "course_number": "490",
         "title": "Internship",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "capstone",
+        "credits_min": 2.0,
+        "credits_max": 5.0,
+        "credits_text": "2 to 5",
+        "section": "required",
         "program_id": "cs-bs"
       },
       {
@@ -189,9 +190,9 @@
         "subject": "CIS",
         "course_number": "335",
         "title": "Data Mining",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -200,9 +201,9 @@
         "subject": "CIS",
         "course_number": "357",
         "title": "Mobile Application Development",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -211,9 +212,9 @@
         "subject": "CIS",
         "course_number": "360",
         "title": "Information Management and Science",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -222,9 +223,9 @@
         "subject": "AI",
         "course_number": "201",
         "title": "Introduction to Artificial Intelligence",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -233,9 +234,9 @@
         "subject": "CIS",
         "course_number": "367",
         "title": "Computer Graphics",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -244,9 +245,9 @@
         "subject": "HCC",
         "course_number": "304",
         "title": "Usability Design and Evaluation",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -255,9 +256,9 @@
         "subject": "CIS",
         "course_number": "371",
         "title": "Web Application Programming",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -266,9 +267,9 @@
         "subject": "CIS",
         "course_number": "373",
         "title": "Pervasive Computing",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -277,9 +278,9 @@
         "subject": "CYB",
         "course_number": "575",
         "title": "Wireless Networks and Security",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -288,9 +289,9 @@
         "subject": "CIS",
         "course_number": "376",
         "title": "Game Programming Techniques and Algorithms",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -299,9 +300,9 @@
         "subject": "CIS",
         "course_number": "378",
         "title": "Applied Machine Learning",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -310,9 +311,9 @@
         "subject": "CIS",
         "course_number": "380",
         "title": "Special Topics in Computer Information Systems",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 1.0,
+        "credits_max": 4.0,
+        "credits_text": "1 to 4",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -321,9 +322,9 @@
         "subject": "CIS",
         "course_number": "418",
         "title": "Secure Software Engineering",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -332,9 +333,9 @@
         "subject": "CIS",
         "course_number": "430",
         "title": "Computer and Cyber Forensics",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -343,9 +344,9 @@
         "subject": "CIS",
         "course_number": "443",
         "title": "Software Development Tools",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -354,9 +355,9 @@
         "subject": "CIS",
         "course_number": "451",
         "title": "Computer Architecture",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -365,9 +366,9 @@
         "subject": "CYB",
         "course_number": "453",
         "title": "Ethical Hacking",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -376,9 +377,9 @@
         "subject": "CYB",
         "course_number": "455",
         "title": "Applied Cryptography",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -387,9 +388,9 @@
         "subject": "CIS",
         "course_number": "458",
         "title": "System Security",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -398,9 +399,9 @@
         "subject": "CIS",
         "course_number": "461",
         "title": "Compiler Design and Construction",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -409,9 +410,9 @@
         "subject": "CIS",
         "course_number": "465",
         "title": "Automata and Theory of Computation",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -420,9 +421,9 @@
         "subject": "CIS",
         "course_number": "480",
         "title": "Special Topics in Computer Information Systems",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 1.0,
+        "credits_max": 4.0,
+        "credits_text": "1 to 4",
         "section": "elective",
         "program_id": "cs-bs"
       },
@@ -431,9 +432,9 @@
         "subject": "COM",
         "course_number": "201",
         "title": "Speech",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "cognate",
         "program_id": "cs-bs"
       },
@@ -442,9 +443,9 @@
         "subject": "MTH",
         "course_number": "201",
         "title": "Calculus I",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
         "section": "cognate",
         "program_id": "cs-bs"
       },
@@ -453,9 +454,9 @@
         "subject": "MTH",
         "course_number": "225",
         "title": "Discrete Structures: Computer Science",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "cognate",
         "program_id": "cs-bs"
       },
@@ -464,9 +465,9 @@
         "subject": "MTH",
         "course_number": "325",
         "title": "Discrete Structures: Computer Science 2",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "cognate",
         "program_id": "cs-bs"
       },
@@ -475,42 +476,45 @@
         "subject": "STA",
         "course_number": "215",
         "title": "Introductory Applied Statistics",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
-        "program_id": "cs-bs"
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "stats-choice",
+        "program_id": "cs-bs",
+        "choice_group": "statistics"
       },
       {
         "code": "STA 312",
         "subject": "STA",
         "course_number": "312",
         "title": "Probability and Statistics",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
-        "program_id": "cs-bs"
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "stats-choice",
+        "program_id": "cs-bs",
+        "choice_group": "statistics"
       },
       {
         "code": "STA 330",
         "subject": "STA",
         "course_number": "330",
         "title": "Probability and Statistics for Computing",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
-        "program_id": "cs-bs"
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "stats-choice",
+        "program_id": "cs-bs",
+        "choice_group": "statistics"
       },
       {
         "code": "WRT 350",
         "subject": "WRT",
         "course_number": "350",
         "title": "Business Communication",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "cognate",
         "program_id": "cs-bs"
       },
@@ -519,10 +523,10 @@
         "subject": "MTH",
         "course_number": "202",
         "title": "Calculus II",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "math-elective",
         "program_id": "cs-bs"
       },
       {
@@ -530,10 +534,10 @@
         "subject": "MTH",
         "course_number": "204",
         "title": "Linear Algebra I",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "math-elective",
         "program_id": "cs-bs"
       },
       {
@@ -541,10 +545,10 @@
         "subject": "MTH",
         "course_number": "465",
         "title": "Automata and Theory of Computation",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "math-elective",
         "program_id": "cs-bs"
       },
       {
@@ -552,10 +556,10 @@
         "subject": "STA",
         "course_number": "216",
         "title": "Intermediate Applied Statistics",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "math-elective",
         "program_id": "cs-bs"
       },
       {
@@ -563,10 +567,10 @@
         "subject": "STA",
         "course_number": "418",
         "title": "Statistical Computing and Graphics with R",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "math-elective",
         "program_id": "cs-bs"
       },
       {
@@ -574,10 +578,10 @@
         "subject": "BIO",
         "course_number": "120",
         "title": "General Biology I",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -585,10 +589,10 @@
         "subject": "BIO",
         "course_number": "121",
         "title": "General Biology II",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -596,10 +600,10 @@
         "subject": "BMS",
         "course_number": "202",
         "title": "Anatomy and Physiology",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -607,10 +611,10 @@
         "subject": "CHM",
         "course_number": "125",
         "title": "Principles of Chemistry I Lecture",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -618,10 +622,10 @@
         "subject": "CHM",
         "course_number": "126",
         "title": "Principles of Chemistry I Lab",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 1.0,
+        "credits_max": 1.0,
+        "credits_text": "1",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -629,10 +633,10 @@
         "subject": "CHM",
         "course_number": "127",
         "title": "Principles of Chemistry II Lecture",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -640,10 +644,10 @@
         "subject": "CHM",
         "course_number": "128",
         "title": "Principles of Chemistry II Lab",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 1.0,
+        "credits_max": 1.0,
+        "credits_text": "1",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -651,10 +655,10 @@
         "subject": "GEO",
         "course_number": "111",
         "title": "Exploring the Earth",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -662,10 +666,10 @@
         "subject": "PHY",
         "course_number": "220",
         "title": "General Physics I",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 5.0,
+        "credits_max": 5.0,
+        "credits_text": "5",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -673,10 +677,10 @@
         "subject": "PHY",
         "course_number": "221",
         "title": "General Physics II",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 5.0,
+        "credits_max": 5.0,
+        "credits_text": "5",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -684,10 +688,10 @@
         "subject": "PHY",
         "course_number": "230",
         "title": "Principles of Physics I",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 5.0,
+        "credits_max": 5.0,
+        "credits_text": "5",
+        "section": "science-lab",
         "program_id": "cs-bs"
       },
       {
@@ -695,13 +699,262 @@
         "subject": "PHY",
         "course_number": "231",
         "title": "Principles of Physics II",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
-        "section": "cognate",
+        "credits_min": 5.0,
+        "credits_max": 5.0,
+        "credits_text": "5",
+        "section": "science-lab",
         "program_id": "cs-bs"
       }
-    ]
+    ],
+    "suggested_order": [
+      {
+        "code": "CIS 162",
+        "subject": "CIS",
+        "course_number": "162",
+        "title": "Computer Science I",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year One"
+      },
+      {
+        "code": "MTH 124",
+        "subject": "MTH",
+        "course_number": "124",
+        "title": "Precalculus: Functions and Models",
+        "credits_min": 5.0,
+        "credits_max": 5.0,
+        "credits_text": "5",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year One"
+      },
+      {
+        "code": "CIS 163",
+        "subject": "CIS",
+        "course_number": "163",
+        "title": "Computer Science II",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year One"
+      },
+      {
+        "code": "COM 201",
+        "subject": "COM",
+        "course_number": "201",
+        "title": "Speech",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year One"
+      },
+      {
+        "code": "MTH 225",
+        "subject": "MTH",
+        "course_number": "225",
+        "title": "Discrete Structures: Computer Science",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year One"
+      },
+      {
+        "code": "CIS 241",
+        "subject": "CIS",
+        "course_number": "241",
+        "title": "System-level Programming and Utilities",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Two"
+      },
+      {
+        "code": "CIS 290",
+        "subject": "CIS",
+        "course_number": "290",
+        "title": "Professional Responsibilities and Practices",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Two"
+      },
+      {
+        "code": "MTH 201",
+        "subject": "MTH",
+        "course_number": "201",
+        "title": "Calculus I",
+        "credits_min": 4.0,
+        "credits_max": 4.0,
+        "credits_text": "4",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Two"
+      },
+      {
+        "code": "MTH 325",
+        "subject": "MTH",
+        "course_number": "325",
+        "title": "Discrete Structures: Computer Science 2",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Two"
+      },
+      {
+        "code": "CIS 263",
+        "subject": "CIS",
+        "course_number": "263",
+        "title": "Data Structures and Algorithms",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Two"
+      },
+      {
+        "code": "CIS 351",
+        "subject": "CIS",
+        "course_number": "351",
+        "title": "Computer Organization",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Two"
+      },
+      {
+        "code": "CIS 350",
+        "subject": "CIS",
+        "course_number": "350",
+        "title": "Introduction to Software Engineering",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Three"
+      },
+      {
+        "code": "CIS 353",
+        "subject": "CIS",
+        "course_number": "353",
+        "title": "Database",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Three"
+      },
+      {
+        "code": "CIS 457",
+        "subject": "CIS",
+        "course_number": "457",
+        "title": "Data Communications",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Three"
+      },
+      {
+        "code": "CIS 343",
+        "subject": "CIS",
+        "course_number": "343",
+        "title": "Structure of Programming Languages",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Three"
+      },
+      {
+        "code": "CIS 452",
+        "subject": "CIS",
+        "course_number": "452",
+        "title": "Operating Systems Concepts",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Four"
+      },
+      {
+        "code": "WRT 350",
+        "subject": "WRT",
+        "course_number": "350",
+        "title": "Business Communication",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Four"
+      },
+      {
+        "code": "CIS 467",
+        "subject": "CIS",
+        "course_number": "467",
+        "title": "Computer Science Project",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Four"
+      },
+      {
+        "code": "CIS 490",
+        "subject": "CIS",
+        "course_number": "490",
+        "title": "Internship",
+        "credits_min": 2.0,
+        "credits_max": 5.0,
+        "credits_text": "2 to 5",
+        "section": "suggested",
+        "program_id": "cs-bs",
+        "year": "Year Four"
+      }
+    ],
+    "badges": [],
+    "rules": {
+      "total_credits": null,
+      "core": {
+        "note": "Complete every required Computer Science course with a minimum 2.0 GPA.",
+        "course_count": 13
+      },
+      "electives": {
+        "choose": 4,
+        "of": 22,
+        "note": "Select four elective Computer Science courses from the catalog list."
+      },
+      "cognate": {
+        "note": "Complete the non-computing cognates, including one statistics choice, one math elective, and one lab science."
+      },
+      "capstone": {
+        "note": "CIS 467 Computer Science Project is the major capstone. CIS 490 Internship is also required (2 to 5 credits)."
+      }
+    }
   },
   {
     "id": "applied-cs-ms",
@@ -711,15 +964,20 @@
     "level": "Masters",
     "source_url": "https://www.gvsu.edu/catalog/program/master-of-science-in-applied-computer-science.htm",
     "catalog_year": "2026-2027",
+    "overview": [
+      "The program consists of 11 three-credit courses (33 credit hours), consisting of core courses, an area of specialization (badge), electives, and a capstone option - an internship, project, or thesis. Classes are offered fully online, in a hybrid format, or in-person in the late afternoon or evening in downtown Grand Rapids.",
+      "Students must complete at least one badge (3 courses per badge):",
+      "Students must take enough elective credits to add up to the required 33 credits (9-12 credits)."
+    ],
     "courses": [
       {
         "code": "CIS 660",
         "subject": "CIS",
         "course_number": "660",
         "title": "Data Engineering",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-data-engineering",
         "program_id": "applied-cs-ms"
       },
@@ -728,9 +986,9 @@
         "subject": "CIS",
         "course_number": "673",
         "title": "Principles of Database Design",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-data-engineering",
         "program_id": "applied-cs-ms"
       },
@@ -739,9 +997,9 @@
         "subject": "CIS",
         "course_number": "641",
         "title": "Systems Analysis and Design",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-systems-development",
         "program_id": "applied-cs-ms"
       },
@@ -750,9 +1008,9 @@
         "subject": "CIS",
         "course_number": "642",
         "title": "IS Project Management",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-systems-development",
         "program_id": "applied-cs-ms"
       },
@@ -761,9 +1019,9 @@
         "subject": "CIS",
         "course_number": "518",
         "title": "Secure Software Engineering",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-software-engineering",
         "program_id": "applied-cs-ms"
       },
@@ -772,9 +1030,9 @@
         "subject": "SE",
         "course_number": "512",
         "title": "Requirements Specification",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-software-engineering",
         "program_id": "applied-cs-ms"
       },
@@ -783,9 +1041,9 @@
         "subject": "SE",
         "course_number": "513",
         "title": "Software Testing",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-software-engineering",
         "program_id": "applied-cs-ms"
       },
@@ -794,9 +1052,9 @@
         "subject": "SE",
         "course_number": "522",
         "title": "Software Architecture and Design",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-software-engineering",
         "program_id": "applied-cs-ms"
       },
@@ -805,9 +1063,9 @@
         "subject": "CIS",
         "course_number": "554",
         "title": "Computer Networking",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-networking",
         "program_id": "applied-cs-ms"
       },
@@ -816,9 +1074,9 @@
         "subject": "CIS",
         "course_number": "656",
         "title": "Distributed Systems",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "core-networking",
         "program_id": "applied-cs-ms"
       },
@@ -827,9 +1085,9 @@
         "subject": "CIS",
         "course_number": "693",
         "title": "Master's Project",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "capstone",
         "program_id": "applied-cs-ms"
       },
@@ -838,12 +1096,1675 @@
         "subject": "CIS",
         "course_number": "695",
         "title": "Master's Thesis",
-        "credits_min": null,
-        "credits_max": null,
-        "credits_text": null,
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
         "section": "capstone",
         "program_id": "applied-cs-ms"
+      },
+      {
+        "code": "CIS 661",
+        "subject": "CIS",
+        "course_number": "661",
+        "title": "Introduction to Health and Bioinformatics",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-biomedical-informatics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "biomedical-informatics"
+      },
+      {
+        "code": "CIS 665",
+        "subject": "CIS",
+        "course_number": "665",
+        "title": "Clinical Information Systems",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-biomedical-informatics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "biomedical-informatics"
+      },
+      {
+        "code": "CIS 635",
+        "subject": "CIS",
+        "course_number": "635",
+        "title": "Knowledge Discovery and Data Mining",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-biomedical-informatics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "biomedical-informatics"
+      },
+      {
+        "code": "CIS 660",
+        "subject": "CIS",
+        "course_number": "660",
+        "title": "Data Engineering",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-biomedical-informatics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "biomedical-informatics"
+      },
+      {
+        "code": "CIS 671",
+        "subject": "CIS",
+        "course_number": "671",
+        "title": "Information Visualization",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-biomedical-informatics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "biomedical-informatics"
+      },
+      {
+        "code": "CYB 615",
+        "subject": "CYB",
+        "course_number": "615",
+        "title": "Cybersecurity Risk Management",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-cybersecurity",
+        "program_id": "applied-cs-ms",
+        "badge_id": "cybersecurity"
+      },
+      {
+        "code": "CIS 518",
+        "subject": "CIS",
+        "course_number": "518",
+        "title": "Secure Software Engineering",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-cybersecurity",
+        "program_id": "applied-cs-ms",
+        "badge_id": "cybersecurity"
+      },
+      {
+        "code": "CIS 553",
+        "subject": "CIS",
+        "course_number": "553",
+        "title": "Ethical Hacking",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-cybersecurity",
+        "program_id": "applied-cs-ms",
+        "badge_id": "cybersecurity"
+      },
+      {
+        "code": "CYB 616",
+        "subject": "CYB",
+        "course_number": "616",
+        "title": "Cybersecurity Fundamentals",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-cybersecurity",
+        "program_id": "applied-cs-ms",
+        "badge_id": "cybersecurity"
+      },
+      {
+        "code": "CYB 617",
+        "subject": "CYB",
+        "course_number": "617",
+        "title": "Digital Forensics and Investigations",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-cybersecurity",
+        "program_id": "applied-cs-ms",
+        "badge_id": "cybersecurity"
+      },
+      {
+        "code": "CYB 619",
+        "subject": "CYB",
+        "course_number": "619",
+        "title": "Artificial Intelligence and Data Analytics for Cybersecurity",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-cybersecurity",
+        "program_id": "applied-cs-ms",
+        "badge_id": "cybersecurity"
+      },
+      {
+        "code": "CYB 655",
+        "subject": "CYB",
+        "course_number": "655",
+        "title": "Advanced Applied Cryptography",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-cybersecurity",
+        "program_id": "applied-cs-ms",
+        "badge_id": "cybersecurity"
+      },
+      {
+        "code": "CIS 635",
+        "subject": "CIS",
+        "course_number": "635",
+        "title": "Knowledge Discovery and Data Mining",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-data-analytics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "data-analytics"
+      },
+      {
+        "code": "CIS 671",
+        "subject": "CIS",
+        "course_number": "671",
+        "title": "Information Visualization",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-data-analytics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "data-analytics"
+      },
+      {
+        "code": "CIS 677",
+        "subject": "CIS",
+        "course_number": "677",
+        "title": "High-performance Computing",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-data-analytics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "data-analytics"
+      },
+      {
+        "code": "CIS 678",
+        "subject": "CIS",
+        "course_number": "678",
+        "title": "Machine Learning",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-data-analytics",
+        "program_id": "applied-cs-ms",
+        "badge_id": "data-analytics"
+      },
+      {
+        "code": "CIS 673",
+        "subject": "CIS",
+        "course_number": "673",
+        "title": "Principles of Database Design",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-database-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "database-management"
+      },
+      {
+        "code": "CIS 635",
+        "subject": "CIS",
+        "course_number": "635",
+        "title": "Knowledge Discovery and Data Mining",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-database-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "database-management"
+      },
+      {
+        "code": "CIS 660",
+        "subject": "CIS",
+        "course_number": "660",
+        "title": "Data Engineering",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-database-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "database-management"
+      },
+      {
+        "code": "CIS 665",
+        "subject": "CIS",
+        "course_number": "665",
+        "title": "Clinical Information Systems",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-database-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "database-management"
+      },
+      {
+        "code": "CIS 671",
+        "subject": "CIS",
+        "course_number": "671",
+        "title": "Information Visualization",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-database-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "database-management"
+      },
+      {
+        "code": "CIS 676",
+        "subject": "CIS",
+        "course_number": "676",
+        "title": "Database Architecture",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-database-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "database-management"
+      },
+      {
+        "code": "CIS 679",
+        "subject": "CIS",
+        "course_number": "679",
+        "title": "Special Topics in Database Management",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-database-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "database-management"
+      },
+      {
+        "code": "CIS 554",
+        "subject": "CIS",
+        "course_number": "554",
+        "title": "Computer Networking",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-distributed-computing",
+        "program_id": "applied-cs-ms",
+        "badge_id": "distributed-computing"
+      },
+      {
+        "code": "CIS 656",
+        "subject": "CIS",
+        "course_number": "656",
+        "title": "Distributed Systems",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-distributed-computing",
+        "program_id": "applied-cs-ms",
+        "badge_id": "distributed-computing"
+      },
+      {
+        "code": "CIS 658",
+        "subject": "CIS",
+        "course_number": "658",
+        "title": "Web Architectures",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-distributed-computing",
+        "program_id": "applied-cs-ms",
+        "badge_id": "distributed-computing"
+      },
+      {
+        "code": "CIS 641",
+        "subject": "CIS",
+        "course_number": "641",
+        "title": "Systems Analysis and Design",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-information-systems-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "information-systems-management"
+      },
+      {
+        "code": "CIS 642",
+        "subject": "CIS",
+        "course_number": "642",
+        "title": "IS Project Management",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-information-systems-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "information-systems-management"
+      },
+      {
+        "code": "CIS 643",
+        "subject": "CIS",
+        "course_number": "643",
+        "title": "Information Systems Policy and Strategy",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-information-systems-management",
+        "program_id": "applied-cs-ms",
+        "badge_id": "information-systems-management"
+      },
+      {
+        "code": "SE 511",
+        "subject": "SE",
+        "course_number": "511",
+        "title": "Introduction to Software Engineering",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-design-and-development",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-design-and-development"
+      },
+      {
+        "code": "CIS 641",
+        "subject": "CIS",
+        "course_number": "641",
+        "title": "Systems Analysis and Design",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-design-and-development",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-design-and-development"
+      },
+      {
+        "code": "CIS 657",
+        "subject": "CIS",
+        "course_number": "657",
+        "title": "Mobile Application Development",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-design-and-development",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-design-and-development"
+      },
+      {
+        "code": "CIS 658",
+        "subject": "CIS",
+        "course_number": "658",
+        "title": "Web Architectures",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-design-and-development",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-design-and-development"
+      },
+      {
+        "code": "CIS 660",
+        "subject": "CIS",
+        "course_number": "660",
+        "title": "Data Engineering",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-design-and-development",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-design-and-development"
+      },
+      {
+        "code": "CIS 673",
+        "subject": "CIS",
+        "course_number": "673",
+        "title": "Principles of Database Design",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-design-and-development",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-design-and-development"
+      },
+      {
+        "code": "CIS 518",
+        "subject": "CIS",
+        "course_number": "518",
+        "title": "Secure Software Engineering",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-engineering",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-engineering"
+      },
+      {
+        "code": "SE 511",
+        "subject": "SE",
+        "course_number": "511",
+        "title": "Introduction to Software Engineering",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-engineering",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-engineering"
+      },
+      {
+        "code": "SE 512",
+        "subject": "SE",
+        "course_number": "512",
+        "title": "Requirements Specification",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-engineering",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-engineering"
+      },
+      {
+        "code": "SE 513",
+        "subject": "SE",
+        "course_number": "513",
+        "title": "Software Testing",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-software-engineering",
+        "program_id": "applied-cs-ms",
+        "badge_id": "software-engineering"
+      },
+      {
+        "code": "CIS 655",
+        "subject": "CIS",
+        "course_number": "655",
+        "title": "Cloud Applications Development",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-web-and-mobile-computing",
+        "program_id": "applied-cs-ms",
+        "badge_id": "web-and-mobile-computing"
+      },
+      {
+        "code": "CIS 657",
+        "subject": "CIS",
+        "course_number": "657",
+        "title": "Mobile Application Development",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-web-and-mobile-computing",
+        "program_id": "applied-cs-ms",
+        "badge_id": "web-and-mobile-computing"
+      },
+      {
+        "code": "CIS 658",
+        "subject": "CIS",
+        "course_number": "658",
+        "title": "Web Architectures",
+        "credits_min": 3.0,
+        "credits_max": 3.0,
+        "credits_text": "3",
+        "section": "badge-web-and-mobile-computing",
+        "program_id": "applied-cs-ms",
+        "badge_id": "web-and-mobile-computing"
       }
-    ]
+    ],
+    "suggested_order": [],
+    "badges": [
+      {
+        "id": "biomedical-informatics",
+        "name": "Biomedical Informatics",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-biomedical-informatics.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "all",
+            "n": 2,
+            "courses": [
+              {
+                "code": "CIS 661",
+                "subject": "CIS",
+                "course_number": "661",
+                "title": "Introduction to Health and Bioinformatics",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "biomedical-informatics"
+              },
+              {
+                "code": "CIS 665",
+                "subject": "CIS",
+                "course_number": "665",
+                "title": "Clinical Information Systems",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "biomedical-informatics"
+              }
+            ]
+          },
+          {
+            "kind": "choose_n",
+            "n": 1,
+            "courses": [
+              {
+                "code": "CIS 635",
+                "subject": "CIS",
+                "course_number": "635",
+                "title": "Knowledge Discovery and Data Mining",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-1",
+                "program_id": "biomedical-informatics"
+              },
+              {
+                "code": "CIS 660",
+                "subject": "CIS",
+                "course_number": "660",
+                "title": "Data Engineering",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-1",
+                "program_id": "biomedical-informatics"
+              },
+              {
+                "code": "CIS 671",
+                "subject": "CIS",
+                "course_number": "671",
+                "title": "Information Visualization",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-1",
+                "program_id": "biomedical-informatics"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "CIS 661",
+            "subject": "CIS",
+            "course_number": "661",
+            "title": "Introduction to Health and Bioinformatics",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "biomedical-informatics"
+          },
+          {
+            "code": "CIS 665",
+            "subject": "CIS",
+            "course_number": "665",
+            "title": "Clinical Information Systems",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "biomedical-informatics"
+          },
+          {
+            "code": "CIS 635",
+            "subject": "CIS",
+            "course_number": "635",
+            "title": "Knowledge Discovery and Data Mining",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-1",
+            "program_id": "biomedical-informatics"
+          },
+          {
+            "code": "CIS 660",
+            "subject": "CIS",
+            "course_number": "660",
+            "title": "Data Engineering",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-1",
+            "program_id": "biomedical-informatics"
+          },
+          {
+            "code": "CIS 671",
+            "subject": "CIS",
+            "course_number": "671",
+            "title": "Information Visualization",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-1",
+            "program_id": "biomedical-informatics"
+          }
+        ]
+      },
+      {
+        "id": "cybersecurity",
+        "name": "Cybersecurity",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-cybersecurity.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "all",
+            "n": 1,
+            "courses": [
+              {
+                "code": "CYB 615",
+                "subject": "CYB",
+                "course_number": "615",
+                "title": "Cybersecurity Risk Management",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "cybersecurity"
+              }
+            ]
+          },
+          {
+            "kind": "choose_n",
+            "n": 2,
+            "courses": [
+              {
+                "code": "CIS 518",
+                "subject": "CIS",
+                "course_number": "518",
+                "title": "Secure Software Engineering",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "cybersecurity"
+              },
+              {
+                "code": "CIS 553",
+                "subject": "CIS",
+                "course_number": "553",
+                "title": "Ethical Hacking",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "cybersecurity"
+              },
+              {
+                "code": "CYB 616",
+                "subject": "CYB",
+                "course_number": "616",
+                "title": "Cybersecurity Fundamentals",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "cybersecurity"
+              },
+              {
+                "code": "CYB 617",
+                "subject": "CYB",
+                "course_number": "617",
+                "title": "Digital Forensics and Investigations",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "cybersecurity"
+              },
+              {
+                "code": "CYB 619",
+                "subject": "CYB",
+                "course_number": "619",
+                "title": "Artificial Intelligence and Data Analytics for Cybersecurity",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "cybersecurity"
+              },
+              {
+                "code": "CYB 655",
+                "subject": "CYB",
+                "course_number": "655",
+                "title": "Advanced Applied Cryptography",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "cybersecurity"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "CYB 615",
+            "subject": "CYB",
+            "course_number": "615",
+            "title": "Cybersecurity Risk Management",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "cybersecurity"
+          },
+          {
+            "code": "CIS 518",
+            "subject": "CIS",
+            "course_number": "518",
+            "title": "Secure Software Engineering",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "cybersecurity"
+          },
+          {
+            "code": "CIS 553",
+            "subject": "CIS",
+            "course_number": "553",
+            "title": "Ethical Hacking",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "cybersecurity"
+          },
+          {
+            "code": "CYB 616",
+            "subject": "CYB",
+            "course_number": "616",
+            "title": "Cybersecurity Fundamentals",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "cybersecurity"
+          },
+          {
+            "code": "CYB 617",
+            "subject": "CYB",
+            "course_number": "617",
+            "title": "Digital Forensics and Investigations",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "cybersecurity"
+          },
+          {
+            "code": "CYB 619",
+            "subject": "CYB",
+            "course_number": "619",
+            "title": "Artificial Intelligence and Data Analytics for Cybersecurity",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "cybersecurity"
+          },
+          {
+            "code": "CYB 655",
+            "subject": "CYB",
+            "course_number": "655",
+            "title": "Advanced Applied Cryptography",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "cybersecurity"
+          }
+        ]
+      },
+      {
+        "id": "data-analytics",
+        "name": "Data Analytics",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-data-analytics.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "all",
+            "n": 2,
+            "courses": [
+              {
+                "code": "CIS 635",
+                "subject": "CIS",
+                "course_number": "635",
+                "title": "Knowledge Discovery and Data Mining",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "data-analytics"
+              },
+              {
+                "code": "CIS 671",
+                "subject": "CIS",
+                "course_number": "671",
+                "title": "Information Visualization",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "data-analytics"
+              }
+            ]
+          },
+          {
+            "kind": "choose_n",
+            "n": 1,
+            "courses": [
+              {
+                "code": "CIS 677",
+                "subject": "CIS",
+                "course_number": "677",
+                "title": "High-performance Computing",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-1",
+                "program_id": "data-analytics"
+              },
+              {
+                "code": "CIS 678",
+                "subject": "CIS",
+                "course_number": "678",
+                "title": "Machine Learning",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-1",
+                "program_id": "data-analytics"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "CIS 635",
+            "subject": "CIS",
+            "course_number": "635",
+            "title": "Knowledge Discovery and Data Mining",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "data-analytics"
+          },
+          {
+            "code": "CIS 671",
+            "subject": "CIS",
+            "course_number": "671",
+            "title": "Information Visualization",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "data-analytics"
+          },
+          {
+            "code": "CIS 677",
+            "subject": "CIS",
+            "course_number": "677",
+            "title": "High-performance Computing",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-1",
+            "program_id": "data-analytics"
+          },
+          {
+            "code": "CIS 678",
+            "subject": "CIS",
+            "course_number": "678",
+            "title": "Machine Learning",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-1",
+            "program_id": "data-analytics"
+          }
+        ]
+      },
+      {
+        "id": "database-management",
+        "name": "Database Management",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-database-management.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "all",
+            "n": 1,
+            "courses": [
+              {
+                "code": "CIS 673",
+                "subject": "CIS",
+                "course_number": "673",
+                "title": "Principles of Database Design",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "database-management"
+              }
+            ]
+          },
+          {
+            "kind": "choose_n",
+            "n": 2,
+            "courses": [
+              {
+                "code": "CIS 635",
+                "subject": "CIS",
+                "course_number": "635",
+                "title": "Knowledge Discovery and Data Mining",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "database-management"
+              },
+              {
+                "code": "CIS 660",
+                "subject": "CIS",
+                "course_number": "660",
+                "title": "Data Engineering",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "database-management"
+              },
+              {
+                "code": "CIS 665",
+                "subject": "CIS",
+                "course_number": "665",
+                "title": "Clinical Information Systems",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "database-management"
+              },
+              {
+                "code": "CIS 671",
+                "subject": "CIS",
+                "course_number": "671",
+                "title": "Information Visualization",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "database-management"
+              },
+              {
+                "code": "CIS 676",
+                "subject": "CIS",
+                "course_number": "676",
+                "title": "Database Architecture",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "database-management"
+              },
+              {
+                "code": "CIS 679",
+                "subject": "CIS",
+                "course_number": "679",
+                "title": "Special Topics in Database Management",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-2",
+                "program_id": "database-management"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "CIS 673",
+            "subject": "CIS",
+            "course_number": "673",
+            "title": "Principles of Database Design",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "database-management"
+          },
+          {
+            "code": "CIS 635",
+            "subject": "CIS",
+            "course_number": "635",
+            "title": "Knowledge Discovery and Data Mining",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "database-management"
+          },
+          {
+            "code": "CIS 660",
+            "subject": "CIS",
+            "course_number": "660",
+            "title": "Data Engineering",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "database-management"
+          },
+          {
+            "code": "CIS 665",
+            "subject": "CIS",
+            "course_number": "665",
+            "title": "Clinical Information Systems",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "database-management"
+          },
+          {
+            "code": "CIS 671",
+            "subject": "CIS",
+            "course_number": "671",
+            "title": "Information Visualization",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "database-management"
+          },
+          {
+            "code": "CIS 676",
+            "subject": "CIS",
+            "course_number": "676",
+            "title": "Database Architecture",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "database-management"
+          },
+          {
+            "code": "CIS 679",
+            "subject": "CIS",
+            "course_number": "679",
+            "title": "Special Topics in Database Management",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-2",
+            "program_id": "database-management"
+          }
+        ]
+      },
+      {
+        "id": "distributed-computing",
+        "name": "Distributed Computing",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-distributed-computing.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "all",
+            "n": 3,
+            "courses": [
+              {
+                "code": "CIS 554",
+                "subject": "CIS",
+                "course_number": "554",
+                "title": "Computer Networking",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "distributed-computing"
+              },
+              {
+                "code": "CIS 656",
+                "subject": "CIS",
+                "course_number": "656",
+                "title": "Distributed Systems",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "distributed-computing"
+              },
+              {
+                "code": "CIS 658",
+                "subject": "CIS",
+                "course_number": "658",
+                "title": "Web Architectures",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "distributed-computing"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "CIS 554",
+            "subject": "CIS",
+            "course_number": "554",
+            "title": "Computer Networking",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "distributed-computing"
+          },
+          {
+            "code": "CIS 656",
+            "subject": "CIS",
+            "course_number": "656",
+            "title": "Distributed Systems",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "distributed-computing"
+          },
+          {
+            "code": "CIS 658",
+            "subject": "CIS",
+            "course_number": "658",
+            "title": "Web Architectures",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "distributed-computing"
+          }
+        ]
+      },
+      {
+        "id": "information-systems-management",
+        "name": "Information Systems Management",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-information-systems-management.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "all",
+            "n": 3,
+            "courses": [
+              {
+                "code": "CIS 641",
+                "subject": "CIS",
+                "course_number": "641",
+                "title": "Systems Analysis and Design",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "information-systems-management"
+              },
+              {
+                "code": "CIS 642",
+                "subject": "CIS",
+                "course_number": "642",
+                "title": "IS Project Management",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "information-systems-management"
+              },
+              {
+                "code": "CIS 643",
+                "subject": "CIS",
+                "course_number": "643",
+                "title": "Information Systems Policy and Strategy",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "information-systems-management"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "CIS 641",
+            "subject": "CIS",
+            "course_number": "641",
+            "title": "Systems Analysis and Design",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "information-systems-management"
+          },
+          {
+            "code": "CIS 642",
+            "subject": "CIS",
+            "course_number": "642",
+            "title": "IS Project Management",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "information-systems-management"
+          },
+          {
+            "code": "CIS 643",
+            "subject": "CIS",
+            "course_number": "643",
+            "title": "Information Systems Policy and Strategy",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "information-systems-management"
+          }
+        ]
+      },
+      {
+        "id": "software-design-and-development",
+        "name": "Software Design and Development",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-software-design-and-development.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "choose_n",
+            "n": 1,
+            "courses": [
+              {
+                "code": "SE 511",
+                "subject": "SE",
+                "course_number": "511",
+                "title": "Introduction to Software Engineering",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "software-design-and-development"
+              },
+              {
+                "code": "CIS 641",
+                "subject": "CIS",
+                "course_number": "641",
+                "title": "Systems Analysis and Design",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "software-design-and-development"
+              }
+            ]
+          },
+          {
+            "kind": "choose_n",
+            "n": 1,
+            "courses": [
+              {
+                "code": "CIS 657",
+                "subject": "CIS",
+                "course_number": "657",
+                "title": "Mobile Application Development",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "software-design-and-development"
+              },
+              {
+                "code": "CIS 658",
+                "subject": "CIS",
+                "course_number": "658",
+                "title": "Web Architectures",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "software-design-and-development"
+              }
+            ]
+          },
+          {
+            "kind": "choose_n",
+            "n": 1,
+            "courses": [
+              {
+                "code": "CIS 660",
+                "subject": "CIS",
+                "course_number": "660",
+                "title": "Data Engineering",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "software-design-and-development"
+              },
+              {
+                "code": "CIS 673",
+                "subject": "CIS",
+                "course_number": "673",
+                "title": "Principles of Database Design",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "software-design-and-development"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "SE 511",
+            "subject": "SE",
+            "course_number": "511",
+            "title": "Introduction to Software Engineering",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "software-design-and-development"
+          },
+          {
+            "code": "CIS 641",
+            "subject": "CIS",
+            "course_number": "641",
+            "title": "Systems Analysis and Design",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "software-design-and-development"
+          },
+          {
+            "code": "CIS 657",
+            "subject": "CIS",
+            "course_number": "657",
+            "title": "Mobile Application Development",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "software-design-and-development"
+          },
+          {
+            "code": "CIS 658",
+            "subject": "CIS",
+            "course_number": "658",
+            "title": "Web Architectures",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "software-design-and-development"
+          },
+          {
+            "code": "CIS 660",
+            "subject": "CIS",
+            "course_number": "660",
+            "title": "Data Engineering",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "software-design-and-development"
+          },
+          {
+            "code": "CIS 673",
+            "subject": "CIS",
+            "course_number": "673",
+            "title": "Principles of Database Design",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "software-design-and-development"
+          }
+        ]
+      },
+      {
+        "id": "software-engineering",
+        "name": "Software Engineering",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-software-engineering.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "choose_n",
+            "n": 3,
+            "courses": [
+              {
+                "code": "CIS 518",
+                "subject": "CIS",
+                "course_number": "518",
+                "title": "Secure Software Engineering",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-3",
+                "program_id": "software-engineering"
+              },
+              {
+                "code": "SE 511",
+                "subject": "SE",
+                "course_number": "511",
+                "title": "Introduction to Software Engineering",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-3",
+                "program_id": "software-engineering"
+              },
+              {
+                "code": "SE 512",
+                "subject": "SE",
+                "course_number": "512",
+                "title": "Requirements Specification",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-3",
+                "program_id": "software-engineering"
+              },
+              {
+                "code": "SE 513",
+                "subject": "SE",
+                "course_number": "513",
+                "title": "Software Testing",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "choose-3",
+                "program_id": "software-engineering"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "CIS 518",
+            "subject": "CIS",
+            "course_number": "518",
+            "title": "Secure Software Engineering",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-3",
+            "program_id": "software-engineering"
+          },
+          {
+            "code": "SE 511",
+            "subject": "SE",
+            "course_number": "511",
+            "title": "Introduction to Software Engineering",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-3",
+            "program_id": "software-engineering"
+          },
+          {
+            "code": "SE 512",
+            "subject": "SE",
+            "course_number": "512",
+            "title": "Requirements Specification",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-3",
+            "program_id": "software-engineering"
+          },
+          {
+            "code": "SE 513",
+            "subject": "SE",
+            "course_number": "513",
+            "title": "Software Testing",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "choose-3",
+            "program_id": "software-engineering"
+          }
+        ]
+      },
+      {
+        "id": "web-and-mobile-computing",
+        "name": "Web and Mobile Computing",
+        "kind": "Post-Baccalaureate Badge",
+        "credits": 9,
+        "course_count": 3,
+        "source_url": "https://www.gvsu.edu/catalog/program/badge-in-web-and-mobile-computing.htm",
+        "catalog_year": "2026-2027",
+        "slots": [
+          {
+            "kind": "all",
+            "n": 3,
+            "courses": [
+              {
+                "code": "CIS 655",
+                "subject": "CIS",
+                "course_number": "655",
+                "title": "Cloud Applications Development",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "web-and-mobile-computing"
+              },
+              {
+                "code": "CIS 657",
+                "subject": "CIS",
+                "course_number": "657",
+                "title": "Mobile Application Development",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "web-and-mobile-computing"
+              },
+              {
+                "code": "CIS 658",
+                "subject": "CIS",
+                "course_number": "658",
+                "title": "Web Architectures",
+                "credits_min": 3.0,
+                "credits_max": 3.0,
+                "credits_text": "3",
+                "section": "required",
+                "program_id": "web-and-mobile-computing"
+              }
+            ]
+          }
+        ],
+        "courses": [
+          {
+            "code": "CIS 655",
+            "subject": "CIS",
+            "course_number": "655",
+            "title": "Cloud Applications Development",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "web-and-mobile-computing"
+          },
+          {
+            "code": "CIS 657",
+            "subject": "CIS",
+            "course_number": "657",
+            "title": "Mobile Application Development",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "web-and-mobile-computing"
+          },
+          {
+            "code": "CIS 658",
+            "subject": "CIS",
+            "course_number": "658",
+            "title": "Web Architectures",
+            "credits_min": 3.0,
+            "credits_max": 3.0,
+            "credits_text": "3",
+            "section": "required",
+            "program_id": "web-and-mobile-computing"
+          }
+        ]
+      }
+    ],
+    "rules": {
+      "total_credits": 33,
+      "course_count": 11,
+      "core": {
+        "credits": 9,
+        "choose_areas": 3,
+        "of_areas": 4,
+        "note": "Complete one course in three of the four core areas."
+      },
+      "badge": {
+        "credits": 9,
+        "course_count": 3,
+        "choose": 1,
+        "note": "Complete at least one College of Computing graduate badge (three courses)."
+      },
+      "electives": {
+        "credits_min": 9,
+        "credits_max": 12,
+        "note": "Take enough electives to reach 33 credits. Electives are graduate computing courses not used as core, badge, or capstone."
+      },
+      "capstone": {
+        "credits": 3,
+        "note": "CIS 693 Master's Project, or CIS 695 Master's Thesis (taken twice for 6 credits). Internship only with Graduate Program Director approval."
+      }
+    }
   }
 ]

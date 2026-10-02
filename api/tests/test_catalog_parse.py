@@ -26,7 +26,11 @@ class ProgramParseTests(unittest.TestCase):
         <p>CIS 335 - Data Mining (3 credits)</p>
         <p>CIS 378 - Applied Machine Learning (3 credits)</p>
         <h2>Required Non-Computing Courses</h2>
-        <p>STA 215 - Introductory Applied Statistics (3 credits) OR STA 312 - Probability and Statistics (3 credits) OR STA 330 - Probability and Statistics for Computing (3 credits)</p>
+        <p>Computer science majors must complete the following cognate courses:</p>
+        <ul>
+          <li>COM 201 - Speech (3 credits)</li>
+          <li>STA 215 - Introductory Applied Statistics (3 credits) <strong>OR</strong> STA 312 - Probability and Statistics (3 credits) <strong>OR</strong> STA 330 - Probability and Statistics for Computing (3 credits)</li>
+        </ul>
         <h2>Suggested Order of Coursework</h2>
         <p>Year One</p>
         <p>CIS 162 - Computer Science I (4 credits)</p>
@@ -73,12 +77,15 @@ class BadgeParseTests(unittest.TestCase):
     def test_database_management_required_plus_choose(self):
         html = """
         <html><body><main>
+        <h4>Requirements</h4>
         <p>The Database Management badge is three courses (9 credits).</p>
         <p>Students must take:</p>
-        <p>CIS 673 - Principles of Database Design (3 credits)</p>
-        <p>AND two of the following:</p>
-        <p>CIS 660 - Data Engineering (3 credits)</p>
-        <p>CIS 676 - Database Architecture (3 credits)</p>
+        <ul><li>CIS 673 - Principles of Database Design (3 credits)</li></ul>
+        <p><strong>AND</strong> two of the following:</p>
+        <ul>
+          <li>CIS 660 - Data Engineering (3 credits)</li>
+          <li>CIS 676 - Database Architecture (3 credits)</li>
+        </ul>
         </main></body></html>
         """
         badge = parse_badge_page(
@@ -96,8 +103,11 @@ class BadgeParseTests(unittest.TestCase):
     def test_or_slots(self):
         html = """
         <html><body><main>
-        <p>SE 511 - Introduction to Software Engineering (3 credits) OR CIS 641 - Systems Analysis and Design (3 credits)</p>
-        <p>CIS 657 - Mobile Application Development (3 credits) OR CIS 658 - Web Architectures (3 credits)</p>
+        <h4>Requirements</h4>
+        <ul>
+          <li>SE 511 - Introduction to Software Engineering (3 credits) OR CIS 641 - Systems Analysis and Design (3 credits)</li>
+          <li>CIS 657 - Mobile Application Development (3 credits) OR CIS 658 - Web Architectures (3 credits)</li>
+        </ul>
         </main></body></html>
         """
         badge = parse_badge_page(

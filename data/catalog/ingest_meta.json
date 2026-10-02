@@ -1,6 +1,6 @@
 {
   "catalog_year": "2026-2027",
-  "ingested_at": "2026-10-02T04:59:49.287769+00:00",
+  "ingested_at": "2026-10-02T19:03:37.953653+00:00",
   "source": "GVSU public catalog",
   "attribution": "Grand Valley State University public catalog. Structured fields only. Not official SIS.",
   "subject_pages": {
@@ -14,6 +14,18 @@
     "cs-bs": "https://www.gvsu.edu/catalog/program/bachelor-of-science-in-computer-science.htm",
     "applied-cs-ms": "https://www.gvsu.edu/catalog/program/master-of-science-in-applied-computer-science.htm"
   },
-  "course_count": 181,
-  "program_count": 2
+  "badge_pages": {
+    "biomedical-informatics": "https://www.gvsu.edu/catalog/program/badge-in-biomedical-informatics.htm",
+    "cybersecurity": "https://www.gvsu.edu/catalog/program/badge-in-cybersecurity.htm",
+    "data-analytics": "https://www.gvsu.edu/catalog/program/badge-in-data-analytics.htm",
+    "database-management": "https://www.gvsu.edu/catalog/program/badge-in-database-management.htm",
+    "distributed-computing": "https://www.gvsu.edu/catalog/program/badge-in-distributed-computing.htm",
+    "information-systems-management": "https://www.gvsu.edu/catalog/program/badge-in-information-systems-management.htm",
+    "software-design-and-development": "https://www.gvsu.edu/catalog/program/badge-in-software-design-and-development.htm",
+    "software-engineering": "https://www.gvsu.edu/catalog/program/badge-in-software-engineering.htm",
+    "web-and-mobile-computing": "https://www.gvsu.edu/catalog/program/badge-in-web-and-mobile-computing.htm"
+  },
+  "course_count": 204,
+  "program_count": 2,
+  "badge_count": 9
 }
