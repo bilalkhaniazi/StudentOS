@@ -30,9 +30,10 @@ const gated = auth((req) => {
 });
 
 export default function middleware(req: NextRequest, event: NextFetchEvent) {
-  // Bounce before Auth.js runs. Its wrapper treats localhost as a different host
-  // than AUTH_URL (127.0.0.1) and redirects to /login?error=Configuration.
-  if (isLoopbackAlias(req.nextUrl.hostname)) {
+  // Use the browser Host header, not nextUrl.hostname. Next.js bound to 0.0.0.0
+  // reports localhost/0.0.0.0 internally even when the client opened 127.0.0.1.
+  const hostname = (req.headers.get("host") ?? "").split(":")[0].toLowerCase();
+  if (isLoopbackAlias(hostname)) {
     return NextResponse.redirect(publicOriginFromRequest(req.nextUrl.pathname, req.nextUrl.search));
   }
   return gated(req, event as never);
