@@ -12,6 +12,7 @@ const localSecret =
 /** Edge-safe Auth.js options used by middleware. Providers live in `auth.ts`. */
 export const authConfig = {
   trustHost: true,
+  basePath: "/api/auth",
   secret: localSecret,
   session: { strategy: "jwt" as const },
   pages: {

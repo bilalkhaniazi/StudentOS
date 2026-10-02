@@ -1,4 +1,5 @@
 import NextAuth from "next-auth";
+import type { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import Google from "next-auth/providers/google";
 import { authConfig } from "@/auth.config";
@@ -15,7 +16,7 @@ import {
 process.env["AUTH_URL"] = PUBLIC_APP_ORIGIN;
 process.env["NEXTAUTH_URL"] = PUBLIC_APP_ORIGIN;
 
-export const { handlers, auth, signIn, signOut } = NextAuth(() => {
+export function buildAuthConfig(): NextAuthConfig {
   const providers = [];
 
   if (isGoogleOAuthConfigured()) {
@@ -67,4 +68,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth(() => {
       },
     },
   };
-});
+}
+
+export const { handlers, auth, signIn, signOut } = NextAuth(() => buildAuthConfig());
