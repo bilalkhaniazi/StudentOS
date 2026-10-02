@@ -180,6 +180,58 @@ class BannerParseTests(unittest.TestCase):
         self.assertEqual(parsed.major, "Computer Science")
         self.assertEqual(parsed.courses[0].code, "CIS 162")
 
+    def test_page1_toc_does_not_skip_institution_credit(self):
+        text = """
+        Academic Transcript
+        Transcript Level
+        Transcript Type
+        Masters
+        Advising
+        Student Information
+        Institution Credit
+        Awarded
+        Transcript Totals
+        Course(s) in Progress
+        This is not an official transcript.
+        Student Information
+        Curriculum Information
+        Master of Science
+        College of Computing
+        Applied Computer Science, Undeclared
+        Awarded
+        Awarded
+        Institution Credit
+        Period : Winter 2025
+        SID 613 Software Testing A- 3.000 11.10
+        SID 655 Cloud Applications Development 3.000 12.00
+        SID Data Engineering 3.000 660 12.00
+        Period : Fall 2025
+        SID 622 B+ 3.000 Software Design Methodologies 9.90
+        SID 656 Distributed Systems 3.000 12.00
+        SID 673 Principles of Database Design 3.000 12.00
+        Transcript Totals
+        Course(s) in Progress
+        Term : Fall 2026
+        SID 671 Information Visualization 3.000
+        SID 569 Master's Project 3.000
+        """
+        parsed = parse_banner(text, method="ocr")
+        parsed = attach_catalog(parsed, CATALOG, PROGRAMS)
+        completed = {c.code: c for c in parsed.completed()}
+        in_progress = {c.code: c for c in parsed.in_progress()}
+        self.assertEqual(parsed.transcriptLevel, "Masters")
+        self.assertEqual(parsed.major, "Applied Computer Science")
+        self.assertIn("SE 513", completed)
+        self.assertIn("CIS 655", completed)
+        self.assertIn("CIS 660", completed)
+        self.assertIn("CIS 656", completed)
+        self.assertIn("CIS 673", completed)
+        self.assertEqual(completed["CIS 655"].term, "Winter 2025")
+        self.assertEqual(completed["CIS 656"].term, "Fall 2025")
+        self.assertIn("CIS 671", in_progress)
+        self.assertIn("CIS 693", in_progress)
+        self.assertEqual(in_progress["CIS 671"].term, "Fall 2026")
+
     def test_ocr_number_before_subject(self):
         text = """
         Academic Transcript

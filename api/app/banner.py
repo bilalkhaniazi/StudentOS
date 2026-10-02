@@ -103,9 +103,16 @@ _NOISE_PREFIXES = (
 )
 
 _PERIOD_RE = re.compile(
-    r"^(?:period|term)\s*:\s*(fall|winter|spring|summer)\s+(\d{4})$",
+    r"(?:^|(?<=\s))(?P<kind>period|term)\s*:\s*(fall|winter|spring|summer)\s+(\d{4})\b",
     re.I,
 )
+_TOC_NAV = {
+    "awarded",
+    "institution credit",
+    "transcript totals",
+    "course(s) in progress",
+    "courses in progress",
+}
 _COURSE_NO_RE = re.compile(r"^(\d{3})$")
 _CREDITS_RE = re.compile(r"^(\d{1,2}\.000)$")
 _GRADE_RE = re.compile(r"^(?:[A-D][+-]?|F|CR|NC|AU|P|N|I|W|IP)$", re.I)
@@ -195,7 +202,7 @@ def _is_noise(line: str) -> bool:
     low = line.lower().strip()
     if not low:
         return True
-    if low in _HEADER_WORDS:
+    if low in _HEADER_WORDS or low.strip("[]") in _HEADER_WORDS:
         return True
     if any(low.startswith(p) for p in _NOISE_PREFIXES):
         return True
@@ -365,6 +372,7 @@ def parse_banner(text: str, method: str = "text") -> ParsedTranscript:
     term_source: str | None = None
     status = "completed"
     group: list[str] = []
+    seen_period = False
 
     def dump_group() -> None:
         nonlocal group
@@ -410,8 +418,14 @@ def parse_banner(text: str, method: str = "text") -> ParsedTranscript:
         if "curriculum information" in low or low == "student information":
             section = "student"
             continue
+        # Banner print PDFs put a one-line TOC (Awarded / Institution Credit /
+        # Transcript Totals / Course(s) in Progress) on page 1. Those labels
+        # must not lock the parser out of the real period tables later.
+        if not seen_period and (
+            low in _TOC_NAV or low.startswith("awarded") or low.startswith("transcript totals")
+        ):
+            continue
         if low == "awarded" or low.startswith("awarded"):
-            section = "awarded"
             continue
         if "institution credit" in low:
             dump_group()
@@ -439,16 +453,20 @@ def parse_banner(text: str, method: str = "text") -> ParsedTranscript:
 
         note_major(low, line)
 
-        period = _PERIOD_RE.match(line)
+        period = _PERIOD_RE.search(line)
         if period:
             dump_group()
-            season, year = period.group(1).title(), period.group(2)
+            seen_period = True
+            season, year = period.group(2).title(), period.group(3)
             term = f"{season} {year}"
-            if period.group(0).lower().startswith("term"):
+            if period.group("kind").lower() == "term":
                 term_source = "Term"
                 status = "in_progress"
+                section = "progress"
             else:
                 term_source = "Period"
+                status = "completed"
+                section = "credit"
             continue
 
         if section not in {"credit", "progress"}:
